@@ -1,0 +1,11 @@
+Video chipset
+Memory Size, Memory Type, Memory Bandwidth
+Width, Length, Thickness
+
+Video chipset Nvidia GeForce
+Memória mérete 4 GB
+Memória típusa GDDR5
+Memória sávszélesség 128 bit
+Szélesség	111 mm
+Hosszúság	191 mm
+Vastagság	36 mm

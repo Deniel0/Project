@@ -1,0 +1,16 @@
+CPU:
+type,number of seeds, number of threads, cpu socket, cpu clock, cpu turbo clock, manufacturing technology, L3 cache, TDP
+
+
+
+Type	Intel Core i7
+Number of seeds	12 core
+Number of threads	20
+Processor socket 	Intel Socket 1700
+Processor clock	2700 MHz
+Processor Turbo Clock	5000 MHz
+Manufacturing Technology 	10 nm
+Integrated graphics processor	Intel UHD Graphics 770
+Cache
+L3 cache	25 MB
+TDP 	125 W
