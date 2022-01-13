@@ -1,15 +1,15 @@
 CPU:
-	type,number of seeds, number of threads, cpu socket, cpu clock, 	cpu turbo clock, manufacturing technology, L3 cache, TDP
+	type,number of seeds, number of threads, cpu socket, cpu clock, cpu turbo clock, manufacturing technology, L3 cache, TDP
 GPU:
 	Video chipset
 	Memory Size, Memory Type, Memory Bandwidth
 	Width, Length, Thickness
 Motherboard:
-	Manufacturer, cpu socket, Form Factor, Chipset, M.2 Slots, 
+	Manufacturer, cpu socket, Form Factor, Chipset, M.2 Slots
 CPU_cooler:
-	Manufacturer, Model, type, RPM, Height, 
+	Manufacturer, Model, type, RPM, Height, fan size
 RAM:
-	Manufacturer, Speed, Modules, CAS Latency, 
+	Manufacturer, Speed, Modules, CAS Latency
 Storage:
 	Manufacturer, type, Capacity, Form Factor, Interface
 Power_Supply:
