@@ -1,6 +1,6 @@
 <?php
-    include_once 'html_header.php';
     include_once 'db.includes.php';
+    include_once 'html_header.php';
 ?>
 <head>
 <link rel="stylesheet" href="html_css/login.css">
@@ -19,3 +19,6 @@
       </div>
     </div>
 </body>
+<?php
+include_once 'footer.php';
+?>
