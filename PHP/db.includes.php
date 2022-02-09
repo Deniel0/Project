@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$username = "phpteszt";
+$username = "root";
 $password = "";
 $dbname = "project";
 // Create connection
