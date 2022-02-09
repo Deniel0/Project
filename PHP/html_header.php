@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Partpicker</title>
-  <link rel="stylesheet" href="project2.css">
+  <link rel="stylesheet" href="header.css">
   <link rel="stylesheet" href="login.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
@@ -11,11 +11,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="java1.js"></script>
 </head>
-<nav class="navbar navbar-expand-custom navbar-mainbg" id="navbarExpandedmainbg">
+<nav class="navbar navbar-expand-custom navbar-mainbg" id="mainnav">
   <a class="navbar-brand navbar-logo" href="#">PCPARTPICKER</a>
-  <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <i class="fas fa-bars text-white"></i>
-  </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto" id="navbar ul">
           <div class="hori-selector"><div class="left"></div><div class="right"></div></div>

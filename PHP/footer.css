@@ -51,7 +51,7 @@
 .copyright-text{
     margin:0
   }
-@media (max-width:991px){
+/* @media (max-width:991px){
     .site-footer [class^=col-]
     {
       margin-bottom:30px
@@ -64,4 +64,4 @@
     .site-footer .copyright-text,.site-footer .social-icons{
       text-align:center
     }
-  }
+  } */

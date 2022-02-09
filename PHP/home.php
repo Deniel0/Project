@@ -1,7 +1,6 @@
 <?php
     include_once 'db.includes.php';
     include_once 'html_header.php';
-    include_once 'footer.php';
 ?>
 <h1>Welcome my friend</h1>
 <?php
@@ -13,4 +12,7 @@
             echo $row['username'] . "<br>";
         }
     }
+?>
+<?php
+    include_once 'footer.php';
 ?>

@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="footer.css">
-<div class="content">
     <footer class="site-footer">
           <div class="container">
             <div class="row">
@@ -30,4 +29,3 @@
             </div>
           </div>
     </footer>
-</div>
