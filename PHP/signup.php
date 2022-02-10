@@ -9,12 +9,12 @@
     <div class="wrapper fadeInDown">
       <div id="formContent">
         <!-- Tabs Titles -->
-        <h2 class="active">Sign In </h2>
+        <h2 class="active">Sign Up </h2>
         <!-- Login Form -->
         <form>
-          <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-          <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-          <input type="submit" class="fadeIn fourth" value="Log In">
+          <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
+          <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+          <input type="submit" class="fadeIn fourth" value="Sign Up">
         </form>
       </div>
     </div>
