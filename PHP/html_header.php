@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="header.css">
 </head>
 <body>
-  <!-- <nav class="navbar navbar-dark bg-dark"> -->
+  <nav class="navbar navbar-dark bg-dark">
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
       <li class="nav-item">
         <a href="home.php"><img src="monkaw.png" id="pepe" alt="monkaE"></a>
@@ -32,7 +32,7 @@
           <a href="signup.php"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false">Sign Up</button></a>
         </li>
   </ul>
-<!-- </nav>  -->
+</nav> 
 
 
 

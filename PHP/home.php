@@ -2,7 +2,6 @@
     include_once 'db.includes.php';
     include_once 'html_header.php';
 ?>
-<h1>Welcome my friend</h1>
 <?php
     $sql = "SELECT * FROM users;";
     $result = mysqli_query($conn, $sql);
