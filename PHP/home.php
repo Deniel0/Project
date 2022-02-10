@@ -1,5 +1,5 @@
 <?php
-    include_once 'db.includes.php';
+    require 'includes/db.includes.php';
     include_once 'html_header.php';
 ?>
 <?php

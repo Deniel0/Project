@@ -1,5 +1,5 @@
 <?php
-    include_once 'db.includes.php';
+    require 'includes/db.includes.php';
     include_once 'html_header.php';
 ?>
 <head>
@@ -9,16 +9,16 @@
     <div class="wrapper fadeInDown">
       <div id="formContent">
         <!-- Tabs Titles -->
-        <h2 class="active">Sign Up </h2>
+        <h2 class="active">Sign Up</h2>
         <!-- Login Form -->
-        <form>
-          <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
-          <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+        <form action="includes/signup.inc.php" method="post">
+          <input type="text" id="login" class="fadeIn second" name="username" placeholder="username">
+          <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
           <input type="submit" class="fadeIn fourth" value="Sign Up">
         </form>
       </div>
     </div>
 </body>
 <?php
-include_once 'footer.php';
+  include_once 'footer.php';
 ?>

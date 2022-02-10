@@ -1,5 +1,5 @@
 <?php
-    include_once 'db.includes.php';
+    require 'includes/db.includes.php';
     include_once 'html_header.php';
 ?>
 <head>
@@ -11,7 +11,7 @@
         <!-- Tabs Titles -->
         <h2 class="active">Login</h2>
         <!-- Login Form -->
-        <form>
+        <form action="includes/login.inc.php" method="post">
           <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
           <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
           <input type="submit" class="fadeIn fourth" value="Log In">
