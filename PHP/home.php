@@ -1,8 +1,7 @@
 <?php
-    include_once 'db.includes.php';
+    require 'includes/db.includes.php';
     include_once 'html_header.php';
 ?>
-<h1>Welcome my friend</h1>
 <?php
     $sql = "SELECT * FROM users;";
     $result = mysqli_query($conn, $sql);
@@ -13,6 +12,7 @@
         }
     }
 ?>
+<h1>Hello</h1>
 <?php
     include_once 'footer.php';
 ?>
