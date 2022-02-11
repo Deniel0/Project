@@ -5,7 +5,7 @@ if (isset($_POST["submit"])) {
     require_once 'db.includes.php';
     require_once 'functions.inc.php';
     
-    if (emptyInputSignup($username, $password) == true) {
+    if (emptyInputSignup($username, $password) != false) {
         header("location: ../signup.php?error=emptyinput");
         exit();
     }
