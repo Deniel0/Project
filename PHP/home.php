@@ -12,6 +12,7 @@
         }
     }
 ?>
+<h1>Hello</h1>
 <?php
     include_once 'footer.php';
 ?>

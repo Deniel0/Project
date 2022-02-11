@@ -1,29 +1,26 @@
 <?php
 if (isset($_POST["submit"])) {
-
-    $username = $_POST["usern"];
-    $password = $_POST["pwd"];
-
+    $username = $_POST["username"];
+    $password = $_POST["password"];
     require_once 'db.includes.php';
-    require_once 'functions.php';
-
-    if (emptyInputSignup($username, $password) !== false) {
-        header("location: ../signup.php?error=emptyinput");
-        exit();
-    }
-    if (invalidUsern($username) !== false) {
-        header("location: ../signup.php?error=emptyinput");
-        exit();
-    }
-    if (invalidPwd($password) !== false) {
-        header("location: ../signup.php?error=emptyinput");
-        exit();
-    }
+    require_once 'functions.inc.php';
     
-
-} else {
-    header("location: ../signup.php");
-}
-createUser($username, $password)
-
+    if (emptyInputSignup($username, $password) == true) {
+        header("location: ../signup.php?error=emptyinput");
+        exit();
+    }
+    if (invalidUsername($username) != false) {
+        header("location: ../signup.php?error=invalidUsername");
+        exit();
+    }
+    if (userexist($conn, $username, $password) != false) {
+        header("location: ../signup.php?error=usernameistaken");
+        exit();
+    }
+    createUser($conn, $username, $password);
+    }
+    /*else{
+        header("location: signup.php");
+        exit();
+}*/
 ?>

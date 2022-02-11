@@ -12,8 +12,8 @@
         <h2 class="active">Login</h2>
         <!-- Login Form -->
         <form action="includes/login.inc.php" method="post">
-          <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
-          <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+          <input type="text" id="login" class="fadeIn second" name="username" placeholder="username">
+          <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
           <input type="submit" class="fadeIn fourth" value="Log In">
         </form>
       </div>
