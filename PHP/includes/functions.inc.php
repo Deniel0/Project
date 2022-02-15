@@ -76,7 +76,7 @@ function loginUser($conn, $username, $password){
         session_start();
         $_SESSION["username"] = $userexist["username"];
         $_SESSION["username"] = $userexist["username"];
-        header("location: ../home.php?error=ok");
+        header("location: ../index.php?error=ok");
         exit();
     }
 }

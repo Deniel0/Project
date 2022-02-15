@@ -17,6 +17,28 @@
           <input type="submit" class="fadeIn fourth" value="Log In">
         </form>
       </div>
+      <?php
+  if (isset($_GET["error"])) {
+    if ($_GET["error"] == "emptyinput") {
+      echo "<p>Fill in all fields!</p>";
+    }
+    else if($_GET["error"] == "wronglogin"){
+      echo "<p>Incorrect login informations!</p>";
+    }
+    else if($_GET["error"] == "invalidPassword"){
+      echo "<p>Invalid password!</p>";
+    }
+    else if($_GET["error"] == "stmtfailed"){
+      echo "<p>Something went wrong!</p>";
+    }
+    else if($_GET["error"] == "usernameistaken"){
+      echo "<p>Username is already taken!</p>";
+    }
+    else if($_GET["error"] == "none"){
+      echo "<p>You have signed up!</p>";
+    }
+  }
+?>
     </div>
 </body>
 <?php

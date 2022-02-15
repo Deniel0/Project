@@ -11,10 +11,10 @@
   <nav class="navbar navbar-dark bg-dark">
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
       <li class="nav-item">
-        <a href="home.php"><img src="monkaw.png" id="pepe" alt="monkaE"></a>
+        <a href="index.php"><img src="monkaw.png" id="pepe" alt="monkaE"></a>
       </li>
       <li class="nav-item" role="presentation">
-        <a href="home.php"><button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button></a>
+        <a href="index.php"><button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button></a>
       </li>
       <li class="nav-item" role="presentation">
         <a href="Picker.php"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false">Picker</button></a>
@@ -30,19 +30,18 @@
         </li>
         <li class="nav-item" role="presentation">
           <a href="signup.php"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false">Sign Up</button></a>
+          
         </li>
+        <?php
+        if (isset($_SESSION["username"])) {
+          echo "<li><a href='includes/logout.php'></a>Log Out</li>";
+        }else {
+          echo "<li><a href='signup.php'></a>Sign up</li>";
+          echo "<li><a href='login.php'></a>Login</li>";
+        }
+        ?>
   </ul>
 </nav> 
-
-
-
-
-
-
-
-
-
-
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
