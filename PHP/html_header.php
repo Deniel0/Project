@@ -30,7 +30,9 @@
         </li>
         <li class="nav-item" role="presentation">
           <a href="signup.php"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false">Sign Up</button></a>
-          
+        </li>
+        <li class="nav-item" role="presentation">
+          <a href="includes/logout.php"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false">Log out</button></a>
         </li>
         <?php
         if (isset($_SESSION["username"])) {
