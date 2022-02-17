@@ -12,9 +12,6 @@
 <body>
 <nav class="nav">
   <div class="container" id="navfont-size">
-    <div class="logo">
-        <a href="Picker.php">Build your own PC</a>
-    </div>
     <div id="mainListDiv" class="main_list">
         <ul class="navlinks">
             <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
@@ -35,34 +32,6 @@
     <section class="home">
     </section>
     <br>
-  <!-- <nav class="navbar navbar-dark bg-dark">
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-      <li class="nav-item">
-        <a href="index.php"><img src="monkaw.png" id="pepe" alt="monkaE"></a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a href="index.php"><button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fa-solid fa-house"></i> Home</button></a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a href="Picker.php"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fa-solid fa-desktop"></i> Picker</button></a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a href="Components.php"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fa-solid fa-puzzle-piece"></i> Components</button></a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a href="Info.php"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fa-solid fa-info"></i> Info</button></a>
-      </li>
-        <li class="nav-item" role="presentation">
-          <a href="login.php"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fa-solid fa-right-to-bracket"></i> Login</button></a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a href="signup.php"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fa-solid fa-user-plus"></i> Sign Up</button></a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a href="includes/logout.php"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fa-solid fa-power-off"></i> Log out</button></a>
-        </li>
-  </ul>
-</nav>  -->
 
 <!-- script -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

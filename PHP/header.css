@@ -20,12 +20,12 @@ html,body {
     line-height: 65px;
     text-align: center;
 }
-.nav div.logo {
+/* .nav div.logo {
     float: left;
     width: auto;
     height: auto;
     padding-left: 3rem;
-}
+} */
 .nav div.logo a {
     text-decoration: none;
     color: #fff;
@@ -50,13 +50,12 @@ html,body {
     width: auto;
     height: 65px;
     padding: 0;
-    padding-right: 3rem;
+    padding-right: 4rem;
 }
 .nav div.main_list ul li a {
     text-decoration: none;
     color: #fff;
     line-height: 65px;
-    /* font-size: 2.4rem; */
 }
 .nav div.main_list ul li a:hover {
     color: #00E676;
@@ -79,7 +78,7 @@ html,body {
     transition: all 0.4s ease;
 }
 /* Media qurey section */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 412px) and (max-width: 1024px) {
     .container {
         margin: 0;
     }
@@ -108,7 +107,6 @@ html,body {
         left: 0;
         bottom: 0;
         background-color: #111;
-        /*same background color of navbar*/
         background-position: center top;
     }
     .nav div.main_list ul li {
