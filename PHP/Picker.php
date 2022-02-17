@@ -6,8 +6,11 @@
 <link rel="stylesheet" href="picker.css">
 </head>
 <body>
+    <div class="container">
+<!-- form-select -->
 <!-- CPU -->
-<select name='cpu1'>
+<h3>Select your CPU:</h3>
+<select  class="form-select rounded shadow" data-live-search="true">
 <?php
     $sql = "SELECT Manufacturer_id, Name, Clock FROM cpu";
     $result = mysqli_query($conn, $sql);
@@ -20,7 +23,8 @@
     echo "</select> <br>";
 ?>
 <!-- Motherboard -->
-<select name='cpu1'>
+<h3>Select your Motherboard:</h3>
+<select  class="form-select rounded shadow" data-live-search="true">
 <?php
     $sql = "SELECT Manufacturer_id, Name FROM motherboard";
     $result = mysqli_query($conn, $sql);
@@ -32,7 +36,8 @@
     echo "</select> <br>";
 ?>
 <!-- CPU cooler -->
-<select name='cpu1'>
+<h3>Select your CPU cooler:</h3>
+<select  class="form-select rounded shadow" data-live-search="true">
 <?php
     $sql = "SELECT Manufacturer_id, Model, Type, RPM FROM cpu_cooler";
     $result = mysqli_query($conn, $sql);
@@ -44,7 +49,8 @@
     echo "</select> <br>";
 ?>
 <!-- RAM -->
-<select name='cpu1'>
+<h3>Select your RAM:</h3>
+<select  class="form-select rounded shadow" data-live-search="true">
 <?php
     $sql = "SELECT Manufacturer_id, ram_type_id, Capacity, Speed, Modules FROM ram";
     $result = mysqli_query($conn, $sql);
@@ -56,7 +62,8 @@
     echo "</select> <br>";
 ?>
 <!-- 1st.:Storage -->
-<select name='cpu1'>
+<h3>Select your 1st.:Storage:</h3>
+<select  class="form-select rounded shadow" data-live-search="true">
 <?php
     $sql = "SELECT Manufacturer_id, storage_type_id, Name, Capacity, R_W_speed FROM storage";
     $result = mysqli_query($conn, $sql);
@@ -68,7 +75,8 @@
     echo "</select> <br>";
 ?>
 <!-- 2nd.:Storage -->
-<select name='cpu1'>
+<h3>Select your 2nd.:Storage:</h3>
+<select  class="form-select rounded shadow" data-live-search="true">
 <?php
     $sql = "SELECT Manufacturer_id, storage_type_id, Name, Capacity, R_W_speed FROM storage";
     $result = mysqli_query($conn, $sql);
@@ -80,7 +88,8 @@
     echo "</select> <br>";
 ?>
 <!-- PowerSupply -->
-<select name='cpu1'>
+<h3>Select your PowerSupply:</h3>
+<select  class="form-select rounded shadow" data-live-search="true">
 <?php
     $sql = "SELECT Manufacturer_id, Name, Wattage, Efficiency_Rating, Modular FROM power_supply";
     $result = mysqli_query($conn, $sql);
@@ -91,7 +100,10 @@
     }
     echo "</select> <br>";
 ?>
+</div>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <?php
     include_once 'footer.php';
 ?>

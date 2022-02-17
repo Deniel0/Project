@@ -1,6 +1,6 @@
-option{
-    width: fit-content;
+.form-select{
+    width: 60%;
 }
-select{
-    width: fit-content;
+.container{
+    justify-content: center;
 }
