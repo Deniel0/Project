@@ -34,14 +34,6 @@
         <li class="nav-item" role="presentation">
           <a href="includes/logout.php"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false">Log out</button></a>
         </li>
-        <?php
-        if (isset($_SESSION["username"])) {
-          echo "<li><a href='includes/logout.php'></a>Log Out</li>";
-        }else {
-          echo "<li><a href='signup.php'></a>Sign up</li>";
-          echo "<li><a href='login.php'></a>Login</li>";
-        }
-        ?>
   </ul>
 </nav> 
 
