@@ -10,7 +10,32 @@
 </head>
 <!-- navbar -->
 <body>
-  <nav class="navbar navbar-dark bg-dark">
+<nav class="nav">
+  <div class="container" id="navfont-size">
+    <div class="logo">
+        <a href="Picker.php">Build your own PC</a>
+    </div>
+    <div id="mainListDiv" class="main_list">
+        <ul class="navlinks">
+            <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="Picker.php"><i class="fa-solid fa-desktop"></i> Picker</a></li>
+            <li><a href="Components.php"><i class="fa-solid fa-puzzle-piece"></i> Components</a></li>
+            <li><a href="login.php"><i class="fa-solid fa-right-to-bracket"></i> Log in</a></li>
+            <li><a href="signup.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li>
+            <li><a href="includes/logout.php"><i class="fa-solid fa-power-off"></i> Log out</a></li>
+        </ul>
+    </div>
+    <span class="navTrigger">
+        <i></i>
+        <i></i>
+        <i></i>
+    </span>
+  </div>
+</nav>
+    <section class="home">
+    </section>
+    <br>
+  <!-- <nav class="navbar navbar-dark bg-dark">
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
       <li class="nav-item">
         <a href="index.php"><img src="monkaw.png" id="pepe" alt="monkaE"></a>
@@ -37,9 +62,10 @@
           <a href="includes/logout.php"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fa-solid fa-power-off"></i> Log out</button></a>
         </li>
   </ul>
-</nav> 
+</nav>  -->
 
 <!-- script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
