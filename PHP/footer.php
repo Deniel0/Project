@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="footer.css">
-
-<footer>
+<div class="wrapper">
+</div>
+<footer class="footer">
 <div class="container text-center text-md-left mt-5">
   <div class="row mt-3">
     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
@@ -43,3 +44,17 @@
 </div>
 <div class="footer-copyright text-center py-3">© 2022 Copyrighted by Me</div>
 </footer>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+  		$(window).resize(function(){
+			    var footerHeight = $('.footer').outerHeight();
+			    var stickFooterPush = $('.push').height(footerHeight);
+		
+    			$('.wrapper').css({'marginBottom':'-' + footerHeight + 'px'});
+		    });
+		
+    		$(window).resize();
+	    });
+
+</script>
