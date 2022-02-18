@@ -11,13 +11,14 @@
 <!-- CPU -->
 <h3><i class="fa-solid fa-microchip"></i> Select your CPU:</h3>
 <select  class="form-select rounded shadow" data-live-search="true">
+    <option value="first" selected id="ogoption">Choose</option>
 <?php
     $sql = "SELECT cpu.Manufacturer_id, manufacturer.Manufacturer, Name, Clock FROM cpu, manufacturer WHERE cpu.Manufacturer_id=manufacturer.Manufacturer_id";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        echo $row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock'];
-        echo "<option value='". "'</option>" ;
+        //echo $row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock'];
+        echo "<option value='". "'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."</option>" ;
     }
     echo "</select> <br>";
 ?>
