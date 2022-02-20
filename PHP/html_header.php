@@ -14,6 +14,11 @@
 <nav class="nav">
   <div class="container" id="navfont-size">
     <div id="mainListDiv" class="main_list">
+    <div class="hamburger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
         <ul class="navlinks">
             <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
             <li><a href="Picker.php"><i class="fa-solid fa-puzzle-piece"></i> Picker</a></li>
@@ -24,11 +29,6 @@
             <li><a href="includes/logout.php"><i class="fa-solid fa-power-off"></i> Log out</a></li>
         </ul>
     </div>
-    <span class="navTrigger">
-        <i></i>
-        <i></i>
-        <i></i>
-    </span>
   </div>
 </nav>
     <section class="home">
