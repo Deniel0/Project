@@ -25,7 +25,7 @@
             <!-- <li><a href="Components.php"><i class="fa-solid fa-list"></i> Components</a></li> -->
             <li><a href="login.php"><i class="fa-solid fa-right-to-bracket"></i> Log in</a></li>
             <li><a href="signup.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li>
-            <li class="blogout"><a href="includes/logout.php"><i class="fa-solid fa-power-off"></i> Log out</a></li>
+            <li><a href="includes/logout.php"><i class="fa-solid fa-power-off"></i> Log out</a></li>
         </ul>
 </nav>
 <!-- Home image -->
