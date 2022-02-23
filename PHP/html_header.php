@@ -23,8 +23,10 @@
             <li><a href="Picker.php"><i class="fa-solid fa-puzzle-piece"></i> Picker</a></li>
             <li><a href="complete_builds.php"><i class="fa-solid fa-desktop"></i> Complete Builds</a></li>
             <!-- <li><a href="Components.php"><i class="fa-solid fa-list"></i> Components</a></li> -->
-            <li><a href="login.php"><i class="fa-solid fa-right-to-bracket"></i> Log in</a></li>
-            <li><a href="signup.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li>
+            <!-- <li><a href="login.php"><i class="fa-solid fa-right-to-bracket"></i> Log in</a></li> -->
+            <li><a href="login2.php"><i class="fa-solid fa-right-to-bracket"></i> Log in</a></li>
+            <!-- <li><a href="signup.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li> -->
+            <li><a href="signup2.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li>
             <li><a href="includes/logout.php"><i class="fa-solid fa-power-off"></i> Log out</a></li>
         </ul>
 </nav>

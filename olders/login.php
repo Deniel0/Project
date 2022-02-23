@@ -1,6 +1,7 @@
 <?php
-    require 'includes/db.includes.php';
     include_once 'html_header.php';
+    require 'includes/db.includes.php';
+    require_once 'includes/login.inc.php';
 ?>
 <head>
   <link rel="stylesheet" href="login.css">
@@ -15,6 +16,7 @@
           <input type="text" id="login" class="fadeIn second" name="username" placeholder="username">
           <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
           <input type="submit" class="fadeIn fourth" value="Log In">
+          Or Sign Up <a href="signup.php"></a>
         </form>
       </div>
       <?php

@@ -4,7 +4,7 @@
     require_once 'includes/signup.inc.php';
 ?>
 <head>
-<link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div class="wrapper fadeInDown">
@@ -42,7 +42,3 @@
 ?>
     </div>
 </body>
-
-<?php
-  include_once 'footer.php';
-?>
