@@ -38,7 +38,7 @@ function userexist($conn, $username){
         mysqli_stmt_close($stmt);
 }
 function createUser($conn, $username, $password){
-    $sql ="INSERT INTO users (username, pwd) VALUES(?, ?);";
+    $sql ="INSERT INTO users (username, user_pwd) VALUES(?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup.php?error=stmtfailed");
@@ -66,7 +66,7 @@ function loginUser($conn, $username, $password){
         header("location: ../login.php?error=wronglogin");
         exit();
     }
-    $pwdHashed = $userexist["pwd"];
+    $pwdHashed = $userexist["user_pwd"];
     $checkPwd = password_verify($password, $pwdHashed);
     if ($checkPwd === false) {
         header("location: ../login.php?error=wronglogin");

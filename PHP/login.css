@@ -1,8 +1,10 @@
-body {
-  font-family: "Poppins", sans-serif;
-  height: 100vh;
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+html,body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
 }
-
 a {
   color: #92badd;
   display:inline-block;
