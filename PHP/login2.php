@@ -25,7 +25,7 @@
       </div>
       <input type="submit" value="Login">
     </form>
-    <div class="sign-txt">Don't have an account yet? <a href="signup.php">Signup</a></div>
+    <div class="sign-txt">Don't have an account yet? <a href="signup2.php">Signup</a></div>
       <?php
   if (isset($_GET["error"])) {
     if ($_GET["error"] == "emptyinput") {
