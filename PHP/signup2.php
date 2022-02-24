@@ -10,20 +10,20 @@
     <div class="form-container">
 <div class="wrapper">
     <header>Signup</header>
-    <form action="signup.inc.php" method="post">
+    <form action="includes/signup.inc.php" method="post">
       <div class="field">
         <div class="input-area">
-          <input type="text" placeholder="Username">
+          <input type="text" name="username" placeholder="Username">
           <i class="icon fas fa-envelope"></i>
         </div>
       </div>
       <div class="field">
         <div class="input-area">
-          <input type="password" placeholder="Password">
+          <input type="password" name="password" placeholder="Password">
           <i class="icon fas fa-lock"></i>
         </div>
       </div>
-      <input type="submit" value="Login">
+      <input type="submit" name="submit" value="Signup">
     </form>
     <div class="sign-txt">You already have an account? <a href="login2.php">Login</a></div>
     <?php
