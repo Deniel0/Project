@@ -10,22 +10,22 @@
     <div class="form-container">
 <div class="wrapper">
     <header>Login</header>
-    <form action="login.inc.php" method="post">
+    <form action="includes/login.inc.php" method="post">
       <div class="field">
         <div class="input-area">
-          <input type="text" placeholder="Username">
+          <input type="text" name="username" placeholder="Username">
           <i class="icon fas fa-envelope"></i>
         </div>
       </div>
       <div class="field">
         <div class="input-area">
-          <input type="password" placeholder="Password">
+          <input type="password" name="password" placeholder="Password">
           <i class="icon fas fa-lock"></i>
         </div>
       </div>
-      <input type="submit" value="Login">
+      <input type="submit" name="submit" value="Login">
     </form>
-    <div class="sign-txt">Don't have an account yet? <a href="signup.php">Signup</a></div>
+    <div class="sign-txt">Don't have an account yet? <a href="signup2.php">Signup</a></div>
       <?php
   if (isset($_GET["error"])) {
     if ($_GET["error"] == "emptyinput") {

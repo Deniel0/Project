@@ -17,9 +17,9 @@ if (isset($_POST["submit"])) {
         header("location: ../signup2.php?error=usernameistaken");
         exit();
     }
-    createUser($conn, $username, $password);
+    if (createUser($conn, $username, $password) != false) {
+        header("location: ../index.php");
+        exit();
     }
-    // else{
-    //     header("location: signup2.php");
-    //     exit();}
+    }
 ?>
