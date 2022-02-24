@@ -6,21 +6,20 @@ if (isset($_POST["submit"])) {
     require_once 'functions.inc.php';
     
     if (emptyInputSignup($username, $password) != false) {
-        header("location: ../signup.php?error=emptyinput");
+        header("location: ../signup2.php?error=emptyinput");
         exit();
     }
     if (invalidUsername($username) != false) {
-        header("location: ../signup.php?error=invalidUsername");
+        header("location: ../signup2.php?error=invalidUsername");
         exit();
     }
     if (userexist($conn, $username, $password) != false) {
-        header("location: ../signup.php?error=usernameistaken");
+        header("location: ../signup2.php?error=usernameistaken");
         exit();
     }
-    createUser($conn, $username, $password);
-    }
-    /*else{
-        header("location: signup.php");
+    if (createUser($conn, $username, $password) != false) {
+        header("location: ../index.php");
         exit();
-}*/
+    }
+    }
 ?>

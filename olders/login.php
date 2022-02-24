@@ -1,21 +1,22 @@
 <?php
     include_once 'html_header.php';
     require 'includes/db.includes.php';
-    require_once 'includes/signup.inc.php';
+    require_once 'includes/login.inc.php';
 ?>
 <head>
-<link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div class="wrapper fadeInDown">
       <div id="formContent">
         <!-- Tabs Titles -->
-        <h2 class="active">Sign Up</h2>
+        <h2 class="active">Login</h2>
         <!-- Login Form -->
-        <form action="includes/signup.inc.php" method="post" >
+        <form action="includes/login.inc.php" method="post">
           <input type="text" id="login" class="fadeIn second" name="username" placeholder="username">
           <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
-          <input type="submit" class="fadeIn fourth" value="Sign Up" name="submit">
+          <input type="submit" class="fadeIn fourth" value="Log In">
+          Or Sign Up <a href="signup.php"></a>
         </form>
       </div>
       <?php
@@ -23,8 +24,8 @@
     if ($_GET["error"] == "emptyinput") {
       echo "<p>Fill in all fields!</p>";
     }
-    else if($_GET["error"] == "invalidUsername"){
-      echo "<p>Invalid username!</p>";
+    else if($_GET["error"] == "wronglogin"){
+      echo "<p>Incorrect login informations!</p>";
     }
     else if($_GET["error"] == "invalidPassword"){
       echo "<p>Invalid password!</p>";
@@ -42,7 +43,3 @@
 ?>
     </div>
 </body>
-
-<?php
-  include_once 'footer.php';
-?>

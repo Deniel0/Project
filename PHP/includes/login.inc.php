@@ -2,17 +2,18 @@
 if (isset($_POST["submit"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
-
     require_once 'db.includes.php';
     require_once 'functions.inc.php';
-    
-    if (emptyInputLogin($username, $password) !== false) {
-        header("location: ../login.php?error=emptyinput");
+    echo 'test';
+    if (emptyInputLogin($username, $password) != false) {
+        echo 'ures';
+        header("location: ../login2.php?error=emptyinput");
         exit();
     }
-    loginUser($conn, $username, $password);
-}else {
-    header("location: ../login.php");
-    exit();
-}
+    if (loginUser($conn, $username, $password) != false) {
+        header("location: ../index.php");
+        exit();
+    }
+    // loginUser($conn, $username, $password);
+    }
 ?>
