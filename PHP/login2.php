@@ -13,13 +13,13 @@
     <form action="includes/login.inc.php" method="post">
       <div class="field">
         <div class="input-area">
-          <input type="text" name="username" placeholder="Username">
+          <input type="text" name="username" placeholder="Username" required>
           <i class="icon fas fa-envelope"></i>
         </div>
       </div>
       <div class="field">
         <div class="input-area">
-          <input type="password" name="password" placeholder="Password">
+          <input type="password" name="password" placeholder="Password" required>
           <i class="icon fas fa-lock"></i>
         </div>
       </div>
