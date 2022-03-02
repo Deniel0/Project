@@ -9,9 +9,9 @@
     <div class="container">
 <!-- form-select -->
 <!-- CPU -->
-<h3><i class="fa-solid fa-microchip"></i> Select your CPU:</h3>
+<h3 class="pickertarget"><i class="fa-solid fa-microchip"></i> Select your CPU:</h3>
 <select  class="form-select rounded shadow" data-live-search="true">
-    <option value="first" selected id="ogoption">Choose</option>
+    <!-- <option value="first" selected id="ogoption">Choose</option> -->
 <?php
     $sql = "SELECT cpu.Manufacturer_id, manufacturer.Manufacturer, Name, Clock FROM cpu, manufacturer WHERE cpu.Manufacturer_id=manufacturer.Manufacturer_id";
     $result = mysqli_query($conn, $sql);

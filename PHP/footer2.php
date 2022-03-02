@@ -44,7 +44,7 @@
 </div>
 <div class="footer-copyright text-center py-3">© 2022 Copyrighted by Me</div>
 </footer>
-<!-- <script src="jquery-3.5.1.min.js"></script>
+<script src="jquery-3.5.1.min.js"></script>
 <script>
 	$(document).ready(function(){
   		$(window).resize(function(){
@@ -57,4 +57,4 @@
     		$(window).resize();
 	    });
 
-</script> -->
+</script>

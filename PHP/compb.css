@@ -1,0 +1,30 @@
+img{
+    height: 300px;
+    width: 350px;
+}
+.flex-container {
+    list-style: none;
+    border: 1px solid silver;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    color: azure;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: center;
+    gap: 20px;
+}
+.bg{
+    /* width: 100%;
+    height: fit-content; */
+    background-image: url(bg1.jpg);
+    background-size: cover;
+}
+
+.wrap{ 
+-webkit-flex-wrap: wrap;
+flex-wrap: wrap;
+}
