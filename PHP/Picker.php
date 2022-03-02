@@ -18,7 +18,8 @@
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
         //echo $row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock'];
-        echo "<option value='". "'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."</option>" ;
+        echo "<option value='". "'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."</option>";
+        //echo "<option name=".".cpu.".">".""."</option>";
     }
     echo "</select> <br>";
 ?>
@@ -104,7 +105,14 @@
         <i class="fa-solid fa-download"></i> Save
     </button>
 </div>
-
+<?php
+    $myfile = fopen("newfile.txt", "a") or die("Unable to open file!");
+    $txt = "Donald Duck\n";
+    fwrite($myfile, $txt);
+    $txt = "Goofy Goof\n";
+    fwrite($myfile, $txt);
+    fclose($myfile);
+?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <?php
