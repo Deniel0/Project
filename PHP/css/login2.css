@@ -11,7 +11,7 @@ background: #5372F0;
 body{
     width: 100%;
     height: 100vh;
-    background-image: url(gaming_home2.jpg);    /* https://blog.graana.com/lifestyle/how-to-make-use-of-your-basement/ */
+    background-image: url(../images/gaming_home2.jpg);    /* https://blog.graana.com/lifestyle/how-to-make-use-of-your-basement/ */
     background-position: center top;
 	background-size:cover;
 }
@@ -21,6 +21,9 @@ background: #5372F0;
 }
 .sign-txt{
   color: rgb(0, 225, 255);
+}
+.field{
+  color: #fff;
 }
 p{
   color: #ff0000;

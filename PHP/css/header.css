@@ -3,6 +3,7 @@ html,body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
 }
 /*Styling Links*/
 .navlinks{
@@ -40,7 +41,7 @@ html,body {
 .home {
     width: 100%;
     height: 100vh;
-    background-image: url(gaming_home2.jpg);    /* https://blog.graana.com/lifestyle/how-to-make-use-of-your-basement/ */
+    background-image: url(../images/gaming_home2.jpg);    /* https://blog.graana.com/lifestyle/how-to-make-use-of-your-basement/ */
     background-position: center top;
 	background-size:cover;
 }

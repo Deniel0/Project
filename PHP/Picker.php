@@ -14,7 +14,7 @@
     include_once 'html_header.php';
 ?>
 <head>
-<link rel="stylesheet" href="picker.css">
+<link rel="stylesheet" href="css/picker.css">
 </head>
 <body>
     <div class="container">

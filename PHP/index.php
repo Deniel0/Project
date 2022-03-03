@@ -3,7 +3,7 @@
     include_once 'html_header.php';
 ?>
 <head>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 

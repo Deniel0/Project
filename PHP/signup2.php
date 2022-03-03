@@ -4,7 +4,7 @@
     require_once 'includes/signup.inc.php';
 ?>
 <head>
-  <link rel="stylesheet" href="login2.css">
+  <link rel="stylesheet" href="css/login2.css">
 </head>
 <body>
     <div class="form-container">

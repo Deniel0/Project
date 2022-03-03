@@ -14,6 +14,6 @@ if (isset($_POST["submit"])) {
         header("location: ../index.php");
         exit();
     }
-    // loginUser($conn, $username, $password);
+    loginUser($conn, $username, $password);
     }
 ?>

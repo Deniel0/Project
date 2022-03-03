@@ -1,7 +1,0 @@
-CPU: AMD Ryzen 9 5900X 3.7 GHz
-Motherboard: Asus ROG Crosshair VII Hero 
-CPU cooler: be quiet! Dark Rock Pro 4 Air 1500
-RAM: Corsair DDR4 8 GB 3200 MHz 1 piece
-Storage: Seagate HDD Barracuda 1 TB 7200RPM
-2nd Storage: Seagate HDD Barracuda 1 TB 7200RPM
-PowerSupply: Asus ROG Strix 650W 80+ Gold Full

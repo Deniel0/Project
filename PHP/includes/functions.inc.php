@@ -75,7 +75,7 @@ function loginUser($conn, $username, $password){
     elseif ($checkPwd === true) {
         session_start();
         $_SESSION["username"] = $userexist["username"];
-        $_SESSION["username"] = $userexist["username"];
+        //$_SESSION["username"] = $userexist["username"];
         header("location: ../index.php?error=ok");
         exit();
     }

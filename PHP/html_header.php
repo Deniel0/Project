@@ -8,7 +8,7 @@
   <link rel="shortcut icon" href="icon.png" type="image/x-icon">
   <!-- css links -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
 <!-- navbar -->
@@ -22,18 +22,22 @@
             <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
             <li><a href="Picker.php"><i class="fa-solid fa-puzzle-piece"></i> Picker</a></li>
             <li><a href="complete_builds.php"><i class="fa-solid fa-desktop"></i> Complete Builds</a></li>
-            <!-- <li><a href="Components.php"><i class="fa-solid fa-list"></i> Components</a></li> -->
-            <!-- <li><a href="login.php"><i class="fa-solid fa-right-to-bracket"></i> Log in</a></li> -->
-            <li><a href="login2.php"><i class="fa-solid fa-right-to-bracket"></i> Log in</a></li>
-            <!-- <li><a href="signup.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li> -->
-            <li><a href="signup2.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li>
+            <?php 
+                    if(!isset($_SESSION['username'])){
+                ?>
+                <li><a href="login2.php"><i class="fa-solid fa-right-to-bracket"></i> Log in</a></li>
+                <!-- <li><a href="signup.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li> -->
+                <li><a href="signup2.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li>
+                <?php 
+                    }
+                ?>
             <li><a href="includes/logout.php"><i class="fa-solid fa-power-off"></i> Log out</a></li>
         </ul>
 </nav>
 <!-- Home image -->
 <section class="home"></section><br>
 <!-- script -->
-<script src="header.js"></script>
+<script src="JavaScript/header.js"></script>
 <script src="https://kit.fontawesome.com/56bce479be.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
