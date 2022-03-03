@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <head>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta charset="UTF-8">
@@ -34,7 +37,13 @@
                 <?php 
                     }
                 ?>
+                <?php 
+                    if(isset($_SESSION['username'])){
+                ?>
                 <li><a href="includes/logout.php"><i class="fa-solid fa-power-off"></i> Log out</a></li>
+                <?php 
+                    }
+                ?>
             </ul>
     </nav>
 <!-- script -->

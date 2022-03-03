@@ -20,7 +20,7 @@
     <div class="container">
 <!-- form-select -->
 <!-- CPU -->
-<form action="" method="post">
+<form action="" method="post" id="anchor">
 <h3 class="pickertarget"><i class="fa-solid fa-microchip"></i> Select your CPU:</h3>
 <select class="form-select rounded shadow" data-live-search="true" name="cpu">
     <!-- <option value="first" selected id="ogoption">Choose</option> -->
