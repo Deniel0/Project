@@ -38,7 +38,7 @@
 <h3><i class="fa-solid fa-chess-board"></i> Select your Motherboard:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="Motherboard">
 <?php
-    $sql = "SELECT motherboard.Manufacturer_id, manufacturer.Manufacturer, Name FROM motherboard, manufacturer WHERE motherboard.Manufacturer_id=manufacturer.Manufacturer_id";
+    $sql = "SELECT motherboard.Manufacturer_id, manufacturer.Manufacturer, Name FROM motherboard, manufacturer WHERE motherboard.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
@@ -51,7 +51,7 @@
 <h3><i class="fa-solid fa-fan"></i> Select your CPU cooler:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="cooler">
 <?php
-    $sql = "SELECT cpu_cooler.Manufacturer_id, manufacturer.Manufacturer, Model, Type, RPM FROM cpu_cooler, manufacturer WHERE cpu_cooler.Manufacturer_id=manufacturer.Manufacturer_id";
+    $sql = "SELECT cpu_cooler.Manufacturer_id, manufacturer.Manufacturer, Model, Type, RPM FROM cpu_cooler, manufacturer WHERE cpu_cooler.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
@@ -64,7 +64,7 @@
 <h3><i class="fa-solid fa-memory"></i> Select your RAM:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="RAM">
 <?php
-    $sql = "SELECT ram.Manufacturer_id, manufacturer.Manufacturer, ram.ram_type_id, ram_type.model, Capacity, Speed, Modules FROM ram, manufacturer, ram_type WHERE ram.Manufacturer_id=manufacturer.Manufacturer_id AND ram.ram_type_id=ram_type.ram_type_id";
+    $sql = "SELECT ram.Manufacturer_id, manufacturer.Manufacturer, ram.ram_type_id, ram_type.model, Capacity, Speed, Modules FROM ram, manufacturer, ram_type WHERE ram.Manufacturer_id=manufacturer.Manufacturer_id AND ram.ram_type_id=ram_type.ram_type_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
@@ -77,7 +77,7 @@
 <h3><i class="fa-solid fa-hard-drive"></i> Select your 1st.:Storage:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="Storage">
 <?php
-    $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id";
+    $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
@@ -90,7 +90,7 @@
 <h3><i class="fa-solid fa-hard-drive"></i> Select your 2nd.:Storage:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="ndStorage">
 <?php
-    $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id";
+    $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
@@ -103,7 +103,7 @@
 <h3><i class="fa-solid fa-plug"></i> Select your PowerSupply:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="PowerSupply">
 <?php
-    $sql = "SELECT power_supply.Manufacturer_id, manufacturer.Manufacturer, Name, Wattage, Efficiency_Rating, Modular FROM power_supply, manufacturer WHERE power_supply.Manufacturer_id=manufacturer.Manufacturer_id";
+    $sql = "SELECT power_supply.Manufacturer_id, manufacturer.Manufacturer, Name, Wattage, Efficiency_Rating, Modular FROM power_supply, manufacturer WHERE power_supply.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
