@@ -34,7 +34,13 @@ session_start();
                 <?php 
                     }
                 ?>
-            <li><a href="includes/logout.php"><i class="fa-solid fa-power-off"></i> Log out</a></li>
+                <?php 
+                    if(isset($_SESSION['username'])){
+                ?>
+                <li><a href="includes/logout.php"><i class="fa-solid fa-power-off"></i> Log out</a></li>
+                <?php 
+                    }
+                ?>
         </ul>
 </nav>
 <!-- Home image -->
