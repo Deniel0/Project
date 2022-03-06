@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
 html,body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: "Quicksand", sans-serif; */
 }
 /*Styling Links*/
 .navlinks{
@@ -11,7 +9,7 @@ html,body {
     column-count: 6;
     gap: 50px;
     justify-content: center;
-    list-style: none; 
+    list-style: none;
     width: 100%;
     font-size: 20px;
     padding-top: 20px;
@@ -41,9 +39,10 @@ html,body {
 .home {
     width: 100%;
     height: 100vh;
-    background-image: url(../images/gaming_home2.jpg);    /* https://blog.graana.com/lifestyle/how-to-make-use-of-your-basement/ */
+    background-image: url(../images/gaming_home3.jpg);    /* https://blog.graana.com/lifestyle/how-to-make-use-of-your-basement/ */
     background-position: center top;
 	background-size:cover;
+
 }
 /*Styling Hamburger Icon*/
 .hamburger div{
@@ -73,19 +72,20 @@ html,body {
         transition: all 0.7s ease;
     }
     .navlinks{
-        position: absolute;
-        right: 0px;
-        background: #7f7f8142;
-        height: fit-content;
-        width: 300px;
-        flex-direction: column;
+        background: #50505067;
         clip-path: circle(50px at 90% -20%);
         -webkit-clip-path: circle(50px at 90% -10%);
         transition: all 1s ease-out;
         pointer-events: none;
+        position: absolute;
+        right: 0px;
         display: flex;
+        flex-direction: column;
         justify-content: flex-start;
         gap: 5px;
+        height: fit-content;
+        width: 200px;
+        padding-left: 10px;
     }
     .navlinks.open{
         clip-path: circle(1000px at 90% -10%);

@@ -1,7 +1,0 @@
-CPU: Intel I3-10100 3.6 GHz
-Motherboard: Asus PRIME H410M-K 
-CPU cooler: be quiet! Dark Rock Pro 4 Air 1500
-RAM: Corsair DDR4 8 GB 3200 MHz 1 piece
-Storage: Kingston SSD-2.5 A400 240 GB 500/450 MB/s
-2nd Storage: Kingston SSD-2.5 A400 240 GB 500/450 MB/s
-PowerSupply: Asus ROG Strix 650W 80+ Gold Full
