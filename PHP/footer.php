@@ -47,7 +47,7 @@
     <ul class="ft-legal-list">
       <li><a href="#">Terms &amp; Conditions</a></li>
       <li><a href="#">Privacy Policy</a></li>
-      <li>&copy; 2022 by ME</li>
+      <li>&copy;2022 by <a href="https://github.com/Deniel0" target="_blank">Sütő Dániel</a></li>
     </ul>
   </section>
 </footer>
