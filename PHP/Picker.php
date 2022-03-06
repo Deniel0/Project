@@ -17,10 +17,10 @@
 <link rel="stylesheet" href="css/picker.css">
 </head>
 <body>
-    <div class="container">
+    <div class="pcontainer">
 <!-- form-select -->
 <!-- CPU -->
-<form action="" method="post" id="anchor">
+<form action="" method="post">
 <h3 class="pickertarget"><i class="fa-solid fa-microchip"></i> Select your CPU:</h3>
 <select class="form-select rounded shadow" data-live-search="true" name="cpu">
     <!-- <option value="first" selected id="ogoption">Choose</option> -->
@@ -121,5 +121,5 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <?php
-    //include_once 'footer.php';
+    include_once 'footer.php'; 
 ?>

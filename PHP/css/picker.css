@@ -1,9 +1,8 @@
 .form-select{
     width: 60%;
 }
-.container{
+.pcontainer{
     justify-content: center;
-}
-.save-gomb{
-    
+    margin-left: 10%;
+    margin-right: 10%;
 }
