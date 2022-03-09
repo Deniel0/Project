@@ -17,11 +17,17 @@ session_start();
 <body>
 <!-- navbar -->
     <nav class="nav">
-        <div class="hamburger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
+        <?php
+            if(isset($_SESSION['username'])){
+        ?>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        <?php 
+            }
+        ?>
             <ul class="navlinks">
                 <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
                 <li><a href="Picker.php"><i class="fa-solid fa-puzzle-piece"></i> Picker</a></li>
