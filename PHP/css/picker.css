@@ -1,21 +1,12 @@
 .form-select{
-    width: 60%;
+    width: 60vh;
 }
 .pcontainer{
     justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
 }
-body{
-  /* background-image: url(../images/bg.gif);
-    background-repeat:no-repeat;
-    background-size:cover; */
-    /* background:
-        linear-gradient(rgb(63, 0, 122), transparent),
-        linear-gradient(to top left, rgb(0, 143, 143), transparent),
-        linear-gradient(to top right, rgb(8, 0, 124), transparent);
-    background-blend-mode: screen; */
-}
+/* backgorund */
 body{
     color: aliceblue;
     background: linear-gradient(-45deg, #640491, #047aa5, #640491,#047aa5,#8d0292);
@@ -89,4 +80,4 @@ a,a:hover, a:active{
     font-size: 24px;
     min-width: 196px;
   }
-  }
+}
