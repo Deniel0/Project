@@ -1,7 +1,0 @@
-CPU: first
-Motherboard: first
-CPU cooler: first
-RAM: first
-Storage: first
-2nd Storage: first
-PowerSupply: first

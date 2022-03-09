@@ -2,9 +2,9 @@
 <div class="container"></div>
 <footer>
   <!-- Footer main -->
-  <section class="ft-main">
-    <div class="ft-main-item">
-      <h2 class="ft-title">About</h2>
+  <section class="main">
+    <div class="second">
+      <h2 class="title">About</h2>
       <ul>
         <li><a href="#" target="_blank">Blank</a></li>
         <li><a href="#" target="_blank">Blank</a></li>
@@ -13,8 +13,8 @@
         <li><a href="#" target="_blank">Blank</a></li>
       </ul>
     </div>
-    <div class="ft-main-item">
-      <h2 class="ft-title">Resources</h2>
+    <div class="second">
+      <h2 class="title">Resources</h2>
       <ul>
         <li><a href="https://www.w3schools.com/" target="_blank">Thanks</a></li>
         <li><a href="https://stackoverflow.com/" target="_blank">for</a></li>
@@ -22,8 +22,8 @@
         <li><a href="https://github.com/GeRRy1337" target="_blank">support</a></li>
       </ul>
     </div>
-    <div class="ft-main-item">
-      <h2 class="ft-title">Contact</h2>
+    <div class="second">
+      <h2 class="title">Contact</h2>
       <ul>
         <li><a href="https://tatabanyakorhaz.hu/" target="_blank">Help</a></li>
         <li>Phone: (34) 512 040 </li>
@@ -31,10 +31,9 @@
       </ul>
     </div>
   </section>
-
   <!-- Footer social -->
-  <section class="ft-social">
-    <ul class="ft-social-list">
+  <section class="social">
+    <ul class="social-list">
       <li><a href="https://www.facebook.com/bankitatabanya" target="_blank"><i class="fab fa-facebook"></i></a></li>
       <li><a href="https://www.instagram.com/p/CUStAoYAW1x/" target="_blank"><i class="fab fa-instagram"></i></a></li>
       <li><a href="https://github.com/Deniel0" target="_blank"><i class="fab fa-github"></i></a></li>
@@ -43,14 +42,13 @@
   </section>
 
   <!-- Footer legal -->
-  <section class="ft-legal">
-    <ul class="ft-legal-list">
-      <li><a href="#">Terms &amp; Conditions</a></li>
-      <li><a href="#">Privacy Policy</a></li>
+  <section class="copy">
+    <ul class="copy-list">
+      <li><a href="Links/terms.php" target="_blank">Terms &amp; Conditions</a></li>
+      <li><a href="Links/policy.php" target="_blank">Privacy Policy</a></li>
       <li>&copy;2022 by <a href="https://github.com/Deniel0" target="_blank">Sütő Dániel</a></li>
     </ul>
   </section>
 </footer>
-
 <!-- Script -->
 <script src="jquery-3.5.1.min.js"></script>

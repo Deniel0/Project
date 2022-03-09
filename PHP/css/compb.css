@@ -4,13 +4,35 @@ img{
     padding: 10%;
 }
 body{
-    background:
+    /* background:
         linear-gradient(rgb(63, 0, 122), transparent),
         linear-gradient(to top left, rgb(0, 143, 143), transparent),
         linear-gradient(to top right, rgb(8, 0, 124), transparent);
     background-blend-mode: screen;
-    /* background-image: url(../images/bg1.jpg);
+    background-image: url(../images/bg1.jpg);
     background-size: cover; */
+    color: aliceblue;
+    background: linear-gradient(-45deg, #640491, #047aa5, #640491,#047aa5,#8d0292);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+  25% {
+        background-position: 0% 25%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+  75% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 .flex-container {
     list-style: none;
