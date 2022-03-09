@@ -19,6 +19,67 @@ body{
     background-position: center top;
     background-size:cover;
 }
+/* home-title */
+.main-header{
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(0, 26, 255),
+    0 0 82px rgb(0, 26, 255),
+    0 0 92px rgb(0, 26, 255),
+    0 0 102px rgb(0, 26, 255),
+    0 0 151px rgb(0, 26, 255);
+}
+.title-style{
+    cursor:default;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+h1 {
+    animation: pulsate 2.5s infinite alternate;
+}
+h1{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 8vh;
+  }
+.bigger{
+    font-size: 10vh;
+}
+.pulsate{
+    animation: pulsate 1.5s infinite alternate;
+}
+@keyframes pulsate{
+    100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(0, 26, 255),
+        0 0 80px rgb(0, 26, 255),
+        0 0 90px rgb(0, 26, 255),
+        0 0 100px rgb(0, 26, 255),
+        0 0 150px rgb(0, 26, 255);
+    }
+    0% {
+      text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px rgb(0, 26, 255),
+      0 0 45px rgb(0, 26, 255),
+      0 0 55px rgb(0, 26, 255),
+      0 0 70px rgb(0, 26, 255),
+      0 0 80px rgb(0, 26, 255);
+  } 
+}
+/* button */
 a,a:hover, a:active{
     text-decoration: none;
     color: #FFFFFF;
