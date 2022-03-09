@@ -72,6 +72,7 @@ html,body {
         transition: all 0.7s ease;
     }
     .navlinks{
+        color: hsl(197, 100%, 50%);
         background: #50505067;
         clip-path: circle(50px at 90% -20%);
         -webkit-clip-path: circle(50px at 90% -10%);
