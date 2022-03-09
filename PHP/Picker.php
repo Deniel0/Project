@@ -11,10 +11,10 @@
         readfile("picked_parts.txt");
     }
     require 'includes/db.includes.php';
-    include_once 'html_header.php';
+    include_once 'header_picker.php';
 ?>
 <head>
-<link rel="stylesheet" href="css/picker.css">
+    <link rel="stylesheet" href="css/picker.css">
 </head>
 <body>
     <div class="pcontainer">
@@ -23,7 +23,7 @@
 <form action="" method="post" id="jump">
 <h3 class="pickertarget"><i class="fa-solid fa-microchip"></i> Select your CPU:</h3>
 <select class="form-select rounded shadow" data-live-search="true" name="cpu">
-    <!-- <option value="first" selected id="ogoption">Choose</option> -->
+    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT cpu.Manufacturer_id, manufacturer.Manufacturer, Name, Clock FROM cpu, manufacturer WHERE cpu.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY Name ASC";
     $result = mysqli_query($conn, $sql);
@@ -37,6 +37,7 @@
 <!-- Motherboard -->
 <h3><i class="fa-solid fa-chess-board"></i> Select your Motherboard:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="Motherboard">
+    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT motherboard.Manufacturer_id, manufacturer.Manufacturer, Name FROM motherboard, manufacturer WHERE motherboard.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
@@ -50,6 +51,7 @@
 <!-- CPU cooler -->
 <h3><i class="fa-solid fa-fan"></i> Select your CPU cooler:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="cooler">
+    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT cpu_cooler.Manufacturer_id, manufacturer.Manufacturer, Model, Type, RPM FROM cpu_cooler, manufacturer WHERE cpu_cooler.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
@@ -63,6 +65,7 @@
 <!-- RAM -->
 <h3><i class="fa-solid fa-memory"></i> Select your RAM:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="RAM">
+    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT ram.Manufacturer_id, manufacturer.Manufacturer, ram.ram_type_id, ram_type.model, Capacity, Speed, Modules FROM ram, manufacturer, ram_type WHERE ram.Manufacturer_id=manufacturer.Manufacturer_id AND ram.ram_type_id=ram_type.ram_type_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
@@ -76,6 +79,7 @@
 <!-- 1st.:Storage -->
 <h3><i class="fa-solid fa-hard-drive"></i> Select your 1st.:Storage:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="Storage">
+    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
@@ -89,6 +93,7 @@
 <!-- 2nd.:Storage -->
 <h3><i class="fa-solid fa-hard-drive"></i> Select your 2nd.:Storage:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="ndStorage">
+    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
@@ -102,6 +107,7 @@
 <!-- PowerSupply -->
 <h3><i class="fa-solid fa-plug"></i> Select your PowerSupply:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="PowerSupply">
+    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT power_supply.Manufacturer_id, manufacturer.Manufacturer, Name, Wattage, Efficiency_Rating, Modular FROM power_supply, manufacturer WHERE power_supply.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
@@ -112,12 +118,13 @@
     }
     echo "</select> <br>";
 ?>
-    <button type="submit" class="btn btn-outline-success" name="save">
-        <i class="fa-solid fa-download"></i> Save
-    </button>
+        <!-- button -->
+        <button type="submit" class="startb" name="save" role="button">
+            <span class="text"><i class="fa-solid fa-download"></i> Save</span>
+        </button>
+        <!-- close -->
     </form>
 </div>
-
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <?php

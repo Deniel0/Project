@@ -3,6 +3,7 @@ ul {
 	padding-left: 0;
 }
 footer {
+	/* position: relative; */
 	background: rgba(0,0,0,.8);
 	color: #bbb;
 	line-height: 1.5;

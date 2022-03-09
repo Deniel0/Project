@@ -1,10 +1,19 @@
 img{
     height: 300px;
     width: 350px;
+    padding: 10%;
+}
+body{
+    background:
+        linear-gradient(rgb(63, 0, 122), transparent),
+        linear-gradient(to top left, rgb(0, 143, 143), transparent),
+        linear-gradient(to top right, rgb(8, 0, 124), transparent);
+    background-blend-mode: screen;
+    /* background-image: url(../images/bg1.jpg);
+    background-size: cover; */
 }
 .flex-container {
     list-style: none;
-    border: 1px solid silver;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -17,14 +26,30 @@ img{
     justify-content: center;
     gap: 20px;
 }
-.bg{
-    /* width: 100%;
-    height: fit-content; */
-    background-image: url(../images/bg1.jpg);
-    background-size: cover;
+p{
+    padding: 10%;
+    color: aliceblue;
 }
-
+a{
+    text-decoration: none;
+}
 .wrap{ 
 -webkit-flex-wrap: wrap;
 flex-wrap: wrap;
+}
+.content{
+    display: flex;
+    justify-content: center;
+  }
+.content .card{
+    position: relative;
+    width: 320px;
+    height:fit-content;
+    border-radius: 20px;
+    /* overflow: hidden; */
+    background:
+        linear-gradient(rgba(63, 0, 122, 0.61), transparent),
+        linear-gradient(to top left, rgba(0, 15, 97, 0.61), transparent),
+        linear-gradient(to top right, rgba(8, 0, 124, 0.61), transparent);
+    background-blend-mode: screen;
 }
