@@ -1,9 +1,0 @@
-CPU: Intel I9-12900KF 3.2 GHz
-Motherboard: MSI MPG Z690 EDGE 
-CPU cooler: NZXT Kraken Z73 Water 1800
-RAM: Kingston DDR4 128 GB 3600  MHz 4 piece
-Video Card: Gigabyte GeForce RTX 3080Ti 12GB GDDR6X 1365 MHz 1770 MHz
-Storage: Samsung SSD M.2 980 PRO 1 TB 7000/5100 MB/s
-2nd Storage: Seagate HDD Barracuda 20 TB 7200RPM
-Case: Asus TUF Gaming GT301
-PowerSupply: be quiet! Dark Power Pro 12 1500W 80+ Titanium Full
