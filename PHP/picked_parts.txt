@@ -1,9 +1,9 @@
-CPU: Intel I5-10500 3.1 GHz
-Motherboard: Asus TUF GAMING B660M-PLUS 
-CPU cooler: NZXT Kraken X63 Water 2000
-RAM: Corsair DDR4 16 GB 3600  MHz 1 piece
-Video Card: Asus GeForce GTX 1650S 4GB GDDR6 1530 MHz 1815 MHz
-Storage: Samsung SSD-2.5 870 EVO 1 TB 560/530 MB/s
-2nd Storage: Samsung SSD M.2 980 PRO 1 TB 7000/5100 MB/s
-Case: be quiet! Silent Base 800
-PowerSupply: Asus ROG Strix G 1000W 80+ Gold Full
+CPU: Intel I9-12900KF 3.2 GHz
+Motherboard: MSI MPG Z690 EDGE 
+CPU cooler: NZXT Kraken Z73 Water 1800
+RAM: Kingston DDR4 128 GB 3600  MHz 4 piece
+Video Card: Gigabyte GeForce RTX 3080Ti 12GB GDDR6X 1365 MHz 1770 MHz
+Storage: Samsung SSD M.2 980 PRO 1 TB 7000/5100 MB/s
+2nd Storage: Seagate HDD Barracuda 20 TB 7200RPM
+Case: Asus TUF Gaming GT301
+PowerSupply: be quiet! Dark Power Pro 12 1500W 80+ Titanium Full
