@@ -31,8 +31,9 @@
     while ($row = mysqli_fetch_array($result)){
         echo "<option value='". $row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."</option>";
     }
-    echo "</select> <br>";
+    // echo "</select> <br>";
 ?>
+</select> <br>
 
 <!-- Motherboard -->
 <h3><i class="fa-solid fa-chess-board"></i> Select your Motherboard:</h3>
