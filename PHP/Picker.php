@@ -1,7 +1,7 @@
 <?php
     if(isset($_POST['save'])){
         $myfile = fopen("picked_parts.txt", "w") or die("Unable to open file!");
-        $txt = "CPU: ".$_POST["cpu"]."\n"."Motherboard: ".$_POST["Motherboard"]."\n"."CPU cooler: ".$_POST["cooler"]."\n"."RAM: ".$_POST["RAM"]."Video Card: ".$_POST["gpu"]."\n"."\n"."Storage: ".$_POST["Storage"]."\n"."2nd Storage: ".$_POST["ndStorage"]."\n"."Case: ".$_POST["case"]."\n"."PowerSupply: ".$_POST["PowerSupply"]."\n";
+        $txt = "CPU: ".$_POST["cpu"]."\n"."Motherboard: ".$_POST["Motherboard"]."\n"."CPU cooler: ".$_POST["cooler"]."\n"."RAM: ".$_POST["RAM"]."\n"."Video Card: ".$_POST["gpu"]."\n"."Storage: ".$_POST["Storage"]."\n"."2nd Storage: ".$_POST["ndStorage"]."\n"."Case: ".$_POST["case"]."\n"."PowerSupply: ".$_POST["PowerSupply"]."\n";
         fwrite($myfile, $txt);
         fclose($myfile);
         header("Content-Disposition: attachment; filename=\"" . basename("picked_parts.txt") . "\"");
