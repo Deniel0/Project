@@ -1,0 +1,9 @@
+CPU: Intel I5-10500 3.1 GHz
+Motherboard: Asus TUF GAMING B660M-PLUS 
+CPU cooler: NZXT Kraken X63 Water 2000
+RAM: Corsair DDR4 16 GB 3600  MHz 1 piece
+Video Card: Asus GeForce GTX 1650S 4GB GDDR6 1530 MHz 1815 MHz
+Storage: Samsung SSD-2.5 870 EVO 1 TB 560/530 MB/s
+2nd Storage: Samsung SSD M.2 980 PRO 1 TB 7000/5100 MB/s
+Case: be quiet! Silent Base 800
+PowerSupply: Asus ROG Strix G 1000W 80+ Gold Full

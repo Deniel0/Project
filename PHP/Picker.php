@@ -44,11 +44,11 @@
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        // echo $row['Manufacturer'] . " " . $row['Name'];
         echo "<option value='". $row['Manufacturer'] . " " . $row['Name'] .  " " ."'>".$row['Manufacturer'] . " " . $row['Name'] .  " " ."</option>";
     }
-    echo "</select> <br>";
+    //echo "</select> <br>";
 ?>
+</select> <br>
 <!-- CPU cooler -->
 <h3><i class="fa-solid fa-fan"></i> Select your CPU cooler:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="cooler">
@@ -58,11 +58,11 @@
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        echo $row['Manufacturer'] . " " . $row['Model'] .  " " . $row['Type'] .  " " . $row['RPM'];
-        echo "<option value='".$row['Manufacturer'] . " " . $row['Model'] .  " " . $row['Type'] .  " " . $row['RPM']. "'</option>" ;
+        echo "<option value='".$row['Manufacturer'] . " " . $row['Model'] .  " " . $row['Type'] .  " " . $row['RPM']. "'>".$row['Manufacturer'] . " " . $row['Model'] .  " " . $row['Type'] .  " " . $row['RPM']. "</option>" ;
     }
-    echo "</select> <br>";
+    //echo "</select> <br>";
 ?>
+</select> <br>
 <!-- RAM -->
 <h3><i class="fa-solid fa-memory"></i> Select your RAM:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="RAM">
@@ -72,11 +72,11 @@
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        echo $row['Manufacturer'] . " " . $row['model'] .  " " . $row['Capacity'] . " " . $row['Speed'] . " " . $row['Modules'] . " piece";
-        echo "<option value='".$row['Manufacturer'] . " " . $row['model'] .  " " . $row['Capacity'] . " " . $row['Speed'] . " " . $row['Modules'] . " piece". "'</option>" ;
+        echo "<option value='".$row['Manufacturer'] . " " . $row['model'] .  " " . $row['Capacity'] . " " . $row['Speed'] . " " . $row['Modules'] . " piece". "'>".$row['Manufacturer'] . " " . $row['model'] .  " " . $row['Capacity'] . " " . $row['Speed'] . " " . $row['Modules'] . " piece". "</option>" ;
     }
-    echo "</select> <br>";
+    //echo "</select> <br>";
 ?>
+</select> <br>
 <!-- GPU -->
 <h3><i class="fa-solid fa-gamepad"></i> Select your Video Card:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="gpu">
@@ -86,11 +86,11 @@
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        echo $row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] . " " . $row['Core_clock'] . " " . $row['Boost_clock'];
-        echo "<option value='".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] . " " . $row['Core_clock'] . " " . $row['Boost_clock']."'</option>" ;
+        echo "<option value='".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] . " " . $row['Core_clock'] . " " . $row['Boost_clock']."'>".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] . " " . $row['Core_clock'] . " " . $row['Boost_clock']."</option>" ;
     }
-    echo "</select> <br>";
+    //echo "</select> <br>";
 ?>
+</select> <br>
 <!-- 1st.:Storage -->
 <h3><i class="fa-solid fa-hard-drive"></i> Select your 1st.:Storage:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="Storage">
@@ -100,11 +100,11 @@
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        echo $row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed'];
-        echo "<option value='".$row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']. "'</option>" ;
+        echo "<option value='".$row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']. "'>".$row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']. "</option>" ;
     }
-    echo "</select> <br>";
+    //echo "</select> <br>";
 ?>
+</select> <br>
 <!-- 2nd.:Storage -->
 <h3><i class="fa-solid fa-hard-drive"></i> Select your 2nd.:Storage:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="ndStorage">
@@ -114,11 +114,11 @@
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        echo $row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed'];
-        echo "<option value='". $row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']."'</option>" ;
+        echo "<option value='". $row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']."'>". $row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']."</option>" ;
     }
-    echo "</select> <br>";
+    //echo "</select> <br>";
 ?>
+</select> <br>
 <!-- Case -->
 <h3><i class="fa-solid fa-fan"></i> Select your Case:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="case">
@@ -128,11 +128,11 @@
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        echo $row['Manufacturer'] . " " . $row['Name'];
-        echo "<option value='".$row['Manufacturer'] . " " . $row['Name']. "'</option>" ;
+        echo "<option value='".$row['Manufacturer'] . " " . $row['Name']. "'>".$row['Manufacturer'] . " " . $row['Name']. "</option>" ;
     }
-    echo "</select> <br>";
+    //echo "</select> <br>";
 ?>
+</select> <br>
 <!-- PowerSupply -->
 <h3><i class="fa-solid fa-plug"></i> Select your PowerSupply:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="PowerSupply">
@@ -142,11 +142,11 @@
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        echo $row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Wattage'] . " " . $row['Efficiency_Rating'] . " " . $row['Modular'];
-        echo "<option value='".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Wattage'] . " " . $row['Efficiency_Rating'] . " " . $row['Modular']. "'</option>" ;
+        echo "<option value='".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Wattage'] . " " . $row['Efficiency_Rating'] . " " . $row['Modular']. "'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Wattage'] . " " . $row['Efficiency_Rating'] . " " . $row['Modular']. "</option>" ;
     }
-    echo "</select> <br>";
+    // echo "</select> <br>";
 ?>
+</select> <br>
         <!-- button -->
         <button type="submit" class="startb" name="save" role="button">
             <span class="text"><i class="fa-solid fa-download"></i> Save</span>
