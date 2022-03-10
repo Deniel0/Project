@@ -31,6 +31,7 @@
     while ($row = mysqli_fetch_array($result)){
         echo "<option value='". $row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."</option>";
     }
+    //"<p value='""'></p>"
     // echo "</select> <br>";
 ?>
 </select> <br>
