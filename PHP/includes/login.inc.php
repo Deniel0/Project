@@ -4,7 +4,6 @@ if (isset($_POST["submit"])) {
     $password = $_POST["password"];
     require_once 'db.includes.php';
     require_once 'functions.inc.php';
-    echo 'test';
     if (emptyInputLogin($username, $password) != false) {
         echo 'ures';
         header("location: ../login2.php?error=emptyinput");

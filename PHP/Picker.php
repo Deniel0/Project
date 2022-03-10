@@ -1,7 +1,7 @@
 <?php
     if(isset($_POST['save'])){
         $myfile = fopen("picked_parts.txt", "w") or die("Unable to open file!");
-        $txt = "CPU: ".$_POST["cpu"]."\n"."Motherboard: ".$_POST["Motherboard"]."\n"."CPU cooler: ".$_POST["cooler"]."\n"."RAM: ".$_POST["RAM"]."\n"."Storage: ".$_POST["Storage"]."\n"."2nd Storage: ".$_POST["ndStorage"]."\n"."PowerSupply: ".$_POST["PowerSupply"]."\n";
+        $txt = "CPU: ".$_POST["cpu"]."\n"."Motherboard: ".$_POST["Motherboard"]."\n"."CPU cooler: ".$_POST["cooler"]."\n"."RAM: ".$_POST["RAM"]."Video Card: ".$_POST["gpu"]."\n"."\n"."Storage: ".$_POST["Storage"]."\n"."2nd Storage: ".$_POST["ndStorage"]."\n"."Case: ".$_POST["case"]."\n"."PowerSupply: ".$_POST["PowerSupply"]."\n";
         fwrite($myfile, $txt);
         fclose($myfile);
         header("Content-Disposition: attachment; filename=\"" . basename("picked_parts.txt") . "\"");
@@ -76,6 +76,20 @@
     }
     echo "</select> <br>";
 ?>
+<!-- GPU -->
+<h3><i class="fa-solid fa-gamepad"></i> Select your Video Card:</h3>
+<select  class="form-select rounded shadow" data-live-search="true" name="gpu">
+    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
+<?php
+    $sql = "SELECT gpu.Manufacturer_id, manufacturer.Manufacturer, Type, Name, Memory_size, Memory_type, Core_clock, Boost_clock  FROM gpu, manufacturer WHERE gpu.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    while ($row = mysqli_fetch_array($result)){
+        echo $row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] . " " . $row['Core_clock'] . " " . $row['Boost_clock'];
+        echo "<option value='".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] . " " . $row['Core_clock'] . " " . $row['Boost_clock']."'</option>" ;
+    }
+    echo "</select> <br>";
+?>
 <!-- 1st.:Storage -->
 <h3><i class="fa-solid fa-hard-drive"></i> Select your 1st.:Storage:</h3>
 <select  class="form-select rounded shadow" data-live-search="true" name="Storage">
@@ -101,6 +115,20 @@
     while ($row = mysqli_fetch_array($result)){
         echo $row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed'];
         echo "<option value='". $row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']."'</option>" ;
+    }
+    echo "</select> <br>";
+?>
+<!-- Case -->
+<h3><i class="fa-solid fa-fan"></i> Select your Case:</h3>
+<select  class="form-select rounded shadow" data-live-search="true" name="case">
+    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
+<?php
+    $sql = "SELECT case_pc.Manufacturer_id, manufacturer.Manufacturer, Name FROM case_pc, manufacturer WHERE case_pc.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    while ($row = mysqli_fetch_array($result)){
+        echo $row['Manufacturer'] . " " . $row['Name'];
+        echo "<option value='".$row['Manufacturer'] . " " . $row['Name']. "'</option>" ;
     }
     echo "</select> <br>";
 ?>
