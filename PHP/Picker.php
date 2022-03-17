@@ -148,11 +148,17 @@
     // echo "</select> <br>";
 ?>
 </select> <br>
+    <?php 
+        if(isset($_SESSION['username'])){
+    ?>
         <!-- button -->
         <button type="submit" class="startb" name="save" role="button">
             <span class="text"><i class="fa-solid fa-download"></i> Save</span>
         </button>
         <!-- close -->
+    <?php 
+        }
+    ?>
     </form>
 </div>
 </body>
