@@ -133,3 +133,14 @@ background: none;
   min-width: 196px;
 }
 }
+@media (max-width: 768px) {
+    h1{
+        font-weight: 100;
+        font-size: 2vh;
+        justify-content: center;
+    }
+    .bigger{
+        font-size: 7vh;
+        justify-content: center;
+    }
+}

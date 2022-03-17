@@ -34,9 +34,15 @@
                             }
                         ?>
                     </span>
-                    <button type="submit" class="startb" name="save" role="button">
-                        <span class="text"><i class="fa-solid fa-download"></i> Save</span>
-                    </button>
+                    <?php 
+                        if(isset($_SESSION['username'])){
+                    ?>
+                        <button type="submit" class="startb" name="save" role="button">
+                            <span class="text"><i class="fa-solid fa-download"></i> Save</span>
+                        </button>
+                    <?php 
+                        }
+                    ?>
             </li>
             <button onclick="arrow1()" id="click"><i class="fa-solid fa-up-down"></i></button>
         </div>
@@ -54,9 +60,15 @@
                     }
                 ?>
                 </span>
-                <button type="submit" class="startb" name="save" role="button">
-                    <span class="text"><i class="fa-solid fa-download"></i> Save</span>
-                </button>
+                <?php 
+                    if(isset($_SESSION['username'])){
+                ?>
+                    <button type="submit" class="startb" name="save" role="button">
+                        <span class="text"><i class="fa-solid fa-download"></i> Save</span>
+                    </button>
+                    <?php 
+                        }
+                    ?>
             </li>
             <button onclick="arrow2()" id="click"><i class="fa-solid fa-up-down"></i></button>
         </div>
@@ -74,9 +86,15 @@
                     }
                 ?>
                 </span>
-                <button type="submit" class="startb" name="save" role="button">
-                    <span class="text"><i class="fa-solid fa-download"></i> Save</span>
-                </button>
+                <?php 
+                    if(isset($_SESSION['username'])){
+                ?>
+                    <button type="submit" class="startb" name="save" role="button">
+                        <span class="text"><i class="fa-solid fa-download"></i> Save</span>
+                    </button>
+                <?php 
+                    }
+                ?>
             </li>
             <button onclick="arrow3()" id="click"><i class="fa-solid fa-up-down"></i></button>
         </div>
@@ -94,9 +112,15 @@
                     }
                 ?>
                 </span>
-                <button type="submit" class="startb" name="save" role="button">
-                    <span class="text"><i class="fa-solid fa-download"></i> Save</span>
-                </button>
+                <?php 
+                    if(isset($_SESSION['username'])){
+                ?>
+                    <button type="submit" class="startb" name="save" role="button">
+                        <span class="text"><i class="fa-solid fa-download"></i> Save</span>
+                    </button>
+                <?php 
+                    }
+                ?>
             </li>
             <button onclick="arrow4()" id="click"><i class="fa-solid fa-up-down"></i></button>
         </div>
@@ -114,9 +138,16 @@
                     }
                 ?>
                 </span>
-                <button type="submit" class="startb" name="save" role="button">
-                    <span class="text"><i class="fa-solid fa-download"></i> Save</span>
-                </button>
+                <?php 
+                    if(isset($_SESSION['username'])){
+        ?>
+        <button type="submit" class="startb" name="save" role="button">
+            <span class="text"><i class="fa-solid fa-download"></i> Save</span>
+        </button>
+
+<?php 
+    }
+?>
             </li>
             <button onclick="arrow5()" id="click"><i class="fa-solid fa-up-down"></i></button>
         </div>
@@ -134,9 +165,16 @@
                     }
                 ?>
                 </span>
-                <button type="submit" class="startb" name="save" role="button">
-                    <span class="text"><i class="fa-solid fa-download"></i> Save</span>
-                </button>
+                <?php 
+                    if(isset($_SESSION['username'])){
+        ?>
+        <button type="submit" class="startb" name="save" role="button">
+            <span class="text"><i class="fa-solid fa-download"></i> Save</span>
+        </button>
+
+<?php 
+    }
+?>
             </li>
             <button onclick="arrow6()" id="click"><i class="fa-solid fa-up-down"></i></button>
         </div>
@@ -154,9 +192,15 @@
                     }
                 ?>
                 </span>
-                <button type="submit" class="startb" name="save" role="button">
-                    <span class="text"><i class="fa-solid fa-download"></i> Save</span>
-                </button>
+                <?php 
+                    if(isset($_SESSION['username'])){
+                ?>
+                    <button type="submit" class="startb" name="save" role="button">
+                        <span class="text"><i class="fa-solid fa-download"></i> Save</span>
+                    </button>
+                <?php 
+                    }
+                ?>
             </li>
             <button onclick="arrow7()" id="click"><i class="fa-solid fa-up-down"></i></button>
         </div>
@@ -174,9 +218,15 @@
                     }
                 ?>
                 </span>
-                <button type="submit" class="startb" name="save" role="button">
-                    <span class="text"><i class="fa-solid fa-download"></i> Save</span>
-                </button>
+                <?php 
+                    if(isset($_SESSION['username'])){
+                ?>
+                    <button type="submit" class="startb" name="save" role="button">
+                        <span class="text"><i class="fa-solid fa-download"></i> Save</span>
+                    </button>
+                <?php 
+                    }
+                ?>
             </li>
             <button onclick="arrow8()" id="click"><i class="fa-solid fa-up-down"></i></button>
         </div>
@@ -194,9 +244,15 @@
                     }
                 ?>
                 </span>
-                <button type="submit" class="startb" name="save" role="button">
-                    <span class="text"><i class="fa-solid fa-download"></i> Save</span>
-                </button>
+                <?php 
+                    if(isset($_SESSION['username'])){
+                ?>
+                    <button type="submit" class="startb" name="save" role="button">
+                        <span class="text"><i class="fa-solid fa-download"></i> Save</span>
+                    </button>
+                <?php
+                    }
+                ?>
             </li>
             <button onclick="arrow9()" id="click"><i class="fa-solid fa-up-down"></i></button>
         </div>
@@ -214,9 +270,15 @@
                     }
                 ?>
                 </span>
-                <button type="submit" class="startb" name="save" role="button">
-                    <span class="text"><i class="fa-solid fa-download"></i> Save</span>
-                </button>
+                <?php 
+                    if(isset($_SESSION['username'])){
+                ?>
+                    <button type="submit" class="startb" name="save" role="button">
+                        <span class="text"><i class="fa-solid fa-download"></i> Save</span>
+                    </button>
+                <?php 
+                    }
+                ?>
             </li>
             <button onclick="arrow10()" id="click"><i class="fa-solid fa-up-down"></i></button>
         </div>
@@ -234,9 +296,15 @@
                         }
                     ?>
                     </span>
-                    <button type="submit" class="startb" name="save" role="button">
-                        <span class="text"><i class="fa-solid fa-download"></i> Save</span>
-                    </button>
+                    <?php 
+                    if(isset($_SESSION['username'])){
+                    ?>
+                        <button type="submit" class="startb" name="save" role="button">
+                            <span class="text"><i class="fa-solid fa-download"></i> Save</span>
+                        </button>
+                    <?php 
+                        }
+                    ?>
                 </li>
                 <button onclick="arrow11()" id="click"><i class="fa-solid fa-up-down"></i></button>
         </div>
@@ -254,9 +322,15 @@
                     }
                 ?>
                 </span>
-                <button type="submit" class="startb" name="save" role="button">
-                    <span class="text"><i class="fa-solid fa-download"></i> Save</span>
-                </button>
+                <?php 
+                    if(isset($_SESSION['username'])){
+                ?>
+                    <button type="submit" class="startb" name="save" role="button">
+                        <span class="text"><i class="fa-solid fa-download"></i> Save</span>
+                    </button>
+                <?php 
+                    }
+                ?>
             </li>
             <button onclick="arrow12()" id="click"><i class="fa-solid fa-up-down"></i></button>
         </div>
