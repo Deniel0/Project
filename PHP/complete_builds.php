@@ -17,14 +17,14 @@
         ?>
             <div class="card">
                 <li class="flex-item">
-                    <img src="<?=$row['images']?>" alt="gamingpc">
+                    <img src="<?=$row['images']?>" class="gepek" alt="gamingpc">
                     <span id="dots<?=$index?>">Setup:</span>
                         <span  id="more<?=$index?>" style="display:none">
                             <?php
                                 echo "<p id='build".$index."' value='". $row['cpu'] . " " . $row['motherboard'] .  " " . $row['cpu_cooler']." ".$row['ram']." ".$row['gpu']." ".$row['first_storage']." ".$row['sec_storage']." ".$row['pc_case']." ".$row['power_supply']."'>
                                 "."Cpu: ".$row['cpu'] . "<br>Motherboard: " . $row['motherboard'] .  "<br>Cpu_cooler: " . $row['cpu_cooler']."<br>RAM: ".$row['ram']."<br>Video Card: ".$row['gpu']."<br>First_storage: ".$row['first_storage']."<br>Second_storage: ".$row['sec_storage']."<br>Case: ".$row['pc_case']."<br>Power Supply: ".$row['power_supply']."</p>";
                             ?>
-                        <img style="width:150px; align-self:center" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<?php echo $_SERVER['SERVER_NAME']."/daniel/szakdolgozat/download/comp.php?buildId=".$index?>" alt="">
+                        <img class="qrcode" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<?php echo $_SERVER['SERVER_NAME']."/daniel/szakdolgozat/download/comp.php?buildId=".$index?>" alt="">
                         </span>
                         <?php 
                             if(isset($_SESSION['username'])){
