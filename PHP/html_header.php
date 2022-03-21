@@ -1,5 +1,5 @@
 <?php
-    session_name('partpicker');
+    // require 'includes/session.php';
     session_start();
 ?>
 <head>
