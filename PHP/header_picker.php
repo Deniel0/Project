@@ -6,6 +6,5 @@
     <link rel="stylesheet" href="css/picker.css">
 </head>
 <body>
-    <div class="container">
-    </div>
+    
 </body>

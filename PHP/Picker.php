@@ -22,7 +22,7 @@
 <!-- CPU -->
 <form action="" method="post" id="jump">
 <h3 class="pickertarget"><i class="fa-solid fa-microchip"></i> Select your CPU:</h3>
-<select class="form-select rounded shadow" data-live-search="true" name="cpu">
+<select name="cpu">
     <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT cpu.Manufacturer_id, manufacturer.Manufacturer, Name, Clock FROM cpu, manufacturer WHERE cpu.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY Name ASC";
@@ -38,7 +38,7 @@
 
 <!-- Motherboard -->
 <h3><i class="fa-solid fa-chess-board"></i> Select your Motherboard:</h3>
-<select  class="form-select rounded shadow" data-live-search="true" name="Motherboard">
+<select name="Motherboard">
     <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT motherboard.Manufacturer_id, manufacturer.Manufacturer, Name FROM motherboard, manufacturer WHERE motherboard.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
@@ -52,7 +52,7 @@
 </select> <br>
 <!-- CPU cooler -->
 <h3><i class="fa-solid fa-fan"></i> Select your CPU cooler:</h3>
-<select  class="form-select rounded shadow" data-live-search="true" name="cooler">
+<select name="cooler">
     <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT cpu_cooler.Manufacturer_id, manufacturer.Manufacturer, Model, Type, RPM FROM cpu_cooler, manufacturer WHERE cpu_cooler.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
@@ -66,7 +66,7 @@
 </select> <br>
 <!-- RAM -->
 <h3><i class="fa-solid fa-memory"></i> Select your RAM:</h3>
-<select  class="form-select rounded shadow" data-live-search="true" name="RAM">
+<select name="RAM">
     <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT ram.Manufacturer_id, manufacturer.Manufacturer, ram.ram_type_id, ram_type.model, Capacity, Speed, Modules FROM ram, manufacturer, ram_type WHERE ram.Manufacturer_id=manufacturer.Manufacturer_id AND ram.ram_type_id=ram_type.ram_type_id ORDER BY manufacturer.Manufacturer ASC";
@@ -80,7 +80,7 @@
 </select> <br>
 <!-- GPU -->
 <h3><i class="fa-solid fa-gamepad"></i> Select your Video Card:</h3>
-<select  class="form-select rounded shadow" data-live-search="true" name="gpu">
+<select name="gpu">
     <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT gpu.Manufacturer_id, manufacturer.Manufacturer, Type, Name, Memory_size, Memory_type, Core_clock, Boost_clock  FROM gpu, manufacturer WHERE gpu.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
@@ -94,7 +94,7 @@
 </select> <br>
 <!-- 1st.:Storage -->
 <h3><i class="fa-solid fa-hard-drive"></i> Select your 1st.:Storage:</h3>
-<select  class="form-select rounded shadow" data-live-search="true" name="Storage">
+<select name="Storage">
     <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";
@@ -108,7 +108,7 @@
 </select> <br>
 <!-- 2nd.:Storage -->
 <h3><i class="fa-solid fa-hard-drive"></i> Select your 2nd.:Storage:</h3>
-<select  class="form-select rounded shadow" data-live-search="true" name="ndStorage">
+<select name="ndStorage">
     <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";
@@ -122,7 +122,7 @@
 </select> <br>
 <!-- Case -->
 <h3><i class="fa-solid fa-fan"></i> Select your Case:</h3>
-<select  class="form-select rounded shadow" data-live-search="true" name="case">
+<select name="case">
     <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT case_pc.Manufacturer_id, manufacturer.Manufacturer, Name FROM case_pc, manufacturer WHERE case_pc.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
@@ -136,7 +136,7 @@
 </select> <br>
 <!-- PowerSupply -->
 <h3><i class="fa-solid fa-plug"></i> Select your PowerSupply:</h3>
-<select  class="form-select rounded shadow" data-live-search="true" name="PowerSupply">
+<select name="PowerSupply">
     <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT power_supply.Manufacturer_id, manufacturer.Manufacturer, Name, Wattage, Efficiency_Rating, Modular FROM power_supply, manufacturer WHERE power_supply.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
