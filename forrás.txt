@@ -1,0 +1,4 @@
+https://goqr.me/api/
+https://fontawesome.com
+https://fonts.google.com
+https://css-tricks.com/how-to-create-neon-text-with-css/
