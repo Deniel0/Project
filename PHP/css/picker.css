@@ -3,6 +3,9 @@
     margin-left: 10%;
     margin-right: 10%;
 }
+h3{
+  font-size: 3vh;
+}
 /* backgorund */
 body{
     color: aliceblue;
@@ -120,6 +123,9 @@ select::-ms-expand {
 @media (max-width: 900px) {
   select{
     width: 30em;
+  }
+  h3{
+    font-size: 2vh;
   }
 }
 @media (max-width: 768px) {

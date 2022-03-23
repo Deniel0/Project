@@ -40,9 +40,6 @@ body {
 	min-width: 12.5rem;
 }
 /* Social */
-.social {
-	/* padding: 0 1.875rem 1.25rem; */
-}
 .social-list {
 	display: flex;
 	justify-content: center;

@@ -6,11 +6,9 @@
     <div class="second">
       <h2 class="title">About</h2>
       <ul>
-        <li><a href="#" target="_blank">Blank</a></li>
-        <li><a href="#" target="_blank">Blank</a></li>
-        <li><a href="#" target="_blank">Blank</a></li>
-        <li><a href="#" target="_blank">Blank</a></li>
-        <li><a href="#" target="_blank">Blank</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="Picker.php">Picker</a></li>
+        <li><a href="complete_builds.php">Complete Builds</a></li>
       </ul>
     </div>
     <div class="second">
