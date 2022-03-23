@@ -16,13 +16,14 @@
 <head>
     <link rel="stylesheet" href="css/picker.css">
 </head>
+
 <body>
     <div class="pcontainer">
 <!-- form-select -->
 <!-- CPU -->
 <form action="" method="post" id="jump">
 <h3 class="pickertarget"><i class="fa-solid fa-microchip"></i> Select your CPU:</h3>
-<select name="cpu">
+<select id="cpu" name="cpu">
 <?php
     $sql = "SELECT cpu.Manufacturer_id, manufacturer.Manufacturer, Name, Clock FROM cpu, manufacturer WHERE cpu.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY Name ASC";
     $result = mysqli_query($conn, $sql);
@@ -31,7 +32,22 @@
         echo "<option value='". $row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."</option>";
     }
 ?>
-</select> <br>
+</select><br>
+
+<!-- <script type="text/javascript">
+    function FechState(cpu) {
+        $('#state').html('');
+        $.ajax({
+            type:'post',
+            url:'Picker.php',
+            data:{ c_id:id},
+            success: function(data){
+                $('#state').html(data);
+            }
+        })
+    }
+</script> -->
+<!-- https://www.cluemediator.com/dynamic-dependent-select-box-using-jquery-ajax-and-php -->
 
 <!-- Motherboard -->
 <h3><i class="fa-solid fa-chess-board"></i> Select your Motherboard:</h3>
