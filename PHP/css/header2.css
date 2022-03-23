@@ -39,6 +39,7 @@ html,body {
 .nav ul li a:hover {
     color: hsl(197, 100%, 50%);
 }
+
 /*Styling Hamburger Icon*/
 .hamburger div{
     width: 30px;
@@ -110,9 +111,6 @@ li{
 .navlinks li:nth-child(6){
     transition: all 0.5s ease 0.9s;
 }
-/* .navlinks li:nth-child(7){
-    transition: all 0.5s ease 1s;
-} */
 }
 @media (max-width: 900px) {
     .nav {

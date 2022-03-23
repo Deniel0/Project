@@ -25,13 +25,11 @@ session_start();
     <ul class="navlinks">
         <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
         <li><a href="Picker.php"><i class="fa-solid fa-puzzle-piece"></i> Picker</a></li>
-        <!-- <a href="#jump" onclick="window.open('Picker.php');"><i class="fa-solid fa-puzzle-piece"></i> Picker</a> -->
         <li><a href="complete_builds.php"><i class="fa-solid fa-desktop"></i> Complete Builds</a></li>
         <?php 
                 if(!isset($_SESSION['username'])){
             ?>
             <li><a href="login2.php"><i class="fa-solid fa-right-to-bracket"></i> Log in</a></li>
-            <!-- <li><a href="signup.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li> -->
             <li><a href="signup2.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li>
             <?php 
                 }

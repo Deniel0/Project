@@ -127,7 +127,6 @@
     while ($row = mysqli_fetch_array($result)){
         echo "<option value='".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Wattage'] . " " . $row['Efficiency_Rating'] . " " . $row['Modular']. "'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Wattage'] . " " . $row['Efficiency_Rating'] . " " . $row['Modular']. "</option>" ;
     }
-    // echo "</select> <br>";
 ?>
 </select> <br>
     <?php 
