@@ -114,7 +114,14 @@ select:focus {
 select::-ms-expand {
   display: none;
 }
-
+/* select:last-of-type{
+  margin-bottom: 5vh;
+} */
+@media (max-width: 900px) {
+  select{
+    width: 30em;
+  }
+}
 @media (max-width: 768px) {
   select{
     width: 20em;

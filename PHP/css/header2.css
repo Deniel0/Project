@@ -51,7 +51,7 @@ html,body {
     display: none;
 }
 /*Stying for small screens*/
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 900px){
 nav{
     position: fixed;
     z-index: 3;
@@ -114,7 +114,7 @@ li{
     transition: all 0.5s ease 1s;
 } */
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .nav {
         margin-top: -5vh;
     }
