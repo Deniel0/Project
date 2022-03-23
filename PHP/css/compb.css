@@ -1,9 +1,16 @@
 .gepek{
-  /* height: 300px;
-  width: 350px; */
-  height: 80%;
+  height: 70%;
   width: 80%;
-  padding: 10%;
+  /* padding: 10%; */
+}
+.image-fit{
+  min-height: 314px;
+  max-height: 314px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
 }
 .qrcode{
   height: 50%;
@@ -96,7 +103,8 @@ flex-wrap: wrap;
 .content .card{
   position: relative;
   width: 320px;
-  height:fit-content;
+  min-height: 462.55px;
+  height: fit-content;
   border-radius: 20px;
   background:
     linear-gradient(rgba(63, 0, 122, 0.61), transparent),

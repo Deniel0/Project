@@ -17,7 +17,7 @@
         ?>
             <div class="card">
                 <li class="flex-item">
-                    <img src="<?=$row['images']?>" class="gepek" alt="gamingpc">
+                    <div class="image-fit"><img src="<?=$row['images']?>" class="gepek" alt="gamingpc"></div>
                     <span id="dots<?=$index?>">Setup:</span>
                         <span  id="more<?=$index?>" style="display:none">
                             <?php
