@@ -23,7 +23,6 @@
 <form action="" method="post" id="jump">
 <h3 class="pickertarget"><i class="fa-solid fa-microchip"></i> Select your CPU:</h3>
 <select name="cpu">
-    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT cpu.Manufacturer_id, manufacturer.Manufacturer, Name, Clock FROM cpu, manufacturer WHERE cpu.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY Name ASC";
     $result = mysqli_query($conn, $sql);
@@ -31,15 +30,12 @@
     while ($row = mysqli_fetch_array($result)){
         echo "<option value='". $row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."</option>";
     }
-    //"<p value='""'></p>"
-    // echo "</select> <br>";
 ?>
 </select> <br>
 
 <!-- Motherboard -->
 <h3><i class="fa-solid fa-chess-board"></i> Select your Motherboard:</h3>
 <select name="Motherboard">
-    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT motherboard.Manufacturer_id, manufacturer.Manufacturer, Name FROM motherboard, manufacturer WHERE motherboard.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
@@ -47,13 +43,11 @@
     while ($row = mysqli_fetch_array($result)){
         echo "<option value='". $row['Manufacturer'] . " " . $row['Name'] .  " " ."'>".$row['Manufacturer'] . " " . $row['Name'] .  " " ."</option>";
     }
-    //echo "</select> <br>";
 ?>
 </select> <br>
 <!-- CPU cooler -->
 <h3><i class="fa-solid fa-fan"></i> Select your CPU cooler:</h3>
 <select name="cooler">
-    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT cpu_cooler.Manufacturer_id, manufacturer.Manufacturer, Model, Type, RPM FROM cpu_cooler, manufacturer WHERE cpu_cooler.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
@@ -61,13 +55,11 @@
     while ($row = mysqli_fetch_array($result)){
         echo "<option value='".$row['Manufacturer'] . " " . $row['Model'] .  " " . $row['Type'] .  " " . $row['RPM']. "'>".$row['Manufacturer'] . " " . $row['Model'] .  " " . $row['Type'] .  " " . $row['RPM']. "</option>" ;
     }
-    //echo "</select> <br>";
 ?>
 </select> <br>
 <!-- RAM -->
 <h3><i class="fa-solid fa-memory"></i> Select your RAM:</h3>
 <select name="RAM">
-    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT ram.Manufacturer_id, manufacturer.Manufacturer, ram.ram_type_id, ram_type.model, Capacity, Speed, Modules FROM ram, manufacturer, ram_type WHERE ram.Manufacturer_id=manufacturer.Manufacturer_id AND ram.ram_type_id=ram_type.ram_type_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
@@ -75,13 +67,11 @@
     while ($row = mysqli_fetch_array($result)){
         echo "<option value='".$row['Manufacturer'] . " " . $row['model'] .  " " . $row['Capacity'] . " " . $row['Speed'] . " " . $row['Modules'] . " piece". "'>".$row['Manufacturer'] . " " . $row['model'] .  " " . $row['Capacity'] . " " . $row['Speed'] . " " . $row['Modules'] . " piece". "</option>" ;
     }
-    //echo "</select> <br>";
 ?>
 </select> <br>
 <!-- GPU -->
 <h3><i class="fa-solid fa-gamepad"></i> Select your Video Card:</h3>
 <select name="gpu">
-    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT gpu.Manufacturer_id, manufacturer.Manufacturer, Type, Name, Memory_size, Memory_type, Core_clock, Boost_clock  FROM gpu, manufacturer WHERE gpu.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
@@ -89,13 +79,11 @@
     while ($row = mysqli_fetch_array($result)){
         echo "<option value='".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] . " " . $row['Core_clock'] . " " . $row['Boost_clock']."'>".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] . " " . $row['Core_clock'] . " " . $row['Boost_clock']."</option>" ;
     }
-    //echo "</select> <br>";
 ?>
 </select> <br>
 <!-- 1st.:Storage -->
 <h3><i class="fa-solid fa-hard-drive"></i> Select your 1st.:Storage:</h3>
 <select name="Storage">
-    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
@@ -103,13 +91,11 @@
     while ($row = mysqli_fetch_array($result)){
         echo "<option value='".$row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']. "'>".$row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']. "</option>" ;
     }
-    //echo "</select> <br>";
 ?>
 </select> <br>
 <!-- 2nd.:Storage -->
 <h3><i class="fa-solid fa-hard-drive"></i> Select your 2nd.:Storage:</h3>
 <select name="ndStorage">
-    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
@@ -117,13 +103,11 @@
     while ($row = mysqli_fetch_array($result)){
         echo "<option value='". $row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']."'>". $row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']."</option>" ;
     }
-    //echo "</select> <br>";
 ?>
 </select> <br>
 <!-- Case -->
 <h3><i class="fa-solid fa-fan"></i> Select your Case:</h3>
 <select name="case">
-    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT case_pc.Manufacturer_id, manufacturer.Manufacturer, Name FROM case_pc, manufacturer WHERE case_pc.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
@@ -131,13 +115,11 @@
     while ($row = mysqli_fetch_array($result)){
         echo "<option value='".$row['Manufacturer'] . " " . $row['Name']. "'>".$row['Manufacturer'] . " " . $row['Name']. "</option>" ;
     }
-    //echo "</select> <br>";
 ?>
 </select> <br>
 <!-- PowerSupply -->
 <h3><i class="fa-solid fa-plug"></i> Select your PowerSupply:</h3>
 <select name="PowerSupply">
-    <!-- <option value="first" selected id="ogoption">Choose...</option> -->
 <?php
     $sql = "SELECT power_supply.Manufacturer_id, manufacturer.Manufacturer, Name, Wattage, Efficiency_Rating, Modular FROM power_supply, manufacturer WHERE power_supply.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);

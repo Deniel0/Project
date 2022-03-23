@@ -60,6 +60,7 @@ a,a:hover, a:active{
   touch-action: manipulation;
   white-space: nowrap;
   margin-top: 5vh;
+  cursor: pointer;
   }
   .startb:active,
   .startb:hover {
