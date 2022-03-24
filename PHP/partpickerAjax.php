@@ -27,7 +27,7 @@
         if ($result=$conn->query($sql)){
             if($result->num_rows>0){
                 $row=$result->fetch_assoc();
-                $sql="SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id AND m2_comp=".$row['m2_comp']." ORDER BY manufacturer.Manufacturer ASC";
+                $sql="SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id AND m2_comp in (0 ".($row['m2_comp']==1 ? ", 1" : "").") ORDER BY manufacturer.Manufacturer ASC";
                 $result=$conn->query($sql);
                 while($row=$result->fetch_assoc()){
                      $storages[]=$row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed'];
