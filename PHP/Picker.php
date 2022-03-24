@@ -23,44 +23,31 @@
 <!-- CPU -->
 <form action="" method="post" id="jump">
 <h3 class="pickertarget"><i class="fa-solid fa-microchip"></i> Select your CPU:</h3>
-<select id="cpu" name="cpu">
+<select id="cpu" name="cpu" onchange="changeCpu()">
+    <!-- <option value="" selected disabled>Choose...</option> -->
 <?php
-    $sql = "SELECT cpu.Manufacturer_id, manufacturer.Manufacturer, Name, Clock FROM cpu, manufacturer WHERE cpu.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY Name ASC";
+    $sql = "SELECT cpu.Manufacturer_id, manufacturer.Manufacturer, Name, Clock, cpu_id FROM cpu, manufacturer WHERE cpu.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY Name ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        echo "<option value='". $row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."</option>";
+        echo "<option id='".$row['cpu_id']."' value='". $row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."</option>";
     }
 ?>
 </select><br>
 
-<!-- <script type="text/javascript">
-    function FechState(cpu) {
-        $('#state').html('');
-        $.ajax({
-            type:'post',
-            url:'Picker.php',
-            data:{ c_id:id},
-            success: function(data){
-                $('#state').html(data);
-            }
-        })
-    }
-</script> -->
-<!-- https://www.cluemediator.com/dynamic-dependent-select-box-using-jquery-ajax-and-php -->
-
 <!-- Motherboard -->
 <h3><i class="fa-solid fa-chess-board"></i> Select your Motherboard:</h3>
-<select name="Motherboard">
+<select name="Motherboard" id="Motherboard" onchange="changeStorage()">
 <?php
-    $sql = "SELECT motherboard.Manufacturer_id, manufacturer.Manufacturer, Name FROM motherboard, manufacturer WHERE motherboard.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
+    $sql = "SELECT motherboard.Manufacturer_id, manufacturer.Manufacturer, Name, motherboard.motherboard_id FROM motherboard, manufacturer WHERE motherboard.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        echo "<option value='". $row['Manufacturer'] . " " . $row['Name'] .  " " ."'>".$row['Manufacturer'] . " " . $row['Name'] .  " " ."</option>";
+        echo "<option id='".$row['motherboard_id']."' value='". $row['Manufacturer'] . " " . $row['Name'] .  " " ."'>".$row['Manufacturer'] . " " . $row['Name'] .  " " ."</option>";
     }
 ?>
-</select> <br>
+</select><br>
+
 <!-- CPU cooler -->
 <h3><i class="fa-solid fa-fan"></i> Select your CPU cooler:</h3>
 <select name="cooler">
@@ -87,49 +74,49 @@
 </select> <br>
 <!-- GPU -->
 <h3><i class="fa-solid fa-gamepad"></i> Select your Video Card:</h3>
-<select name="gpu">
+<select name="gpu" id="gpu" onchange="changeCase()">
 <?php
-    $sql = "SELECT gpu.Manufacturer_id, manufacturer.Manufacturer, Type, Name, Memory_size, Memory_type, Core_clock, Boost_clock  FROM gpu, manufacturer WHERE gpu.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
+    $sql = "SELECT gpu.Manufacturer_id, manufacturer.Manufacturer, Type, Name, Memory_size, Memory_type, Core_clock, Boost_clock, gpu_id FROM gpu, manufacturer WHERE gpu.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        echo "<option value='".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] . " " . $row['Core_clock'] . " " . $row['Boost_clock']."'>".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] . " " . $row['Core_clock'] . " " . $row['Boost_clock']."</option>" ;
+        echo "<option id='".$row['gpu_id']."' value='".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] . " " . $row['Core_clock'] . " " . $row['Boost_clock']."'>".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] . " " . $row['Core_clock'] . " " . $row['Boost_clock']."</option>" ;
     }
 ?>
 </select> <br>
 <!-- 1st.:Storage -->
 <h3><i class="fa-solid fa-hard-drive"></i> Select your 1st.:Storage:</h3>
-<select name="Storage">
+<select name="Storage" id="Storage">
 <?php
-    $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";
+    $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed, storage_id FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        echo "<option value='".$row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']. "'>".$row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']. "</option>" ;
+        echo "<option id='".$row['storage_id']."' value='".$row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']. "'>".$row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']. "</option>" ;
     }
 ?>
 </select> <br>
 <!-- 2nd.:Storage -->
 <h3><i class="fa-solid fa-hard-drive"></i> Select your 2nd.:Storage:</h3>
-<select name="ndStorage">
+<select name="ndStorage" id="ndStorage">
 <?php
-    $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";
+    $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed, storage_id FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        echo "<option value='". $row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']."'>". $row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']."</option>" ;
+        echo "<option id='".$row['storage_id']."' value='". $row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']."'>". $row['Manufacturer'] . " " . $row['s_type'] .  " " . $row['Name'] . " " . $row['Capacity'] . " " . $row['R_W_speed']."</option>" ;
     }
 ?>
 </select> <br>
 <!-- Case -->
 <h3><i class="fa-solid fa-fan"></i> Select your Case:</h3>
-<select name="case">
+<select name="case" id="case">
 <?php
-    $sql = "SELECT case_pc.Manufacturer_id, manufacturer.Manufacturer, Name FROM case_pc, manufacturer WHERE case_pc.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
-    $result = mysqli_query($conn, $sql);
+    $sql = "SELECT case_pc.Manufacturer_id, manufacturer.Manufacturer, Name, case_id FROM case_pc, manufacturer  WHERE case_pc.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
+    $result = $conn->query($sql);
     $resultCheck = mysqli_num_rows($result);
     while ($row = mysqli_fetch_array($result)){
-        echo "<option value='".$row['Manufacturer'] . " " . $row['Name']. "'>".$row['Manufacturer'] . " " . $row['Name']. "</option>" ;
+        echo "<option  id='".$row['case_id']."' value='".$row['Manufacturer'] . " " . $row['Name']. "'>".$row['Manufacturer'] . " " . $row['Name']. "</option>" ;
     }
 ?>
 </select> <br>
@@ -158,8 +145,88 @@
     ?>
     </form>
 </div>
+<script>
+        changeCpu();
+        changeStorage();
+        changeCase();
+    function changeCpu() {
+        var id=document.getElementById("cpu").options[document.getElementById("cpu").selectedIndex].id;
+        $.ajax({
+            type:'post',
+            url:'partpickerAjax.php',
+            dataType:"JSON",
+            data:{ action:'cpu',c_id:id},
+            success: function(data){
+                var motherboard = document.getElementById("Motherboard");
+                motherboard.options.length=0;
+                for(i=0;i<data.length;i++){
+                    opt = document.createElement("option");
+                    opt.value = data[i].name;
+                    opt.textContent = data[i].name;
+                    opt.id=data[i].id;
+                    motherboard.appendChild(opt);
+                }
+            },
+        })
+    }
+    function changeStorage() {
+        var id=document.getElementById("Motherboard").options[document.getElementById("Motherboard").selectedIndex].id;
+        $.ajax({
+            type:'post',
+            url:'partpickerAjax.php',
+            dataType:"JSON",
+            data:{ action:'Motherboard',m_id:id},
+            success: function(data){
+                var motherboard = document.getElementById("Storage");
+                motherboard.options.length=0;
+                for(j=0;j<data.length;j++){
+                    opt = document.createElement("option");
+                    opt.value = data[j];
+                    opt.textContent = data[j];
+                    motherboard.appendChild(opt);
+                }
+                motherboard = document.getElementById("ndStorage");
+                motherboard.options.length=0;
+                for(j=0;j<data.length;j++){
+                    opt = document.createElement("option");
+                    opt.value = data[j];
+                    opt.textContent = data[j];
+                    motherboard.appendChild(opt);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                console.log(jqXHR);
+                console.log(textStatus);
+                console.log(errorThrown);
+            }
+        })
+    }
+    function changeCase() {
+        var id=document.getElementById("gpu").options[document.getElementById("gpu").selectedIndex].id;
+        $.ajax({
+            type:'post',
+            url:'partpickerAjax.php',
+            dataType:"JSON",
+            data:{ action:'gpu',g_id:id},
+            success: function(data){
+                var motherboard = document.getElementById("case");
+                motherboard.options.length=0;
+                for(i=0;i<data.length;i++){
+                    opt = document.createElement("option");
+                    opt.value = data[i];
+                    opt.textContent = data[i];
+                    motherboard.appendChild(opt);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                console.log(jqXHR);
+                console.log(textStatus);
+                console.log(errorThrown);
+            }
+        })
+    }
+</script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <?php
-    include_once 'footer.php'; 
+    include_once 'footer.php';
 ?>

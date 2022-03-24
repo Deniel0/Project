@@ -30,11 +30,9 @@ select {
     color: inherit;
     background-color: $option;
   }
-  /* Remove focus outline */
   &:focus {
     outline: none;
   }
-  /* Remove IE arrow */
   &::-ms-expand {
     display: none;
   }
