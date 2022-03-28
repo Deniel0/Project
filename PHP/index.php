@@ -3,6 +3,8 @@
     include_once 'html_header.php';
 ?>
 <head>
+    <!-- Title -->
+  <title>Home</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>

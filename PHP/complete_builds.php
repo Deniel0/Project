@@ -3,6 +3,8 @@
     include_once 'html_header.php';
 ?>
 <head>
+    <!-- Title -->
+  <title>Complete Builds</title>
 <link rel="stylesheet" href="css/compb.css">
 </head>
 <body>

@@ -4,6 +4,8 @@
     require_once 'includes/signup.inc.php';
 ?>
 <head>
+  <!-- Title -->
+  <title>Signup</title>
   <link rel="stylesheet" href="css/login2.css">
 </head>
 <body>

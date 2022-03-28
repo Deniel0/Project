@@ -4,6 +4,8 @@
     require_once 'includes/login.inc.php';
 ?>
 <head>
+  <!-- Title -->
+  <title>Login</title>
   <link rel="stylesheet" href="css/login2.css">
 </head>
 <body>
@@ -26,7 +28,7 @@
       <input type="submit" name="submit" value="Login">
     </form>
     <div class="sign-txt">Don't have an account yet? <a href="signup2.php">Signup</a></div>
-      <?php
+<?php
   if (isset($_GET["error"])) {
     if ($_GET["error"] == "emptyinput") {
       echo "<p>Fill in all fields!</p>";

@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- Title -->
-  <title>Partpicker</title>
   <!-- Title icon -->
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
   <!-- css links -->
@@ -17,29 +15,29 @@
 <!-- navbar -->
 <nav class="nav">
     <div class="hamburger">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
     </div>
     <ul class="navlinks">
         <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
         <li><a href="Picker.php"><i class="fa-solid fa-puzzle-piece"></i> Picker</a></li>
         <li><a href="complete_builds.php"><i class="fa-solid fa-desktop"></i> Complete Builds</a></li>
         <?php 
-                if(!isset($_SESSION['username'])){
-            ?>
+            if(!isset($_SESSION['username'])){
+        ?>
             <li><a href="login2.php"><i class="fa-solid fa-right-to-bracket"></i> Log in</a></li>
             <li><a href="signup2.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li>
-            <?php 
-                }
-            ?>
-            <?php 
-                if(isset($_SESSION['username'])){
-            ?>
+        <?php 
+            }
+        ?>
+        <?php 
+            if(isset($_SESSION['username'])){
+        ?>
             <li><a href="includes/logout.php"><i class="fa-solid fa-power-off"></i> Log out</a></li>
-            <?php 
-                }
-            ?>
+        <?php 
+            }
+        ?>
     </ul>
 </nav>
 <!-- Home image -->
