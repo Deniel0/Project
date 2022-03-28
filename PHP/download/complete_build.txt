@@ -1,9 +1,0 @@
-CPU: Intel I3-10100 3.6 GHz
-Motherboard: Asus PRIME B460-PLUS
-CPU cooler: be quiet! Dark Rock Pro 4 Air
-RAM: Corsair DDR4 32 GB 3200 MHz
-Video Card: Asus GeForce GTX 1050 2GB GDDR5
-Storage: Kingston SSD-2.5 A400 240 GB
-2nd Storage: Samsung SSD M.2 980 PRO 2 TB
-Case: be quiet! Silent Base 802
-PowerSupply: Asus RMx (2021) 750W 80+ Gold Full

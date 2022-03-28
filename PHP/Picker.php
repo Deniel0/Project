@@ -11,7 +11,7 @@
             readfile("picked_parts.txt");
     }
     require 'includes/db.includes.php';
-    include_once 'header_picker.php';
+    include_once 'html_header.php';
 ?>
 <!-- Head -->
     <head>
