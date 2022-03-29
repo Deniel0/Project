@@ -1,5 +1,6 @@
 <?php
     require 'includes/db.includes.php';
+    require 'adminadd.php';
     include_once 'html_header.php';
 ?>
     <head>
@@ -22,18 +23,12 @@
                 <br>
                 <button class="button-6" role="button" type="submit">Add Admin</button>
             </form>
-            <?php
-                /*$sql = "INSERT INTO `admin`(`user_id`, `prev`) VALUES ('[value-2]')";*/
-            ?>
             <form action="" method="POST">
                 <h4>Manufacturer:</h4>
-                <input required pattern="[A-Za-z]{12}" type="text" name="man_name" id="">
+                <input required type="text" name="man_name" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Manufacturer</button>
             </form>
-            <?php
-                $sql = "INSERT INTO `manufacturer`(`Manufacturer`) VALUES (".$_POST["man_name"] .")";
-            ?>
             <form action="" method="POST">
                 <h4>Chipset:</h4>
                 <input required pattern="[A-Za-z]{12}" type="text" name="chip_name" id="">

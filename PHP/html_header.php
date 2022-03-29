@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    require 'includes/functions.inc.php';
 ?>
 <head>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -28,6 +29,13 @@
         ?>
             <li><a href="login2.php"><i class="fa-solid fa-right-to-bracket"></i> Log in</a></li>
             <li><a href="signup2.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li>
+        <?php 
+            }
+        ?>
+        <?php 
+            if(CheckAdmin($conn)){
+        ?>
+            <li><a href="admin.php"><i class="fa-solid fa-toolbox"></i> Admin</a></li>
         <?php 
             }
         ?>
