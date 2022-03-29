@@ -1,7 +1,6 @@
 .gepek{
   height: 70%;
   width: 80%;
-  /* padding: 10%; */
 }
 .image-fit{
   min-height: 314px;
@@ -44,18 +43,18 @@ body{
     }
 }
 .flex-container {
-    list-style: none;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: flex;
-    color: azure;
-    padding-left: 10%;
-    padding-right: 10%;
-    justify-content: center;
-    gap: 20px;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  color: azure;
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: center;
+  gap: 20px;
 }
 .flex-item{
   margin-left: 5%;
@@ -93,13 +92,13 @@ a{
   color: aliceblue;
 }
 .wrap{ 
--webkit-flex-wrap: wrap;
-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .content{
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
+}
 .content .card{
   position: relative;
   width: 320px;
