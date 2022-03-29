@@ -25,6 +25,7 @@ input {
 }
 select{
     width: fit-content;
+    height: 3vh;
 }
 
 /* CSS */
