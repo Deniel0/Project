@@ -25,7 +25,7 @@
 <!-- CPU -->
     <form action="" method="post" id="jump">
             <h3 class="pickertarget"><i class="fa-solid fa-microchip"></i> Select your CPU:</h3>
-        <select id="cpu" name="cpu" onchange="changeCpu()">
+        <select required id="cpu" name="cpu" onchange="changeCpu()">
             <option value="" selected disabled>Select CPU...</option>
             <?php
                 $sql = "SELECT cpu.Manufacturer_id, manufacturer.Manufacturer, Name, Clock, cpu_id FROM cpu, manufacturer WHERE cpu.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY Name ASC";
@@ -38,7 +38,7 @@
         </select><br>
 <!-- Motherboard -->
         <h3><i class="fa-solid fa-chess-board"></i> Select your Motherboard:</h3>
-    <select name="Motherboard" id="Motherboard" onchange="changeStorage()">
+    <select required name="Motherboard" id="Motherboard" onchange="changeStorage()">
         <option value="" selected disabled>Select Motherboard...</option>
         <?php
             $sql = "SELECT motherboard.Manufacturer_id, manufacturer.Manufacturer, Name, motherboard.motherboard_id FROM motherboard, manufacturer WHERE motherboard.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
@@ -51,7 +51,7 @@
     </select><br>
 <!-- CPU cooler -->
         <h3><i class="fa-solid fa-fan"></i> Select your CPU cooler:</h3>
-    <select name="cooler">
+    <select required name="cooler">
         <option value="" selected disabled>Select CPU Cooler...</option>
         <?php
             $sql = "SELECT cpu_cooler.Manufacturer_id, manufacturer.Manufacturer, Model, Type, RPM FROM cpu_cooler, manufacturer WHERE cpu_cooler.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
@@ -64,7 +64,7 @@
     </select><br>
 <!-- RAM -->
         <h3><i class="fa-solid fa-memory"></i> Select your RAM:</h3>
-    <select name="RAM">
+    <select required name="RAM">
         <option value="" selected disabled>Select RAM...</option>
         <?php
             $sql = "SELECT ram.Manufacturer_id, manufacturer.Manufacturer, ram.ram_type_id, ram_type.model, Capacity, Speed, Modules FROM ram, manufacturer, ram_type WHERE ram.Manufacturer_id=manufacturer.Manufacturer_id AND ram.ram_type_id=ram_type.ram_type_id ORDER BY manufacturer.Manufacturer ASC";
@@ -77,7 +77,7 @@
     </select><br>
 <!-- GPU -->
         <h3><i class="fa-solid fa-gamepad"></i> Select your Video Card:</h3>
-    <select name="gpu" id="gpu" onchange="changeCase()">
+    <select required name="gpu" id="gpu" onchange="changeCase()">
         <option value="" selected disabled>Select Video Card...</option>
         <?php
             $sql = "SELECT gpu.Manufacturer_id, manufacturer.Manufacturer, Type, Name, Memory_size, Memory_type, gpu_id FROM gpu, manufacturer WHERE gpu.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
@@ -90,7 +90,7 @@
     </select><br>
 <!-- 1st.:Storage -->
         <h3><i class="fa-solid fa-hard-drive"></i> Select your 1st.:Storage:</h3>
-    <select name="Storage" id="Storage">
+    <select required name="Storage" id="Storage">
         <option value="" selected disabled>Select 1st.:Storage...</option>
         <?php
             $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed, storage_id FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";
@@ -103,7 +103,7 @@
     </select><br>
 <!-- 2nd.:Storage -->
         <h3><i class="fa-solid fa-hard-drive"></i> Select your 2nd.:Storage:</h3>
-    <select name="ndStorage" id="ndStorage">
+    <select required name="ndStorage" id="ndStorage">
         <option value="" selected disabled>Select 2nd.:Storage...</option>
         <?php
             $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed, storage_id FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";
@@ -116,7 +116,7 @@
     </select><br>
 <!-- Case -->
         <h3><i class="fa-solid fa-fan"></i> Select your Case:</h3>
-    <select name="case" id="case">
+    <select required name="case" id="case">
     <option value="" selected disabled>Select case...</option>
     <?php
         $sql = "SELECT case_pc.Manufacturer_id, manufacturer.Manufacturer, Name, case_id FROM case_pc, manufacturer  WHERE case_pc.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
@@ -129,7 +129,7 @@
     </select><br>
 <!-- PowerSupply -->
         <h3><i class="fa-solid fa-plug"></i> Select your PowerSupply:</h3>
-    <select name="PowerSupply">
+    <select required name="PowerSupply">
     <option value="" selected disabled>Select Power Supply...</option>
     <?php
         $sql = "SELECT power_supply.Manufacturer_id, manufacturer.Manufacturer, Name, Wattage, Efficiency_Rating, Modular FROM power_supply, manufacturer WHERE power_supply.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
