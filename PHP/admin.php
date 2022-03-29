@@ -107,7 +107,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Motherboard:</h3>
-            <form action="yo.php" method="POST">
+            <form action="" method="POST">
             <h4>Socket:</h4>
                 <select required name="Socket">
                     <option value="" selected disabled>Select Socket...</option>
@@ -157,7 +157,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add CPU cooler:</h3>
-            <form action="yo.php" method="POST">
+            <form action="" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer...</option>
@@ -189,9 +189,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add RAM:</h3>
-            <form action="yo.php" method="POST">
-                <h4>Socket id:</h4>
-                <input required type="number" pattern="[0-9]" min="1" name="socket" id="">
+            <form action="" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer...</option>
@@ -233,7 +231,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add GPU:</h3>
-            <form action="yo.php" method="POST">
+            <form action="" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer...</option>
@@ -269,7 +267,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Storage:</h3>
-            <form action="yo.php" method="POST">
+            <form action="" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer...</option>
@@ -311,7 +309,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Case:</h3>
-            <form action="yo.php" method="POST">
+            <form action="" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer...</option>
@@ -337,7 +335,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Power Supply:</h3>
-            <form action="yo.php" method="POST">
+            <form action="" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer...</option>
