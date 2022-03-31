@@ -3,12 +3,12 @@
     require 'adminadd.php';
     include_once 'html_header.php';
 ?>
-    <head>
-        <title>Admin</title>
-        <link rel="stylesheet" href="css/select.css">
-        <link rel="stylesheet" href="css/admin.css">
-        <link rel="stylesheet" href="css/compb.css">
-    </head>
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/select.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/compb.css">
+</head>
 <?php
 ?>
 <body>
@@ -83,25 +83,25 @@
             </form>
             <form action="" method="POST">
                 <h4>Ram type:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="ram_type" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="ram_type" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Ram type</button>
             </form>
             <form action="" method="POST">
                 <h4>Storage type:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="stype_name" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="stype_name" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Storage type</button>
             </form>
             <form action="" method="POST">
                 <h4>Socket:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="Socket" id="">
+                    <input required type="text" name="Socket" id="">
                 <br>
-                <button class="button-6" role="button" type="submit">Add Storage type</button>
+                <button class="button-6" role="button" type="submit">Add Socket</button>
             </form>
             <form action="" method="POST">
                 <h4>Cooler Type:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="cooler_id" id="">
+                    <input required type="text" name="cooler_id" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Cooler Type</button>
             </form>
@@ -143,9 +143,9 @@
                 <h4>Number of threads:</h4>
                     <input required type="number" pattern="[0-9]" min="1" max="512" name="threads" id="">
                 <h4>Clock:</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="clock" id="">
+                    <input required type="text" name="clock" id="">
                 <h4>Turbo clock:</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="Turbo_clock" id="">
+                    <input required type="text" name="Turbo_clock" id="">
                 <h4>Size of L3 cache:</h4>
                     <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="l3-cache" id="">
                 <h4>Wattage:</h4>
@@ -199,7 +199,7 @@
                 <h4>M.2 compatibility (0/1):</h4>
                     <input required type="number" pattern="[0-9]" min="0" max="1" name="m2_comp" id="">
                 <h4>Motherboard name:</h4>
-                    <input required pattern="[A-Za-z]{1,12}{16}" type="text" name="m_name" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}{16}" type="text" name="m_name" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Motherboard</button>
             </form>
@@ -223,7 +223,7 @@
                 ?>
                 </select><br>
                 <h4>Model:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="model" id="">
+                    <input required type="text" name="model" id="">
                 <h4>Cooler Type:</h4>
                     <select required name="cooler_id">
                     <option value="" selected disabled>Select Cooler Type</option>
@@ -237,7 +237,7 @@
                     ?>
                     </select><br>
                 <h4>RPM:</h4>
-                    <input required type="number" pattern="[0-9]" min="1" min="5000" name="rmp" id="">
+                    <input required type="number" min="1" max="5000" name="rmp" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add CPU cooler</button>
             </form>
@@ -273,13 +273,13 @@
                     ?>
                 </select><br>
                 <h4>Capacity (GB):</h4>
-                    <input required pattern="[A-Za-z]{1,12}{5}" type="text" name="capacity" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}{5}" type="text" name="capacity" id="">
                 <h4>Speed (Mhz):</h4>
-                    <input required pattern="[A-Za-z]{1,12}{7}" type="text" name="speed" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}{7}" type="text" name="speed" id="">
                 <h4>Modules:</h4>
                     <input required type="number" pattern="[0-9]" min="1" max="8" name="modules" id="">
                 <h4>Cas Latency:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="cas_Latency" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="cas_Latency" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add RAM</button>
             </form>
@@ -303,19 +303,19 @@
                 ?>
                 </select><br>
                 <h4>Type:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="type" id="">
+                    <input required type="text" name="type" id="">
                 <h4>GPU name:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="g_name" id="">
+                    <input required type="text" name="g_name" id="">
                 <h4>Memory size(GB):</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="memory_size" id="">
+                    <input required type="text" name="memory_size" id="">
                 <h4>Memory type:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="memory_type" id="">
+                    <input required type="text" name="memory_type" id="">
                 <h4>Core clock(Mhz):</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="core_clock" id="">
+                    <input required type="text" name="core_clock" id="">
                 <h4>Boost clock(Mhz):</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="boost_clock" id="">
+                    <input required type="text" name="boost_clock" id="">
                 <h4>Length(mm):</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="length" id="">
+                    <input required type="text" name="length" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add GPU</button>
             </form>
@@ -351,11 +351,11 @@
                     ?>
                     </select><br>
                 <h4>Storage name:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="s_name" id="">
+                    <input required type="text" name="s_name" id="">
                 <h4>Capacity:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="capacity" id="">
+                    <input required type="text" name="capacity" id="">
                 <h4>Read/Write speed:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="r_w_speed" id="">
+                    <input required type="text" name="r_w_speed" id="">
                 <h4>M.2 compatibility (0/1):</h4>
                     <input required type="number" pattern="[0-9]" min="0" max="1" name="m2_comp" id="">
                 <br>
@@ -381,9 +381,9 @@
                 ?>
                 </select><br>
                 <h4>Case name:</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="case_name" id="">
+                    <input required type="text" name="case_name" id="">
                 <h4>Max length(mm):</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="max_length" id="">
+                    <input required type="text" name="max_length" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Case</button>
             </form>
@@ -407,11 +407,11 @@
                 ?>
                 </select><br>
                 <h4>Power Supply name:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="pw_name" id="">
+                    <input required type="text" name="pw_name" id="">
                 <h4>Wattage(W):</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="wattage" id="">
+                    <input required type="text" name="wattage" id="">
                 <h4>Efficiency_Rating:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="efficiency_rating" id="">
+                    <input required pattern="[A-Za-z]{1,20}" type="text" name="efficiency_rating" id="">
                 <h4>Modular:</h4>
                     <input required pattern="[A-Za-z]{1,12}" type="text" name="modular" id="">
                 <br>

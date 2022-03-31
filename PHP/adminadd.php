@@ -19,14 +19,19 @@
         $sql = "INSERT INTO ram_type(model) VALUES ('".$_POST["ram_type"] ."')";
     }
     if(isset($_POST['stype_name'])){
-        $sql = "INSERT INTO storage_type(s_type)  VALUES ('".$_POST["stype_name"] ."')";
+        $sql = "INSERT INTO storage_type(s_type) VALUES ('".$_POST["stype_name"] ."')";
     }
-    if(isset($_POST['socket'])){
-        $sql = "INSERT INTO socket(Socket)  VALUES ('".$_POST["socket"] ."')";
+    if(isset($_POST['Socket'])){
+        $sql = "INSERT INTO socket(Socket) VALUES ('".$_POST["Socket"] ."')";
     }
     if(isset($_POST['cooler_id'])){
         $sql = "INSERT INTO cpu_cooler_type(cooler_type) VALUES ('".$_POST["cooler_id"] ."')";
     }
+    /*
+    if(isset($_POST['nev'])and isset($_POST["szam"])and isset($_POST["valami"])){
+        $sql = "INSERT INTO teszt(nev,szam,valami) VALUES ('".$_POST["nev"] ."'".$_POST["szam"] ."'".$_POST["valami"] ."')";
+        $conn->query($sql);
+    }*/
     /*
     if(isset($_POST['Socket']) and isset($_POST['Manufacturer'])and isset($_POST['c_name'])and isset($_POST['seeds']) and isset($_POST['threads']) and isset($_POST['clock']) and isset($_POST['Turbo clock)'] )and isset($_POST['l3-cache)'] )and isset($_POST['TDP'])){
         $sql = "INSERT INTO cpu(Socket_id, Manufacturer_id, Name, Seeds, Threads, Clock, Turbo clock, L3 cache, TDP)
@@ -70,8 +75,10 @@
     /*
     if(isset($_POST['Socket'],$_POST['Manufacturer'],$_POST['Chipset'],$_POST['m2_comp'],$_POST['m_name'])){
         $sql = "INSERT INTO motherboard(Socket_id, Manufacturer_id, chipset_id, m2_comp, Name)
-                VALUES ('".$_POST['Socket']."''".$_POST['Manufacturer']."'".$_POST['Chipset']."'".$_POST['m2_comp']."'".$_POST['m_name'].")";
+                VALUES ('".$_POST['Socket']."'".$_POST['Manufacturer']."'".$_POST['Chipset']."'".$_POST['m2_comp']."'".$_POST['m_name'].")";
     }
+
+    
     if(isset($_POST['Manufacturer'],$_POST['model'],$_POST['type'],$_POST['rmp'])){
         $sql = "INSERT INTO cpu_cooler(Manufacturer_id, Model, cooler_type, RPM)
                 VALUES ('".$_POST['Manufacturer']."''".$_POST['model']."'".$_POST['cooler_type']."'".$_POST['rmp'].")";
@@ -97,7 +104,6 @@
                 VALUES ('".$_POST['Manufacturer']."''".$_POST['pw_name']."'".$_POST['wattage']."'".$_POST['efficiency_rating']."'".$_POST['modular'].")";
     }*/
 
-    // conn
     if (isset($sql)){
         $conn->query($sql);
         header("location:admin.php");
