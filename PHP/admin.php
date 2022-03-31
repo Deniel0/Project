@@ -1,7 +1,7 @@
 <?php
     require 'includes/db.includes.php';
     require 'adminadd.php';
-    include_once 'html_header.php';
+    require 'html_header.php';
 ?>
 <head>
     <title>Admin</title>
@@ -69,7 +69,7 @@
         </div>
         <div class="card">
             <li class="flex-item">
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
                 <h4>Manufacturer:</h4>
                     <input required pattern="[A-Za-z]{1,32}" type="text" name="man_name" id="">
                 <br>
