@@ -113,14 +113,14 @@
             <h3>Add CPU:</h3>
             <form action="" method="POST">
                 <h4>Socket:</h4>
-                <select required name="Socket">
+                    <select required name="Socket">
                     <option value="" selected disabled>Select Socket</option>
                     <?php
                         $sql = "SELECT * FROM socket";
                         $result = mysqli_query($conn, $sql);
                         $resultCheck = mysqli_num_rows($result);
                         while ($row = mysqli_fetch_array($result)){
-                            echo "<option value='".$row['Socket']."'>".$row['Socket']."</option>" ;
+                            echo "<option value='".$row['Socket_id']."'>".$row['Socket']."</option>" ;
                         }
                     ?>
                     </select><br>
@@ -132,12 +132,12 @@
                         $result = mysqli_query($conn, $sql);
                         $resultCheck = mysqli_num_rows($result);
                         while ($row = mysqli_fetch_array($result)){
-                            echo "<option value='".$row['Manufacturer']."'>".$row['Manufacturer']."</option>" ;
+                            echo "<option value='".$row['Manufacturer_id']."'>".$row['Manufacturer']."</option>" ;
                         }
                     ?>
                     </select><br>
                 <h4>Cpu name:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="c_name" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="c_name" id="">
                 <h4>Number of seeds:</h4>
                     <input required type="number" pattern="[0-9]" min="1" max="256" name="seeds" id="">
                 <h4>Number of threads:</h4>
@@ -145,7 +145,7 @@
                 <h4>Clock:</h4>
                     <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="clock" id="">
                 <h4>Turbo clock:</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="Turbo clock" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="Turbo_clock" id="">
                 <h4>Size of L3 cache:</h4>
                     <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="l3-cache" id="">
                 <h4>Wattage:</h4>
@@ -381,9 +381,9 @@
                 ?>
                 </select><br>
                 <h4>Case name:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="case_name" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="case_name" id="">
                 <h4>Max length(mm):</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="max_length" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="max_length" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Case</button>
             </form>

@@ -27,11 +27,47 @@
     if(isset($_POST['cooler_id'])){
         $sql = "INSERT INTO cpu_cooler_type(cooler_type) VALUES ('".$_POST["cooler_id"] ."')";
     }
-    // COOL
-    if(isset($_POST['c_name'])and isset($_POST['seeds']) and isset($_POST['threads']) and isset($_POST['clock']) and isset($_POST['Turbo clock)'] )and isset($_POST['l3-cache)'] )and isset($_POST['TDP'])){
+    /*
+    if(isset($_POST['Socket']) and isset($_POST['Manufacturer'])and isset($_POST['c_name'])and isset($_POST['seeds']) and isset($_POST['threads']) and isset($_POST['clock']) and isset($_POST['Turbo clock)'] )and isset($_POST['l3-cache)'] )and isset($_POST['TDP'])){
         $sql = "INSERT INTO cpu(Socket_id, Manufacturer_id, Name, Seeds, Threads, Clock, Turbo clock, L3 cache, TDP)
-                VALUES ('(SELECT socket_id FROM socket WHERE socket=".$_POST['Socket'].")',' ".$_POST['Manufacturer']."','".$_POST['c_name']."','".$_POST['seeds']."','".$_POST['threads']."','".$_POST['clock']."','".$_POST['Turbo clock']."','".$_POST['l3-cache']."','".$_POST['TDP'].")";
+                VALUES ('
+                ".$_POST['Socket']."',
+                '".$_POST['Manufacturer']."',
+                '".$_POST['c_name']."',
+                '".$_POST['seeds']."',
+                '".$_POST['threads']."',
+                '".$_POST['clock']."',
+                '".$_POST['Turbo clock']."',
+                '".$_POST['l3-cache']."',
+                '".$_POST['TDP']."
+                )";
+    }*/
+
+    /*if(isset($_POST['Socket']) and isset($_POST['Manufacturer'])and isset($_POST['c_name'])and isset($_POST['seeds']) and isset($_POST['threads']) and isset($_POST['clock']) and isset($_POST['Turbo clock)'] )and isset($_POST['l3-cache)'] )and isset($_POST['TDP'])){
+        $sql = "INSERT INTO cpu(Socket_id, Manufacturer_id, Name, Seeds, Threads, Clock, Turbo clock, L3 cache, TDP)
+                VALUES ('(SELECT socket.Socket_id FROM socket WHERE socket.Socket_id=".$_POST['Socket'] .")',
+                '(SELECT Manufacturer_id FROM manufacturer WHERE manufacturer=".$_POST['Manufacturer'] .")',
+                '".$_POST['c_name'] ."',
+                '".$_POST['seeds'] ."',
+                '".$_POST['threads'] ."',
+                '".$_POST['clock'] ."',
+                '".$_POST['Turbo clock'] ."',
+                '".$_POST['l3-cache'] ."',
+                '".$_POST['TDP'] ."
+                )";
+    }*/
+
+    if(isset($_POST['Socket'])and isset($_POST['Manufacturer'])and isset($_POST['c_name'])and isset($_POST['seeds'])and isset($_POST['threads'])and isset($_POST['clock'])and isset($_POST['Turbo_clock'])and isset($_POST['l3-cache'])and isset($_POST['TDP'])){
+        $sql = "INSERT INTO cpu(cpu_id, Socket_id, Manufacturer_id, Name, Seeds, Threads, Clock, Turbo clock, L3 cache, TDP) 
+        VALUES ('".$_POST['Socket']. "','".$_POST['Manufacturer']. "','".$_POST['c_name']. "','".$_POST['seeds']. "','".$_POST['threads']. "','".$_POST['clock']. "','".$_POST['Turbo_clock']. "','".$_POST['l3-cache']. "','".$_POST['TDP']. "')";
     }
+
+    if(isset($_POST['Socket'],$_POST['Manufacturer'],$_POST['c_name'],$_POST['seeds'],$_POST['threads'],$_POST['clock'],$_POST['Turbo_clock'],$_POST['l3-cache'],$_POST['TDP'])){
+        $sql = "INSERT INTO cpu(cpu_id, Socket_id, Manufacturer_id, Name, Seeds, Threads, Clock, Turbo clock, L3 cache, TDP) 
+        VALUES ('".$_POST['Socket']. "','".$_POST['Manufacturer']. "','".$_POST['c_name']. "','".$_POST['seeds']. "','".$_POST['threads']. "','".$_POST['clock']. "','".$_POST['Turbo_clock']. "','".$_POST['l3-cache']. "','".$_POST['TDP']. "')";
+    }
+
+    /*
     if(isset($_POST['Socket'],$_POST['Manufacturer'],$_POST['Chipset'],$_POST['m2_comp'],$_POST['m_name'])){
         $sql = "INSERT INTO motherboard(Socket_id, Manufacturer_id, chipset_id, m2_comp, Name)
                 VALUES ('".$_POST['Socket']."''".$_POST['Manufacturer']."'".$_POST['Chipset']."'".$_POST['m2_comp']."'".$_POST['m_name'].")";
@@ -59,7 +95,8 @@
     if(isset($_POST['Manufacturer'],$_POST['pw_name'],$_POST['wattage'],$_POST['efficiency_rating'],$_POST['modular'])){
         $sql = "INSERT INTO power_supply(Manufacturer_id, Name, Wattage, Efficiency_Rating, Modular)
                 VALUES ('".$_POST['Manufacturer']."''".$_POST['pw_name']."'".$_POST['wattage']."'".$_POST['efficiency_rating']."'".$_POST['modular'].")";
-    }
+    }*/
+
     // conn
     if (isset($sql)){
         $conn->query($sql);
