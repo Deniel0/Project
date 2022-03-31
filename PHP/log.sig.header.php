@@ -35,6 +35,7 @@
             if(isset($_SESSION['username'])){
         ?>
             <li><a href="includes/logout.php"><i class="fa-solid fa-power-off"></i> Log out</a></li>
+            <li class="profil"><i class="fa-solid fa-user"> </i><?php echo $_SESSION['username'] ?></li>
         <?php 
             }
         ?>
