@@ -14,11 +14,10 @@
 <body>
     <div class="content">
         <ul class="flex-container wrap">
-            <!-- Manufacturer -->
         <div class="card">
             <li class="flex-item">
             <form action="" method="POST">
-            <h4>Add admin priv to user:</h4>
+            <h4>Add admin privilege to user:</h4>
             <select required name="admin">
                     <option value="" selected disabled>Users</option>
                     <?php
@@ -33,6 +32,43 @@
                 <br>
                 <button class="button-6" role="button" type="submit">Add Admin</button>
             </form>
+            <form action="" method="POST">
+            <h4>Remove admin privilege:</h4>
+            <select required name="rem_admin">
+                    <option value="" selected disabled>Admins</option>
+                    <?php
+                        $sql = "SELECT admin.user_id, users.username FROM admin, users WHERE admin.user_id=users.user_id ORDER BY username ASC";
+                        $result = mysqli_query($conn, $sql);
+                        $resultCheck = mysqli_num_rows($result);
+                        while ($row = mysqli_fetch_array($result)){
+                            echo "<option value='".$row['user_id']."'>".$row['username']."</option>" ;
+                        }
+                    ?>
+                    </select><br>
+                <br>
+                <button class="button-6" role="button" type="submit">Remove Admin</button>
+            </form>
+            <form action="" method="POST">
+            <h4>Remove user:</h4>
+            <select required name="rem_user">
+                    <option value="" selected disabled>Users</option>
+                    <?php
+                        $sql = $sql = "SELECT * FROM users ORDER BY username ASC";
+                        $result = mysqli_query($conn, $sql);
+                        $resultCheck = mysqli_num_rows($result);
+                        while ($row = mysqli_fetch_array($result)){
+                            echo "<option value='".$row['user_id']."'>".$row['username']."</option>" ;
+                        }
+                    ?>
+                    </select><br>
+                <br>
+                <button class="button-6" role="button" type="submit">Remove User</button>
+            </form>
+            
+            </li>
+        </div>
+        <div class="card">
+            <li class="flex-item">
             <form action="" method="POST">
                 <h4>Manufacturer:</h4>
                     <input required pattern="[A-Za-z]{1,32}" type="text" name="man_name" id="">

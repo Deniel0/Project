@@ -1,7 +1,7 @@
 <?php
     if(isset($_POST['save'])){
         $myfile = fopen("picked_parts.txt", "w") or die("Unable to open file!");
-        $txt = "CPU: ".$_POST["cpu"]."\n"."Motherboard: ".$_POST["Motherboard"]."\n"."CPU cooler: ".$_POST["cooler"]."\n"."RAM: ".$_POST["RAM"]."\n"."Video Card: ".$_POST["gpu"]."\n"."Storage: ".$_POST["Storage"]."\n"."2nd Storage: ".$_POST["ndStorage"]."\n"."Case: ".$_POST["case"]."\n"."PowerSupply: ".$_POST["PowerSupply"]."\n";
+        $txt = "CPU: ".$_POST["cpu"]."\n"."Motherboard: ".$_POST["Motherboard"]."\n"."CPU cooler: ".$_POST["cooler"]." rpm\n"."RAM: ".$_POST["RAM"]."\n"."Video Card: ".$_POST["gpu"]."\n"."Storage: ".$_POST["Storage"]."\n"."2nd Storage: ".$_POST["ndStorage"]."\n"."Case: ".$_POST["case"]."\n"."PowerSupply: ".$_POST["PowerSupply"]."\n";
             fwrite($myfile, $txt);
             fclose($myfile);
             header("Content-Disposition: attachment; filename=\"" . basename("picked_parts.txt") . "\"");
@@ -54,11 +54,11 @@
     <select required name="cooler">
         <option value="" selected disabled>Select CPU Cooler...</option>
         <?php
-            $sql = "SELECT cpu_cooler.Manufacturer_id, manufacturer.Manufacturer, Model, Type, RPM FROM cpu_cooler, manufacturer WHERE cpu_cooler.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
+            $sql = "SELECT cpu_cooler.Manufacturer_id, manufacturer.Manufacturer, Model, cpu_cooler.cooler_type_id, cpu_cooler_type.cooler_type, RPM FROM cpu_cooler, manufacturer, cpu_cooler_type WHERE cpu_cooler.Manufacturer_id=manufacturer.Manufacturer_id AND cpu_cooler.cooler_type_id=cpu_cooler_type.cpu_cooler_type_id ORDER BY manufacturer.Manufacturer ASC";
             $result = mysqli_query($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             while ($row = mysqli_fetch_array($result)){
-                echo "<option value='".$row['Manufacturer'] . " " . $row['Model'] .  " " . $row['Type'] .  " " . $row['RPM']. "'>".$row['Manufacturer'] . " " . $row['Model'] .  " " . $row['Type'] .  " " . $row['RPM']. "</option>" ;
+                echo "<option value='".$row['Manufacturer'] . " " . $row['Model'] .  " " . $row['cooler_type'] .  " " . $row['RPM']. "'>".$row['Manufacturer'] . " " . $row['Model'] .  " " . $row['cooler_type'] .  " " . $row['RPM']. " rpm"."</option>" ;
             }
         ?>
     </select><br>
