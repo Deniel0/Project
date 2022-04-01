@@ -57,51 +57,133 @@
     }
     // Storage type: Ugyan az a típús ne szerepeljen többször az adatbázisban
     if(isset($_POST['stype_name'])){
-        $sql = "INSERT INTO storage_type(s_type) VALUES ('".$_POST["stype_name"] ."')";
+        $storagetype=$_POST['stype_name'];
+        $sql = "SELECT * FROM storage_type WHERE s_type='$storagetype'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $storagetype_error="Storage type is already exist!";
+            }else {
+                $sql = "INSERT INTO storage_type(s_type) VALUES ('".$_POST["stype_name"] ."')";
+                echo "RAM type added to the database.";
+            }
     }
     // Socket: Ugyan az a Socket ne szerepeljen többször az adatbázisban
     if(isset($_POST['Socket'])){
-        $sql = "INSERT INTO socket(Socket) VALUES ('".$_POST["Socket"] ."')";
+        $socket=$_POST['Socket'];
+        $sql = "SELECT * FROM socket WHERE Socket='$socket'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $socket_error="Socket is already exist!";
+            }else {
+                $sql = "INSERT INTO socket(Socket) VALUES ('".$_POST["Socket"] ."')";
+                echo "Socket added to the database.";
+            }
     }
     // CPU cooler type: Ugyan az a típús ne szerepeljen többször az adatbázisban
     if(isset($_POST['cooler_id'])){
-        $sql = "INSERT INTO cpu_cooler_type(cooler_type) VALUES ('".$_POST["cooler_id"] ."')";
+        $coolertype=$_POST['cooler_id'];
+        $sql = "SELECT * FROM cpu_cooler_type WHERE cooler_type='$coolertype'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $coolertype_error="Cooler type is already exist!";
+            }else {
+                $sql = "INSERT INTO cpu_cooler_type(cooler_type) VALUES ('".$_POST["cooler_id"] ."')";
+                echo "Cooler type added to the database.";
+            }
+    }
+    // GPU cooler type: Ugyan az a típús ne szerepeljen többször az adatbázisban
+    if(isset($_POST['gpu_type'])){
+        $gputype=$_POST['gpu_type'];
+        $sql = "SELECT * FROM gpu_type WHERE g_type='$gputype'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $gputype_error="GPU type is already exist!";
+            }else {
+                $sql = "INSERT INTO gpu_type(g_type) VALUES ('".$_POST["gpu_type"] ."')";
+                echo "GPU type added to the database.";
+            }
     }
     // CPU: Ugyan az a nevű (Name/c_name) ne szerepeljen többször az adatbázisban
     if(isset($_POST['Socket'])and isset($_POST['Manufacturer'])and isset($_POST['c_name'])and isset($_POST['seeds'])and isset($_POST['threads'])and isset($_POST['clock'])and isset($_POST['Turbo_clock'])and isset($_POST['l3-cache'])and isset($_POST['TDP'])){
-        $sql = "INSERT INTO cpu (Socket_id, Manufacturer_id, Name, Seeds, Threads, Clock, Turbo_clock, L3_cache, TDP) 
-        VALUES ('".$_POST['Socket']. "','".$_POST['Manufacturer']. "','".$_POST['c_name']. "','".$_POST['seeds']. "','".$_POST['threads']. "','".$_POST['clock']. "','".$_POST['Turbo_clock']. "','".$_POST['l3-cache']. "','".$_POST['TDP']. "')";
+        $cpuname=$_POST['c_name'];
+        $sql = "SELECT * FROM cpu WHERE Name='$cpuname'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $cpuname_error="CPU is already exist!";
+            }else {
+                $sql = "INSERT INTO cpu (Socket_id, Manufacturer_id, Name, Seeds, Threads, Clock, Turbo_clock, L3_cache, TDP) 
+                        VALUES ('".$_POST['Socket']. "','".$_POST['Manufacturer']. "','".$_POST['c_name']. "','".$_POST['seeds']. "','".$_POST['threads']. "','".$_POST['clock']. "','".$_POST['Turbo_clock']. "','".$_POST['l3-cache']. "','".$_POST['TDP']. "')";
+                echo "CPU added to the database.";
+            }
     }
     // Motherboard: Ugyan az a nevű (Name/m_name) ne szerepeljen többször az adatbázisban
     if(isset($_POST['Socket'])and isset($_POST['Manufacturer'])and isset($_POST['Chipset'])and isset($_POST['m2_comp'])and isset($_POST['m_name'])){
-        $sql = "INSERT INTO motherboard (Socket_id, Manufacturer_id, chipset_id, m2_comp, Name)
-        VALUES ('".$_POST['Socket']. "','".$_POST['Manufacturer']. "','".$_POST['Chipset']. "','".$_POST['m2_comp']. "','".$_POST['m_name']. "')";
+        $motherboardname=$_POST['m_name'];
+        $sql = "SELECT * FROM motherboard WHERE Name='$motherboardname'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $motherboardname_error="Motherboard is already exist!";
+            }else {
+                $sql = "INSERT INTO motherboard (Socket_id, Manufacturer_id, chipset_id, m2_comp, Name)
+                        VALUES ('".$_POST['Socket']. "','".$_POST['Manufacturer']. "','".$_POST['Chipset']. "','".$_POST['m2_comp']. "','".$_POST['m_name']. "')";
+                echo "Motherboard added to the database.";
+            }
     }
-    /*
-    if(isset($_POST['Manufacturer'],$_POST['model'],$_POST['type'],$_POST['rmp'])){
-        $sql = "INSERT INTO cpu_cooler(Manufacturer_id, Model, cooler_type, RPM)
-                VALUES ('".$_POST['Manufacturer']."''".$_POST['model']."'".$_POST['cooler_type']."'".$_POST['rmp'].")";
+    // CPU cooler: Ugyan az a nevű (model) ne szerepeljen többször az adatbázisban
+    if(isset($_POST['Manufacturer'])and isset($_POST['model'])and isset($_POST['cooler_type'])and isset($_POST['rmp'])){
+        $coolermodel=$_POST['model'];
+        $sql = "SELECT * FROM cpu_cooler WHERE Model='$coolermodel'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $coolermodel_error="CPU cooler is already exist!";
+            }else {
+                $sql = "INSERT INTO cpu_cooler(Manufacturer_id, Model, cooler_type_id, RPM)
+                        VALUES ('".$_POST['Manufacturer']. "','".$_POST['model']. "','".$_POST['cooler_type']. "','".$_POST['rmp']."')";
+                echo "CPU cooler added to the database.";
+            }
     }
-    if(isset($_POST['socket'],$_POST['Manufacturer'],$_POST['ram_type'],$_POST['capacity'],$_POST['speed'],$_POST['modules'],$_POST['cas_Latency'])){
+    // RAM:
+    if(isset($_POST['Manufacturer'])and isset($_POST['ram_type'])and isset($_POST['capacity'])and isset($_POST['speed'])and isset($_POST['modules'])and isset($_POST['cas_Latency'])){
         $sql = "INSERT INTO ram(Manufacturer_id, ram_type_id, Capacity, Speed, Modules, CAS_Latency)
-                VALUES ('".$_POST['socket']."''".$_POST['Manufacturer']."'".$_POST['ram_type']."'".$_POST['capacity']."'".$_POST['speed']."'".$_POST['modules']."'".$_POST['cas_Latency'].")";
+                VALUES ('".$_POST['Manufacturer']. "','".$_POST['ram_type']. "','".$_POST['capacity']. "','".$_POST['speed']. "','".$_POST['modules']. "','".$_POST['cas_Latency']. "')";
     }
-    if(isset($_POST['Manufacturer'],$_POST['type'],$_POST['g_name'],$_POST['memory_size'],$_POST['memory_type'],$_POST['core_clock'],$_POST['boost_clock'],$_POST['length'])){
+    // GPU:
+    if(isset($_POST['Manufacturer'])and isset($_POST['g_type'])and isset($_POST['g_name'])and isset($_POST['memory_size'])and isset($_POST['memory_type'])and isset($_POST['core_clock'])and isset($_POST['boost_clock'])and isset($_POST['Length'])){
         $sql = "INSERT INTO gpu(Manufacturer_id, Type, Name, Memory_size, Memory_type, Core_clock, Boost_clock, Length)
-                VALUES ('".$_POST['Manufacturer']."''".$_POST['type']."'".$_POST['g_name']."'".$_POST['memory_size']."'".$_POST['memory_type']."'".$_POST['core_clock']."'".$_POST['boost_clock']."'".$_POST['length'].")";
+                VALUES ('".$_POST['Manufacturer']. "','".$_POST['g_type']. "','".$_POST['g_name']. "','".$_POST['memory_size']. "','".$_POST['memory_type']. "','".$_POST['core_clock']. "','".$_POST['boost_clock']. "','".$_POST['Length']. "')";
     }
-    if(isset($_POST['Manufacturer'],$_POST['storage_type'],$_POST['s_name'],$_POST['capacity'],$_POST['r_w_speed'],$_POST['m2_comp'])){
+    // Storage:
+    if(isset($_POST['Manufacturer'])and isset($_POST['storage_type'])and isset($_POST['Name'])and isset($_POST['Capacity'])and isset($_POST['R_W_speed'])and isset($_POST['m2_comp'])){
         $sql = "INSERT INTO storage(Manufacturer_id, storage_type_id, Name, Capacity, R_W_speed, m2_comp)
-                VALUES ('".$_POST['Manufacturer']."''".$_POST['storage_type']."'".$_POST['s_name']."'".$_POST['capacity']."'".$_POST['r_w_speed']."'".$_POST['m2_comp'].")";
+                VALUES ('".$_POST['Manufacturer']. "','".$_POST['storage_type']. "','".$_POST['Name']. "','".$_POST['Capacity']. "','".$_POST['R_W_speed']. "','".$_POST['m2_comp']. "')";
     }
-    if(isset($_POST['Manufacturer'],$_POST['case_name'],$_POST['max_length'])){
-        $sql = "INSERT INTO case_pc(Manufacturer_id, Name, Max_Length)
-                VALUES ('".$_POST['Manufacturer']."''".$_POST['case_name']."'".$_POST['max_length'].")";
+    // Case: Ugyan az a nevű (model) ne szerepeljen többször az adatbázisban
+    if(isset($_POST['Manufacturer'])and isset($_POST['case_name'])and isset($_POST['max_length'])){
+        $casename=$_POST['case_name'];
+        $sql = "SELECT * FROM case_pc WHERE Name='$casename'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $casename_error="Case is already exist!";
+            }else {
+                $sql = "INSERT INTO case_pc(Manufacturer_id, Name, Max_Length)
+                        VALUES ('".$_POST['Manufacturer']. "','".$_POST['case_name']. "','".$_POST['max_length']. "')";
+                echo "Case added to the database.";
+            }
     }
-    if(isset($_POST['Manufacturer'],$_POST['pw_name'],$_POST['wattage'],$_POST['efficiency_rating'],$_POST['modular'])){
-        $sql = "INSERT INTO power_supply(Manufacturer_id, Name, Wattage, Efficiency_Rating, Modular)
-                VALUES ('".$_POST['Manufacturer']."''".$_POST['pw_name']."'".$_POST['wattage']."'".$_POST['efficiency_rating']."'".$_POST['modular'].")";
-    }*/
+    // Power Supply: Ugyan az a nevű (model) ne szerepeljen többször az adatbázisban
+    if(isset($_POST['Manufacturer'])and isset($_POST['pw_name'])and isset($_POST['wattage'])and isset($_POST['Efficiency_Rating'])and isset($_POST['Modular'])){
+        $psupplyname=$_POST['pw_name'];
+        $sql = "SELECT * FROM power_supply WHERE Name='$psupplyname'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $psupplyname_error="Power Supply is already exist!";
+            }else {
+                $sql = "INSERT INTO power_supply(Manufacturer_id, Name, Wattage, Efficiency_Rating, Modular)
+                        VALUES ('".$_POST['Manufacturer']. "','".$_POST['pw_name']. "','".$_POST['wattage']. "','".$_POST['Efficiency_Rating']. "','".$_POST['Modular']. "')";
+                echo "Power Supply added to the database.";
+            }
+    }
+    // Connecting to database:
     if (isset($sql)){
         if($conn->query($sql)){
             header("location:admin.php?sikeres=true");

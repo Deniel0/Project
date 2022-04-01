@@ -1,5 +1,6 @@
 <?php
     require 'includes/db.includes.php';
+    require 'adminadd.php';
     require 'html_header.php';
 ?>
 <head>
@@ -15,7 +16,7 @@
         <ul class="flex-container wrap">
         <div class="card">
             <li class="flex-item">
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
             <h4>Add admin privilege to user:</h4>
             <select required name="admin">
                     <option value="" selected disabled>Users</option>
@@ -31,7 +32,7 @@
                 <br>
                 <button class="button-6" role="button" type="submit">Add Admin</button>
             </form>
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
             <h4>Remove admin privilege:</h4>
             <select required name="rem_admin">
                     <option value="" selected disabled>Admins</option>
@@ -47,7 +48,7 @@
                 <br>
                 <button class="button-6" role="button" type="submit">Remove Admin</button>
             </form>
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
             <h4>Remove user:</h4>
             <select required name="rem_user">
                     <option value="" selected disabled>Users</option>
@@ -68,41 +69,47 @@
         </div>
         <div class="card">
             <li class="flex-item">
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
                 <h4>Manufacturer:</h4>
                     <input required pattern="[A-Za-z]{1,32}" type="text" name="man_name" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Manufacturer</button>
             </form>
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
                 <h4>Chipset:</h4>
                     <input required pattern="[A-Za-z0-9]{1,12}" type="text" name="chip_name" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Chipset</button>
             </form>
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
                 <h4>Ram type:</h4>
                     <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="ram_type" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Ram type</button>
             </form>
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
                 <h4>Storage type:</h4>
                     <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="stype_name" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Storage type</button>
             </form>
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
                 <h4>Socket:</h4>
                     <input required type="text" name="Socket" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Socket</button>
             </form>
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
                 <h4>Cooler Type:</h4>
                     <input required type="text" name="cooler_id" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Cooler Type</button>
+            </form>
+            <form action="" method="POST">
+                <h4>GPU Type:</h4>
+                    <input required type="text" name="gpu_type" id="">
+                <br>
+                <button class="button-6" role="button" type="submit">Add GPU Type</button>
             </form>
             </li>
         </div>
@@ -110,7 +117,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add CPU:</h3>
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
                 <h4>Socket:</h4>
                     <select required name="Socket">
                     <option value="" selected disabled>Select Socket</option>
@@ -158,7 +165,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Motherboard:</h3>
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
             <h4>Socket:</h4>
                 <select required name="Socket">
                     <option value="" selected disabled>Select Socket</option>
@@ -208,7 +215,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add CPU cooler:</h3>
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -224,14 +231,14 @@
                 <h4>Model:</h4>
                     <input required type="text" name="model" id="">
                 <h4>Cooler Type:</h4>
-                    <select required name="cooler_id">
+                    <select required name="cooler_type">
                     <option value="" selected disabled>Select Cooler Type</option>
                     <?php
                         $sql = "SELECT * FROM `cpu_cooler_type`";
                         $result = mysqli_query($conn, $sql);
                         $resultCheck = mysqli_num_rows($result);
                         while ($row = mysqli_fetch_array($result)){
-                            echo "<option value='".$row['cooler_type_id']."'>".$row['cooler_type']."</option>" ;
+                            echo "<option value='".$row['cpu_cooler_type_id']."'>".$row['cooler_type']."</option>" ;
                         }
                     ?>
                     </select><br>
@@ -246,7 +253,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add RAM:</h3>
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -267,7 +274,7 @@
                         $result = mysqli_query($conn, $sql);
                         $resultCheck = mysqli_num_rows($result);
                         while ($row = mysqli_fetch_array($result)){
-                            echo "<option value='".$row['model']."'>".$row['model']."</option>" ;
+                            echo "<option value='".$row['ram_type_id']."'>".$row['model']."</option>" ;
                         }
                     ?>
                 </select><br>
@@ -278,7 +285,7 @@
                 <h4>Modules:</h4>
                     <input required type="number" pattern="[0-9]" min="1" max="8" name="modules" id="">
                 <h4>Cas Latency:</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="cas_Latency" id="">
+                    <input required pattern="[0-9]{1,12}" type="text" name="cas_Latency" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add RAM</button>
             </form>
@@ -288,8 +295,8 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add GPU:</h3>
-            <form action="adminadd.php" method="POST">
-                <h4>Manufacturer id:</h4>
+            <form action="" method="POST">
+                <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
                 <?php
@@ -301,8 +308,18 @@
                     }
                 ?>
                 </select><br>
-                <h4>Type:</h4>
-                    <input required type="text" name="type" id="">
+                <h4>GPU Type:</h4>
+                <select required name="g_type">
+                <option value="" selected disabled>Select GPU type</option>
+                <?php
+                    $sql = "SELECT * FROM gpu_type";
+                    $result = mysqli_query($conn, $sql);
+                    $resultCheck = mysqli_num_rows($result);
+                    while ($row = mysqli_fetch_array($result)){
+                        echo "<option value='".$row['gpu_type_id']."'>".$row['g_type']."</option>" ;
+                    }
+                ?>
+                </select><br>
                 <h4>GPU name:</h4>
                     <input required type="text" name="g_name" id="">
                 <h4>Memory size(GB):</h4>
@@ -314,7 +331,7 @@
                 <h4>Boost clock(Mhz):</h4>
                     <input required type="text" name="boost_clock" id="">
                 <h4>Length(mm):</h4>
-                    <input required type="text" name="length" id="">
+                    <input required type="number" min="100" max="500" name="Length" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add GPU</button>
             </form>
@@ -324,7 +341,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Storage:</h3>
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -366,7 +383,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Case:</h3>
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -392,7 +409,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Power Supply:</h3>
-            <form action="adminadd.php" method="POST">
+            <form action="" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -412,7 +429,17 @@
                 <h4>Efficiency_Rating:</h4>
                     <input required pattern="[A-Za-z]{1,20}" type="text" name="efficiency_rating" id="">
                 <h4>Modular:</h4>
-                    <input required pattern="[A-Za-z]{1,12}" type="text" name="modular" id="">
+                <select required name="Modular">
+                <option value="" selected disabled>Select Modularity</option>
+                <?php
+                    $sql = "SELECT * FROM pw_modular_type";
+                    $result = mysqli_query($conn, $sql);
+                    $resultCheck = mysqli_num_rows($result);
+                    while ($row = mysqli_fetch_array($result)){
+                        echo "<option value='".$row['pw_modular_type_id']."'>".$row['pw_modular_type']."</option>" ;
+                    }
+                ?>
+                </select><br>
                 <br>
                 <button class="button-6" role="button" type="submit">Add Power Supply</button>
             </form>

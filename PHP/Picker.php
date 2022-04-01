@@ -80,11 +80,11 @@
     <select required name="gpu" id="gpu" onchange="changeCase()">
         <option value="" selected disabled>Select Video Card...</option>
         <?php
-            $sql = "SELECT gpu.Manufacturer_id, manufacturer.Manufacturer, Type, Name, Memory_size, Memory_type, gpu_id FROM gpu, manufacturer WHERE gpu.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
+            $sql = "SELECT gpu.Manufacturer_id, manufacturer.Manufacturer, gpu.Type, gpu_type.g_type, Name, Memory_size, Memory_type, gpu_id FROM gpu, manufacturer, gpu_type WHERE gpu.Manufacturer_id=manufacturer.Manufacturer_id AND gpu.Type=gpu_type.gpu_type_id ORDER BY manufacturer.Manufacturer ASC";
             $result = mysqli_query($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             while ($row = mysqli_fetch_array($result)){
-                echo "<option id='".$row['gpu_id']."' value='".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] ."'>".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] ."</option>" ;
+                echo "<option id='".$row['gpu_id']."' value='".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] ."'>".$row['Manufacturer'] . " " . $row['g_type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] ."</option>" ;
             }
         ?>
     </select><br>
@@ -132,11 +132,11 @@
     <select required name="PowerSupply">
     <option value="" selected disabled>Select Power Supply...</option>
     <?php
-        $sql = "SELECT power_supply.Manufacturer_id, manufacturer.Manufacturer, Name, Wattage, Efficiency_Rating, Modular FROM power_supply, manufacturer WHERE power_supply.Manufacturer_id=manufacturer.Manufacturer_id ORDER BY manufacturer.Manufacturer ASC";
+        $sql = "SELECT power_supply.Manufacturer_id, manufacturer.Manufacturer, Name, Wattage, Efficiency_Rating, power_supply.modular_type, pw_modular_type.pw_modular_type FROM power_supply, manufacturer, pw_modular_type WHERE power_supply.Manufacturer_id=manufacturer.Manufacturer_id AND power_supply.modular_type=pw_modular_type.pw_modular_type_id ORDER BY manufacturer.Manufacturer ASC";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
         while ($row = mysqli_fetch_array($result)){
-            echo "<option value='".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Wattage'] . " " . $row['Efficiency_Rating'] . " " . $row['Modular']. "'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Wattage'] . " " . $row['Efficiency_Rating'] . " " . $row['Modular']. "</option>";
+            echo "<option value='".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Wattage'] . " " . $row['Efficiency_Rating'] . " " . $row['modular_type']. "'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Wattage'] . " " . $row['Efficiency_Rating'] . " " . $row['pw_modular_type']. "</option>";
         }
     ?>
     </select><br>
