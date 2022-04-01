@@ -91,7 +91,7 @@
                 echo "Cooler type added to the database.";
             }
     }
-    // GPU cooler type: Ugyan az a típús ne szerepeljen többször az adatbázisban
+    // GPU type: Ugyan az a típús ne szerepeljen többször az adatbázisban
     if(isset($_POST['gpu_type'])){
         $gputype=$_POST['gpu_type'];
         $sql = "SELECT * FROM gpu_type WHERE g_type='$gputype'";
@@ -101,6 +101,18 @@
             }else {
                 $sql = "INSERT INTO gpu_type(g_type) VALUES ('".$_POST["gpu_type"] ."')";
                 echo "GPU type added to the database.";
+            }
+    }
+    // GPU mem type: Ugyan az a típús ne szerepeljen többször az adatbázisban
+    if(isset($_POST['gpu_mem_type'])){
+        $gmemputype=$_POST['gpu_mem_type'];
+        $sql = "SELECT * FROM gmemory_type WHERE gmem_type='$gmemputype'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $gmemputype_error="GPU memory type is already exist!";
+            }else {
+                $sql = "INSERT INTO gmemory_type(gmem_type) VALUES ('".$_POST["gpu_mem_type"] ."')";
+                echo "GPU memory type added to the database.";
             }
     }
     // CPU: Ugyan az a nevű (Name/c_name) ne szerepeljen többször az adatbázisban

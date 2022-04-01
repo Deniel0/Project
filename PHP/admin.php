@@ -3,17 +3,18 @@
     require 'adminadd.php';
     require 'html_header.php';
 ?>
+<!-- Head -->
 <head>
     <title>Admin</title>
     <link rel="stylesheet" href="css/select.css">
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/compb.css">
 </head>
-<?php
-?>
+<!-- Body -->
 <body>
     <div class="content">
         <ul class="flex-container wrap">
+        <!-- Admin/User -->
         <div class="card">
             <li class="flex-item">
             <form action="" method="POST">
@@ -64,52 +65,63 @@
                 <br>
                 <button class="button-6" role="button" type="submit">Remove User</button>
             </form>
-            
             </li>
         </div>
+        <!-- 1st -->
+        <div class="card">
+            <li class="flex-item">
+                <form action="" method="POST">
+                    <h4>Manufacturer:</h4>
+                        <input required pattern="[A-Za-z]{1,32}" placeholder="Asus" type="text" name="man_name" id="">
+                    <br>
+                    <button class="button-6" role="button" type="submit">Add Manufacturer</button>
+                </form>
+                <form action="" method="POST">
+                    <h4>Chipset:</h4>
+                        <input required pattern="[A-Za-z0-9]{1,12}" placeholder="Z590" type="text" name="chip_name" id="">
+                    <br>
+                    <button class="button-6" role="button" type="submit">Add Chipset</button>
+                </form>
+                <form action="" method="POST">
+                    <h4>Ram type:</h4>
+                        <input required pattern="[A-Za-z0-9 ]{1,12}" placeholder="DDR4" type="text" name="ram_type" id="">
+                    <br>
+                    <button class="button-6" role="button" type="submit">Add Ram type</button>
+                </form>
+                <form action="" method="POST">
+                    <h4>Storage type:</h4>
+                        <input required pattern="[A-Za-z0-9 ]{1,12}" placeholder="SSD" type="text" name="stype_name" id="">
+                    <br>
+                    <button class="button-6" role="button" type="submit">Add Storage type</button>
+                </form>
+            </li>
+        </div>
+        <!-- 2nd -->
         <div class="card">
             <li class="flex-item">
             <form action="" method="POST">
-                <h4>Manufacturer:</h4>
-                    <input required pattern="[A-Za-z]{1,32}" type="text" name="man_name" id="">
-                <br>
-                <button class="button-6" role="button" type="submit">Add Manufacturer</button>
-            </form>
-            <form action="" method="POST">
-                <h4>Chipset:</h4>
-                    <input required pattern="[A-Za-z0-9]{1,12}" type="text" name="chip_name" id="">
-                <br>
-                <button class="button-6" role="button" type="submit">Add Chipset</button>
-            </form>
-            <form action="" method="POST">
-                <h4>Ram type:</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="ram_type" id="">
-                <br>
-                <button class="button-6" role="button" type="submit">Add Ram type</button>
-            </form>
-            <form action="" method="POST">
-                <h4>Storage type:</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="stype_name" id="">
-                <br>
-                <button class="button-6" role="button" type="submit">Add Storage type</button>
-            </form>
-            <form action="" method="POST">
                 <h4>Socket:</h4>
-                    <input required type="text" name="Socket" id="">
+                    <input required type="text" placeholder="1151" name="Socket" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Socket</button>
             </form>
             <form action="" method="POST">
                 <h4>Cooler Type:</h4>
-                    <input required type="text" name="cooler_id" id="">
+                    <input required type="text" placeholder="Air" name="cooler_id" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Cooler Type</button>
             </form>
             <form action="" method="POST">
                 <h4>GPU Type:</h4>
-                    <input required type="text" name="gpu_type" id="">
+                    <input required type="text" placeholder="GeForce GTX" name="gpu_type" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add GPU Type</button>
+            </form>
+            <form action="" method="POST">
+                <h4>GPU Memory Type:</h4>
+                    <input required type="text" placeholder="GDDR5" name="gpu_mem_type" id="">
+                <br>
+                <button class="button-6" role="button" type="submit">Add GPU Memory Type</button>
             </form>
             </li>
         </div>
@@ -143,19 +155,19 @@
                     ?>
                     </select><br>
                 <h4>Cpu name:</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="c_name" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}" placeholder="I7-11700K" type="text" name="c_name" id="">
                 <h4>Number of seeds:</h4>
-                    <input required type="number" pattern="[0-9]" min="1" max="256" name="seeds" id="">
+                    <input required placeholder="4" type="number" pattern="[0-9]" min="1" max="256" name="seeds" id="">
                 <h4>Number of threads:</h4>
-                    <input required type="number" pattern="[0-9]" min="1" max="512" name="threads" id="">
+                    <input required placeholder="5" type="number" pattern="[0-9]" min="1" max="512" name="threads" id="">
                 <h4>Clock:</h4>
-                    <input required type="text" name="clock" id="">
+                    <input required placeholder="4.1 GHz" type="text" name="clock" id="">
                 <h4>Turbo clock:</h4>
-                    <input required type="text" name="Turbo_clock" id="">
+                    <input required placeholder="5.1 GHz" type="text" name="Turbo_clock" id="">
                 <h4>Size of L3 cache:</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="l3-cache" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}" placeholder="64 MB" type="text" name="l3-cache" id="">
                 <h4>Wattage:</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="TDP" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}" placeholder="110 W" type="text" name="TDP" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add CPU</button>
             </form>
@@ -178,7 +190,7 @@
                         }
                     ?>
                     </select><br>
-                <h4>Manufacturer id:</h4>
+                <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
                 <?php
@@ -203,9 +215,9 @@
                     ?>
                     </select><br>
                 <h4>M.2 compatibility (0/1):</h4>
-                    <input required type="number" pattern="[0-9]" min="0" max="1" name="m2_comp" id="">
+                    <input required type="number" placeholder="0" pattern="[0-9]" min="0" max="1" name="m2_comp" id="">
                 <h4>Motherboard name:</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}{16}" type="text" name="m_name" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}{16}" placeholder="ROG MAXIMUS Z690" type="text" name="m_name" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Motherboard</button>
             </form>
@@ -216,7 +228,7 @@
             <li class="flex-item">
             <h3>Add CPU cooler:</h3>
             <form action="" method="POST">
-                <h4>Manufacturer id:</h4>
+                <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
                 <?php
@@ -228,8 +240,8 @@
                     }
                 ?>
                 </select><br>
-                <h4>Model:</h4>
-                    <input required type="text" name="model" id="">
+                <h4>Name:</h4>
+                    <input required type="text" placeholder="Dark Rock Pro 4" name="model" id="">
                 <h4>Cooler Type:</h4>
                     <select required name="cooler_type">
                     <option value="" selected disabled>Select Cooler Type</option>
@@ -243,7 +255,7 @@
                     ?>
                     </select><br>
                 <h4>RPM:</h4>
-                    <input required type="number" min="1" max="5000" name="rmp" id="">
+                    <input required type="number" min="1" max="5000" placeholder="2000" name="rmp" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add CPU cooler</button>
             </form>
@@ -254,7 +266,7 @@
             <li class="flex-item">
             <h3>Add RAM:</h3>
             <form action="" method="POST">
-                <h4>Manufacturer id:</h4>
+                <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
                 <?php
@@ -279,13 +291,13 @@
                     ?>
                 </select><br>
                 <h4>Capacity (GB):</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}{5}" type="text" name="capacity" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}{5}" placeholder="16 GB" type="text" name="capacity" id="">
                 <h4>Speed (Mhz):</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}{7}" type="text" name="speed" id="">
+                    <input required pattern="[A-Za-z0-9 ]{1,12}{7}" placeholder="2133 MHz" type="text" name="speed" id="">
                 <h4>Modules:</h4>
-                    <input required type="number" pattern="[0-9]" min="1" max="8" name="modules" id="">
+                    <input required type="number" pattern="[0-9]" min="1" max="8" placeholder="4" name="modules" id="">
                 <h4>Cas Latency:</h4>
-                    <input required pattern="[0-9]{1,12}" type="text" name="cas_Latency" id="">
+                    <input required pattern="[0-9]{1,12}" type="text" placeholder="16" name="cas_Latency" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add RAM</button>
             </form>
@@ -321,17 +333,17 @@
                 ?>
                 </select><br>
                 <h4>GPU name:</h4>
-                    <input required type="text" name="g_name" id="">
+                    <input required type="text" placeholder="3080Ti" name="g_name" id="">
                 <h4>Memory size(GB):</h4>
-                    <input required type="text" name="memory_size" id="">
+                    <input required type="text" placeholder="8GB" name="memory_size" id="">
                 <h4>Memory type:</h4>
-                    <input required type="text" name="memory_type" id="">
+                    <input required type="text" placeholder="GDDR5X" name="memory_type" id="">
                 <h4>Core clock(Mhz):</h4>
-                    <input required type="text" name="core_clock" id="">
+                    <input required type="text" placeholder="1755 MHz" name="core_clock" id="">
                 <h4>Boost clock(Mhz):</h4>
-                    <input required type="text" name="boost_clock" id="">
+                    <input required type="text" placeholder="1955 MHz" name="boost_clock" id="">
                 <h4>Length(mm):</h4>
-                    <input required type="number" min="100" max="500" name="Length" id="">
+                    <input required type="number" placeholder="275" min="100" max="500" name="Length" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add GPU</button>
             </form>
@@ -342,7 +354,7 @@
             <li class="flex-item">
             <h3>Add Storage:</h3>
             <form action="" method="POST">
-                <h4>Manufacturer id:</h4>
+                <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
                 <?php
@@ -367,13 +379,13 @@
                     ?>
                     </select><br>
                 <h4>Storage name:</h4>
-                    <input required type="text" name="s_name" id="">
+                    <input required type="text" placeholder="980 Pro" name="s_name" id="">
                 <h4>Capacity:</h4>
-                    <input required type="text" name="capacity" id="">
+                    <input required type="text" placeholder="1 TB" name="capacity" id="">
                 <h4>Read/Write speed:</h4>
-                    <input required type="text" name="r_w_speed" id="">
+                    <input required type="text" placeholder="550/500 MB/s" name="r_w_speed" id="">
                 <h4>M.2 compatibility (0/1):</h4>
-                    <input required type="number" pattern="[0-9]" min="0" max="1" name="m2_comp" id="">
+                    <input required type="number" pattern="[0-9]" placeholder="1" min="0" max="1" name="m2_comp" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Storage</button>
             </form>
@@ -384,7 +396,7 @@
             <li class="flex-item">
             <h3>Add Case:</h3>
             <form action="" method="POST">
-                <h4>Manufacturer id:</h4>
+                <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
                 <?php
@@ -397,9 +409,9 @@
                 ?>
                 </select><br>
                 <h4>Case name:</h4>
-                    <input required type="text" name="case_name" id="">
+                    <input required type="text" placeholder="Silent Base 800" name="case_name" id="">
                 <h4>Max length(mm):</h4>
-                    <input required type="text" name="max_length" id="">
+                    <input required type="text" placeholder="420" name="max_length" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Case</button>
             </form>
@@ -410,7 +422,7 @@
             <li class="flex-item">
             <h3>Add Power Supply:</h3>
             <form action="" method="POST">
-                <h4>Manufacturer id:</h4>
+                <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
                 <?php
@@ -423,11 +435,21 @@
                 ?>
                 </select><br>
                 <h4>Power Supply name:</h4>
-                    <input required type="text" name="pw_name" id="">
+                    <input required type="text" placeholder="Dark Power 12" name="pw_name" id="">
                 <h4>Wattage(W):</h4>
-                    <input required type="text" name="wattage" id="">
-                <h4>Efficiency_Rating:</h4>
-                    <input required pattern="[A-Za-z]{1,20}" type="text" name="efficiency_rating" id="">
+                    <input required type="text" placeholder="1250 W" name="wattage" id="">
+                <h4>Efficiency Rating:</h4>
+                <select required name="Efficiency_Rating">
+                <option value="" selected disabled>Select Efficiency Rating</option>
+                <?php
+                    $sql = "SELECT * FROM efficiency_type";
+                    $result = mysqli_query($conn, $sql);
+                    $resultCheck = mysqli_num_rows($result);
+                    while ($row = mysqli_fetch_array($result)){
+                        echo "<option value='".$row['efficiency_type_id']."'>".$row['efficiency_type']."</option>" ;
+                    }
+                ?>
+                </select><br>
                 <h4>Modular:</h4>
                 <select required name="Modular">
                 <option value="" selected disabled>Select Modularity</option>
