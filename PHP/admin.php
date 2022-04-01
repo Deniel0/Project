@@ -1,6 +1,5 @@
 <?php
     require 'includes/db.includes.php';
-    require 'adminadd.php';
     require 'html_header.php';
 ?>
 <head>
@@ -16,7 +15,7 @@
         <ul class="flex-container wrap">
         <div class="card">
             <li class="flex-item">
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
             <h4>Add admin privilege to user:</h4>
             <select required name="admin">
                     <option value="" selected disabled>Users</option>
@@ -32,7 +31,7 @@
                 <br>
                 <button class="button-6" role="button" type="submit">Add Admin</button>
             </form>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
             <h4>Remove admin privilege:</h4>
             <select required name="rem_admin">
                     <option value="" selected disabled>Admins</option>
@@ -48,7 +47,7 @@
                 <br>
                 <button class="button-6" role="button" type="submit">Remove Admin</button>
             </form>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
             <h4>Remove user:</h4>
             <select required name="rem_user">
                     <option value="" selected disabled>Users</option>
@@ -75,31 +74,31 @@
                 <br>
                 <button class="button-6" role="button" type="submit">Add Manufacturer</button>
             </form>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
                 <h4>Chipset:</h4>
                     <input required pattern="[A-Za-z0-9]{1,12}" type="text" name="chip_name" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Chipset</button>
             </form>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
                 <h4>Ram type:</h4>
                     <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="ram_type" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Ram type</button>
             </form>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
                 <h4>Storage type:</h4>
                     <input required pattern="[A-Za-z0-9 ]{1,12}" type="text" name="stype_name" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Storage type</button>
             </form>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
                 <h4>Socket:</h4>
                     <input required type="text" name="Socket" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Socket</button>
             </form>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
                 <h4>Cooler Type:</h4>
                     <input required type="text" name="cooler_id" id="">
                 <br>
@@ -111,7 +110,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add CPU:</h3>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
                 <h4>Socket:</h4>
                     <select required name="Socket">
                     <option value="" selected disabled>Select Socket</option>
@@ -159,7 +158,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Motherboard:</h3>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
             <h4>Socket:</h4>
                 <select required name="Socket">
                     <option value="" selected disabled>Select Socket</option>
@@ -209,7 +208,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add CPU cooler:</h3>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -247,7 +246,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add RAM:</h3>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -289,7 +288,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add GPU:</h3>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -325,7 +324,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Storage:</h3>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -367,7 +366,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Case:</h3>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -393,7 +392,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Power Supply:</h3>
-            <form action="" method="POST">
+            <form action="adminadd.php" method="POST">
                 <h4>Manufacturer id:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
