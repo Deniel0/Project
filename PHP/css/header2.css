@@ -77,6 +77,9 @@ nav{
 li{
     margin-left: 2vh;
 }
+.profil{
+    display: none;
+}
 .navlinks{
     color: hsl(197, 100%, 50%);
     position: absolute;
@@ -94,6 +97,7 @@ li{
     justify-content: flex-start;
     gap: 5px;
     padding-left: 40px;
+    margin-right: 0vh;
 }
 .navlinks.open{
     clip-path: circle(1000px at 90% -10%);
