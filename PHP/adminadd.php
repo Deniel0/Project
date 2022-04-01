@@ -33,11 +33,27 @@
     }
     // Chipset: Ugyan az a Chipset ne szerepeljen többször az adatbázisban
     if(isset($_POST['chip_name'])){
-        $sql = "INSERT INTO chipset(chipset) VALUES ('".$_POST["chip_name"] ."')";
+        $chipset=$_POST['chip_name'];
+        $sql = "SELECT * FROM chipset WHERE chipset='$chipset'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $chipset_error="Chipset already exist!";
+            }else {
+                $sql = "INSERT INTO chipset(chipset) VALUES ('".$_POST["chip_name"] ."')";
+                echo "Chipset added to the database.";
+            }
     }
     // RAM type: Ugyan az a típús ne szerepeljen többször az adatbázisban
     if(isset($_POST['ram_type'])){
-        $sql = "INSERT INTO ram_type(model) VALUES ('".$_POST["ram_type"] ."')";
+        $ramtype=$_POST['ram_type'];
+        $sql = "SELECT * FROM ram_type WHERE model='$ramtype'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $ramtype_error="RAM type is already exist!";
+            }else {
+                $sql = "INSERT INTO ram_type(model) VALUES ('".$_POST["ram_type"] ."')";
+                echo "RAM type added to the database.";
+            }
     }
     // Storage type: Ugyan az a típús ne szerepeljen többször az adatbázisban
     if(isset($_POST['stype_name'])){
@@ -87,7 +103,10 @@
                 VALUES ('".$_POST['Manufacturer']."''".$_POST['pw_name']."'".$_POST['wattage']."'".$_POST['efficiency_rating']."'".$_POST['modular'].")";
     }*/
     if (isset($sql)){
-        $conn->query($sql);
-        header("location:admin.php");
+        if($conn->query($sql)){
+            header("location:admin.php?sikeres=true");
+        }else{
+            header("location:admin.php?sikeres=false");
+        }
     }
 ?>
