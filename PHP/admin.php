@@ -167,7 +167,7 @@
                         $result = mysqli_query($conn, $sql);
                         $resultCheck = mysqli_num_rows($result);
                         while ($row = mysqli_fetch_array($result)){
-                            echo "<option value='".$row['Socket']."'>".$row['Socket']."</option>" ;
+                            echo "<option value='".$row['Socket_id']."'>".$row['Socket']."</option>" ;
                         }
                     ?>
                     </select><br>
@@ -179,7 +179,7 @@
                     $result = mysqli_query($conn, $sql);
                     $resultCheck = mysqli_num_rows($result);
                     while ($row = mysqli_fetch_array($result)){
-                        echo "<option value='".$row['Manufacturer']."'>".$row['Manufacturer']."</option>" ;
+                        echo "<option value='".$row['Manufacturer_id']."'>".$row['Manufacturer']."</option>" ;
                     }
                 ?>
                 </select><br>
@@ -191,7 +191,7 @@
                         $result = mysqli_query($conn, $sql);
                         $resultCheck = mysqli_num_rows($result);
                         while ($row = mysqli_fetch_array($result)){
-                            echo "<option value='".$row['chipset']."'>".$row['chipset']."</option>" ;
+                            echo "<option value='".$row['chipset_id']."'>".$row['chipset']."</option>" ;
                         }
                     ?>
                     </select><br>
@@ -217,7 +217,7 @@
                     $result = mysqli_query($conn, $sql);
                     $resultCheck = mysqli_num_rows($result);
                     while ($row = mysqli_fetch_array($result)){
-                        echo "<option value='".$row['Manufacturer']."'>".$row['Manufacturer']."</option>" ;
+                        echo "<option value='".$row['Manufacturer_id']."'>".$row['Manufacturer']."</option>" ;
                     }
                 ?>
                 </select><br>
@@ -231,7 +231,7 @@
                         $result = mysqli_query($conn, $sql);
                         $resultCheck = mysqli_num_rows($result);
                         while ($row = mysqli_fetch_array($result)){
-                            echo "<option value='".$row['cooler_type']."'>".$row['cooler_type']."</option>" ;
+                            echo "<option value='".$row['cooler_type_id']."'>".$row['cooler_type']."</option>" ;
                         }
                     ?>
                     </select><br>
@@ -255,7 +255,7 @@
                     $result = mysqli_query($conn, $sql);
                     $resultCheck = mysqli_num_rows($result);
                     while ($row = mysqli_fetch_array($result)){
-                        echo "<option value='".$row['Manufacturer']."'>".$row['Manufacturer']."</option>" ;
+                        echo "<option value='".$row['Manufacturer_id']."'>".$row['Manufacturer']."</option>" ;
                     }
                 ?>
                 </select><br>
@@ -297,7 +297,7 @@
                     $result = mysqli_query($conn, $sql);
                     $resultCheck = mysqli_num_rows($result);
                     while ($row = mysqli_fetch_array($result)){
-                        echo "<option value='".$row['Manufacturer']."'>".$row['Manufacturer']."</option>" ;
+                        echo "<option value='".$row['Manufacturer_id']."'>".$row['Manufacturer']."</option>" ;
                     }
                 ?>
                 </select><br>
@@ -333,7 +333,7 @@
                     $result = mysqli_query($conn, $sql);
                     $resultCheck = mysqli_num_rows($result);
                     while ($row = mysqli_fetch_array($result)){
-                        echo "<option value='".$row['Manufacturer']."'>".$row['Manufacturer']."</option>" ;
+                        echo "<option value='".$row['Manufacturer_id']."'>".$row['Manufacturer']."</option>" ;
                     }
                 ?>
                 </select><br>
@@ -345,7 +345,7 @@
                         $result = mysqli_query($conn, $sql);
                         $resultCheck = mysqli_num_rows($result);
                         while ($row = mysqli_fetch_array($result)){
-                            echo "<option value='".$row['s_type']."'>".$row['s_type']."</option>" ;
+                            echo "<option value='".$row['storage_type_id']."'>".$row['s_type']."</option>" ;
                         }
                     ?>
                     </select><br>
@@ -375,7 +375,7 @@
                     $result = mysqli_query($conn, $sql);
                     $resultCheck = mysqli_num_rows($result);
                     while ($row = mysqli_fetch_array($result)){
-                        echo "<option value='".$row['Manufacturer']."'>".$row['Manufacturer']."</option>" ;
+                        echo "<option value='".$row['Manufacturer_id']."'>".$row['Manufacturer']."</option>" ;
                     }
                 ?>
                 </select><br>
@@ -401,7 +401,7 @@
                     $result = mysqli_query($conn, $sql);
                     $resultCheck = mysqli_num_rows($result);
                     while ($row = mysqli_fetch_array($result)){
-                        echo "<option value='".$row['Manufacturer']."'>".$row['Manufacturer']."</option>" ;
+                        echo "<option value='".$row['Manufacturer_id']."'>".$row['Manufacturer']."</option>" ;
                     }
                 ?>
                 </select><br>

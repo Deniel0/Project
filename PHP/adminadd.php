@@ -1,43 +1,67 @@
 <?php
+    // link:
     require 'includes/db.includes.php';
+    //Hiba kiiratás:
+    /*
+    $conn->query($sql);
+    echo $sql;
+    echo $conn->error;
+    */
+    // Manufacturer: Ugyan az a gyártó ne szerepeljen többször az adatbázisban
     if(isset($_POST['man_name'])){
-        $sql = "INSERT INTO manufacturer (Manufacturer) VALUES ('".$_POST["man_name"] ."')";
+        $manufacturer=$_POST['man_name'];
+        $sql = "SELECT * FROM manufacturer WHERE Manufacturer='$manufacturer'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $manufacturer_error="Manufacturer already exist!";
+            }else {
+                $sql = "INSERT INTO manufacturer (Manufacturer) VALUES ('".$_POST["man_name"] ."')";
+                echo "Manufacturer added to the database.";
+            }
     }
+    // Admin: Ne listázza ki azt aki már admin
     if(isset($_POST['admin'])){
         $sql = "INSERT INTO admin(user_id,prev) SELECT user_id,1 FROM users WHERE username='".$_POST["admin"]."'";
     }
+    // Remove Admin:
     if(isset($_POST['rem_admin'])){
         $sql = "DELETE FROM admin WHERE user_id='".$_POST["rem_admin"]."'";
     }
+    // Remove user:
     if(isset($_POST['rem_user'])){
         $sql = "DELETE FROM users WHERE user_id='".$_POST["rem_user"]."'";
     }
+    // Chipset: Ugyan az a Chipset ne szerepeljen többször az adatbázisban
     if(isset($_POST['chip_name'])){
         $sql = "INSERT INTO chipset(chipset) VALUES ('".$_POST["chip_name"] ."')";
     }
+    // RAM type: Ugyan az a típús ne szerepeljen többször az adatbázisban
     if(isset($_POST['ram_type'])){
         $sql = "INSERT INTO ram_type(model) VALUES ('".$_POST["ram_type"] ."')";
     }
+    // Storage type: Ugyan az a típús ne szerepeljen többször az adatbázisban
     if(isset($_POST['stype_name'])){
         $sql = "INSERT INTO storage_type(s_type) VALUES ('".$_POST["stype_name"] ."')";
     }
+    // Socket: Ugyan az a Socket ne szerepeljen többször az adatbázisban
     if(isset($_POST['Socket'])){
         $sql = "INSERT INTO socket(Socket) VALUES ('".$_POST["Socket"] ."')";
     }
+    // CPU cooler type: Ugyan az a típús ne szerepeljen többször az adatbázisban
     if(isset($_POST['cooler_id'])){
         $sql = "INSERT INTO cpu_cooler_type(cooler_type) VALUES ('".$_POST["cooler_id"] ."')";
     }
-    // CPU:
+    // CPU: Ugyan az a nevű (Name/c_name) ne szerepeljen többször az adatbázisban
     if(isset($_POST['Socket'])and isset($_POST['Manufacturer'])and isset($_POST['c_name'])and isset($_POST['seeds'])and isset($_POST['threads'])and isset($_POST['clock'])and isset($_POST['Turbo_clock'])and isset($_POST['l3-cache'])and isset($_POST['TDP'])){
-        $sql = "INSERT INTO cpu(Socket_id, Manufacturer_id, Name, Seeds, Threads, Clock, Turbo_clock, L3_cache, TDP) 
+        $sql = "INSERT INTO cpu (Socket_id, Manufacturer_id, Name, Seeds, Threads, Clock, Turbo_clock, L3_cache, TDP) 
         VALUES ('".$_POST['Socket']. "','".$_POST['Manufacturer']. "','".$_POST['c_name']. "','".$_POST['seeds']. "','".$_POST['threads']. "','".$_POST['clock']. "','".$_POST['Turbo_clock']. "','".$_POST['l3-cache']. "','".$_POST['TDP']. "')";
     }
-
-    /*
-    if(isset($_POST['Socket'],$_POST['Manufacturer'],$_POST['Chipset'],$_POST['m2_comp'],$_POST['m_name'])){
-        $sql = "INSERT INTO motherboard(Socket_id, Manufacturer_id, chipset_id, m2_comp, Name)
-                VALUES ('".$_POST['Socket']."'".$_POST['Manufacturer']."'".$_POST['Chipset']."'".$_POST['m2_comp']."'".$_POST['m_name'].")";
+    // Motherboard: Ugyan az a nevű (Name/m_name) ne szerepeljen többször az adatbázisban
+    if(isset($_POST['Socket'])and isset($_POST['Manufacturer'])and isset($_POST['Chipset'])and isset($_POST['m2_comp'])and isset($_POST['m_name'])){
+        $sql = "INSERT INTO motherboard (Socket_id, Manufacturer_id, chipset_id, m2_comp, Name)
+        VALUES ('".$_POST['Socket']. "','".$_POST['Manufacturer']. "','".$_POST['Chipset']. "','".$_POST['m2_comp']. "','".$_POST['m_name']. "')";
     }
+    /*
     if(isset($_POST['Manufacturer'],$_POST['model'],$_POST['type'],$_POST['rmp'])){
         $sql = "INSERT INTO cpu_cooler(Manufacturer_id, Model, cooler_type, RPM)
                 VALUES ('".$_POST['Manufacturer']."''".$_POST['model']."'".$_POST['cooler_type']."'".$_POST['rmp'].")";
