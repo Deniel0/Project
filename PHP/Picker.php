@@ -21,9 +21,8 @@
 <!-- Head end -->
 <body>
     <div class="pcontainer">
-<!-- form-select -->
+        <form action="" method="post" id="jump">
 <!-- CPU -->
-    <form action="" method="post" id="jump">
             <h3 class="pickertarget"><i class="fa-solid fa-microchip"></i> Select your CPU:</h3>
         <select required id="cpu" name="cpu" onchange="changeCpu()">
             <option value="" selected disabled>Select CPU...</option>
@@ -80,11 +79,11 @@
     <select required name="gpu" id="gpu" onchange="changeCase()">
         <option value="" selected disabled>Select Video Card...</option>
         <?php
-            $sql = "SELECT gpu.Manufacturer_id, manufacturer.Manufacturer, gpu.Type, gpu_type.g_type, Name, Memory_size, Memory_type, gpu_id FROM gpu, manufacturer, gpu_type WHERE gpu.Manufacturer_id=manufacturer.Manufacturer_id AND gpu.Type=gpu_type.gpu_type_id ORDER BY manufacturer.Manufacturer ASC";
+            $sql = "SELECT gpu.Manufacturer_id, manufacturer.Manufacturer, gpu.Type, gpu_type.g_type, Name, Memory_size, gpu.Memory_type, gmemory_type.gmem_type, gpu_id FROM gpu, manufacturer, gpu_type, gmemory_type WHERE gpu.Manufacturer_id=manufacturer.Manufacturer_id AND gpu.Type=gpu_type.gpu_type_id AND gpu.Memory_type=gmemory_type.memory_type_id ORDER BY manufacturer.Manufacturer ASC";
             $result = mysqli_query($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             while ($row = mysqli_fetch_array($result)){
-                echo "<option id='".$row['gpu_id']."' value='".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] ."'>".$row['Manufacturer'] . " " . $row['g_type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] ."</option>" ;
+                echo "<option id='".$row['gpu_id']."' value='".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] ."'>".$row['Manufacturer'] . " " . $row['g_type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['gmem_type'] ."</option>" ;
             }
         ?>
     </select><br>
@@ -151,9 +150,9 @@
     <?php 
         }
     ?>
-    </form>
-    </div>
 
+        </form>
+    </div>
 <!-- AJAX -->
     <script>
             changeCpu();
@@ -238,6 +237,7 @@
     </script>
 <!-- AJAX End -->
 </body>
+<!-- end include -->
 <?php
     include_once 'footer.php';
 ?>
