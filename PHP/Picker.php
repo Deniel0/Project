@@ -83,7 +83,7 @@
             $result = mysqli_query($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             while ($row = mysqli_fetch_array($result)){
-                echo "<option id='".$row['gpu_id']."' value='".$row['Manufacturer'] . " " . $row['Type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['Memory_type'] ."'>".$row['Manufacturer'] . " " . $row['g_type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['gmem_type'] ."</option>" ;
+                echo "<option id='".$row['gpu_id']."' value='".$row['Manufacturer'] . " " . $row['g_type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['gmem_type'] ."'>".$row['Manufacturer'] . " " . $row['g_type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['gmem_type'] ."</option>" ;
             }
         ?>
     </select><br>
@@ -131,11 +131,11 @@
     <select required name="PowerSupply">
     <option value="" selected disabled>Select Power Supply...</option>
     <?php
-        $sql = "SELECT power_supply.Manufacturer_id, manufacturer.Manufacturer, Name, Wattage, Efficiency_Rating, power_supply.modular_type, pw_modular_type.pw_modular_type FROM power_supply, manufacturer, pw_modular_type WHERE power_supply.Manufacturer_id=manufacturer.Manufacturer_id AND power_supply.modular_type=pw_modular_type.pw_modular_type_id ORDER BY manufacturer.Manufacturer ASC";
+        $sql = "SELECT power_supply.Manufacturer_id, manufacturer.Manufacturer, Name, Wattage, power_supply.Efficiency_Rating, efficiency_type.efficiency_type, power_supply.modular_type, pw_modular_type.pw_modular_type FROM power_supply, manufacturer, pw_modular_type, efficiency_type WHERE power_supply.Manufacturer_id=manufacturer.Manufacturer_id AND power_supply.modular_type=pw_modular_type.pw_modular_type_id AND power_supply.Efficiency_Rating=efficiency_type.efficiency_type_id ORDER BY manufacturer.Manufacturer ASC";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
         while ($row = mysqli_fetch_array($result)){
-            echo "<option value='".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Wattage'] . " " . $row['Efficiency_Rating'] . " " . $row['modular_type']. "'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Wattage'] . " " . $row['Efficiency_Rating'] . " " . $row['pw_modular_type']. "</option>";
+            echo "<option value='".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Wattage'] . " " . $row['efficiency_type'] . " " . $row['pw_modular_type']. "'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Wattage'] . " " . $row['efficiency_type'] . " " . $row['pw_modular_type']. "</option>";
         }
     ?>
     </select><br>
@@ -150,7 +150,6 @@
     <?php 
         }
     ?>
-
         </form>
     </div>
 <!-- AJAX -->
