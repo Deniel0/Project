@@ -117,8 +117,10 @@
     }
     // CPU: Ugyan az a nevű (Name/c_name) ne szerepeljen többször az adatbázisban
     if(isset($_POST['Socket'])and isset($_POST['Manufacturer'])and isset($_POST['c_name'])and isset($_POST['seeds'])and isset($_POST['threads'])and isset($_POST['clock'])and isset($_POST['Turbo_clock'])and isset($_POST['l3-cache'])and isset($_POST['TDP'])){
+        $cpusocket=$_POST['Socket'];
+        $cpuman=$_POST['Manufacturer'];
         $cpuname=$_POST['c_name'];
-        $sql = "SELECT * FROM cpu WHERE Name='$cpuname'";
+        $sql = "SELECT * FROM cpu WHERE Socket_id='$cpusocket' AND Manufacturer_id='$cpuman' AND Name='$cpuname'";
         $res = mysqli_query($conn, $sql);
             if(mysqli_num_rows($res)>0){
                 $cpuname_error="CPU is already exist!";
@@ -156,8 +158,21 @@
     }
     // RAM:
     if(isset($_POST['Manufacturer'])and isset($_POST['ram_type'])and isset($_POST['capacity'])and isset($_POST['speed'])and isset($_POST['modules'])and isset($_POST['cas_Latency'])){
-        $sql = "INSERT INTO ram(Manufacturer_id, ram_type_id, Capacity, Speed, Modules, CAS_Latency)
+        $ramman=$_POST['Manufacturer'];
+        $ramtype=$_POST['ram_type'];
+        $ramcap=$_POST['capacity'];
+        $ramspeed=$_POST['speed'];
+        $rammodule=$_POST['modules'];
+        $ramcas=$_POST['cas_Latency'];
+        $sql = "SELECT * FROM ram WHERE Manufacturer_id=$ramman AND ram_type_id=$ramtype AND Capacity=$ramcap AND Speed=$ramspeed AND Modules=$rammodule AND CAS_Latency=$ramcas";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $cpuname_error="RAM is already exist!";
+            }else {
+                $sql = "INSERT INTO ram(Manufacturer_id, ram_type_id, Capacity, Speed, Modules, CAS_Latency)
                 VALUES ('".$_POST['Manufacturer']. "','".$_POST['ram_type']. "','".$_POST['capacity']. "','".$_POST['speed']. "','".$_POST['modules']. "','".$_POST['cas_Latency']. "')";
+                echo "RAM added to the database.";
+            }
     }
     // GPU:
     if(isset($_POST['Manufacturer'])and isset($_POST['g_type'])and isset($_POST['g_name'])and isset($_POST['memory_size'])and isset($_POST['memory_type'])and isset($_POST['core_clock'])and isset($_POST['boost_clock'])and isset($_POST['Length'])){
@@ -221,7 +236,6 @@
             }
     }
     // Connecting to database:
-    /*
     if (isset($sql)){
         if($conn->query($sql)){
             header("location:admin.php?sikeres=true");
@@ -229,5 +243,4 @@
             header("location:admin.php?sikeres=false");
         }
     }
-    */
 ?>

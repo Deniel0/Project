@@ -155,7 +155,7 @@
                     ?>
                     </select><br>
                 <h4>Cpu name:</h4>
-                    <input required pattern="[A-Za-z0-9 ]{1,12}" placeholder="I7-11700K" type="text" name="c_name" id="">
+                    <input required placeholder="I7-11700K" type="text" name="c_name" id="">
                 <h4>Number of seeds:</h4>
                     <input required placeholder="4" type="number" pattern="[0-9]" min="1" max="256" name="seeds" id="">
                 <h4>Number of threads:</h4>
