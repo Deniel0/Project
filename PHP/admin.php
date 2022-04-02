@@ -379,11 +379,11 @@
                     ?>
                     </select><br>
                 <h4>Storage name:</h4>
-                    <input required type="text" placeholder="980 Pro" name="s_name" id="">
+                    <input required type="text" placeholder="980 Pro" name="Name" id="">
                 <h4>Capacity:</h4>
-                    <input required type="text" placeholder="1 TB" name="capacity" id="">
+                    <input required type="text" placeholder="1 TB" name="Capacity" id="">
                 <h4>Read/Write speed:</h4>
-                    <input required type="text" placeholder="550/500 MB/s" name="r_w_speed" id="">
+                    <input required type="text" placeholder="550/500 MB/s" name="R_W_speed" id="">
                 <h4>M.2 compatibility (0/1):</h4>
                     <input required type="number" pattern="[0-9]" placeholder="1" min="0" max="1" name="m2_comp" id="">
                 <br>

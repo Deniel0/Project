@@ -161,13 +161,33 @@
     }
     // GPU:
     if(isset($_POST['Manufacturer'])and isset($_POST['g_type'])and isset($_POST['g_name'])and isset($_POST['memory_size'])and isset($_POST['memory_type'])and isset($_POST['core_clock'])and isset($_POST['boost_clock'])and isset($_POST['Length'])){
-        $sql = "INSERT INTO gpu(Manufacturer_id, Type, Name, Memory_size, Memory_type, Core_clock, Boost_clock, Length)
+        $storagename=$_POST['Manufacturer'];
+        $storagename=$_POST['g_name'];
+        $storagetype=$_POST['memory_size'];
+        $storagecap=$_POST['Capacity'];
+        $sql = "SELECT * FROM storage WHERE Name='$storagename' AND storage_type_id='$storagetype' AND Capacity='$storagecap'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $storagename_error="Storage is already exist!";
+            }else {
+                $sql = "INSERT INTO gpu(Manufacturer_id, Type, Name, Memory_size, Memory_type, Core_clock, Boost_clock, Length)
                 VALUES ('".$_POST['Manufacturer']. "','".$_POST['g_type']. "','".$_POST['g_name']. "','".$_POST['memory_size']. "','".$_POST['memory_type']. "','".$_POST['core_clock']. "','".$_POST['boost_clock']. "','".$_POST['Length']. "')";
+            }
     }
     // Storage:
     if(isset($_POST['Manufacturer'])and isset($_POST['storage_type'])and isset($_POST['Name'])and isset($_POST['Capacity'])and isset($_POST['R_W_speed'])and isset($_POST['m2_comp'])){
-        $sql = "INSERT INTO storage(Manufacturer_id, storage_type_id, Name, Capacity, R_W_speed, m2_comp)
+        $storagename=$_POST['Name'];
+        $storagetype=$_POST['storage_type'];
+        $storagecap=$_POST['Capacity'];
+        $sql = "SELECT * FROM storage WHERE Name='$storagename' AND storage_type_id='$storagetype' AND Capacity='$storagecap'";
+        $res = mysqli_query($conn, $sql);
+            if(mysqli_num_rows($res)>0){
+                $storagename_error="Storage is already exist!";
+            }else {
+                $sql = "INSERT INTO storage(Manufacturer_id, storage_type_id, Name, Capacity, R_W_speed, m2_comp)
                 VALUES ('".$_POST['Manufacturer']. "','".$_POST['storage_type']. "','".$_POST['Name']. "','".$_POST['Capacity']. "','".$_POST['R_W_speed']. "','".$_POST['m2_comp']. "')";
+                echo "Storage added to the database.";
+            }
     }
     // Case: Ugyan az a nevű (model) ne szerepeljen többször az adatbázisban
     if(isset($_POST['Manufacturer'])and isset($_POST['case_name'])and isset($_POST['max_length'])){
@@ -182,15 +202,17 @@
                 echo "Case added to the database.";
             }
     }
-    // Power Supply: Ugyan az a nevű (model) ne szerepeljen többször az adatbázisban
+    // Power Supply: Ugyan oyal (pw_name, wattage) ne szerepeljen többször az adatbázisban
     if(isset($_POST['Manufacturer'])and isset($_POST['pw_name'])and isset($_POST['wattage'])and isset($_POST['Efficiency_Rating'])and isset($_POST['Modular'])){
         $psupplyname=$_POST['pw_name'];
-        $sql = "SELECT * FROM power_supply WHERE Name='$psupplyname'";
+        $psupplywattage=$_POST['wattage'];
+        $psupplyeffr=$_POST['Efficiency_Rating'];
+        $sql = "SELECT * FROM power_supply WHERE Name='$psupplyname' AND Wattage='$psupplywattage' AND Efficiency_Rating='$psupplyeffr'";
         $res = mysqli_query($conn, $sql);
             if(mysqli_num_rows($res)>0){
                 $psupplyname_error="Power Supply is already exist!";
             }else {
-                $sql = "INSERT INTO power_supply(Manufacturer_id, Name, Wattage, Efficiency_Rating, Modular)
+                $sql = "INSERT INTO power_supply(Manufacturer_id, Name, Wattage, Efficiency_Rating, modular_type)
                         VALUES ('".$_POST['Manufacturer']. "','".$_POST['pw_name']. "','".$_POST['wattage']. "','".$_POST['Efficiency_Rating']. "','".$_POST['Modular']. "')";
                 echo "Power Supply added to the database.";
             }
