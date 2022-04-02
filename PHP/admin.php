@@ -337,7 +337,17 @@
                 <h4>Memory size(GB):</h4>
                     <input required type="text" placeholder="8GB" name="memory_size" id="">
                 <h4>Memory type:</h4>
-                    <input required type="text" placeholder="GDDR5X" name="memory_type" id="">
+                <select required name="memory_type">
+                <option value="" selected disabled>Select Memory type</option>
+                <?php
+                    $sql = "SELECT * FROM gmemory_type";
+                    $result = mysqli_query($conn, $sql);
+                    $resultCheck = mysqli_num_rows($result);
+                    while ($row = mysqli_fetch_array($result)){
+                        echo "<option value='".$row['memory_type_id']."'>".$row['gmem_type']."</option>" ;
+                    }
+                ?>
+                </select><br>
                 <h4>Core clock(Mhz):</h4>
                     <input required type="text" placeholder="1755 MHz" name="core_clock" id="">
                 <h4>Boost clock(Mhz):</h4>

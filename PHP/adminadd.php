@@ -161,17 +161,20 @@
     }
     // GPU:
     if(isset($_POST['Manufacturer'])and isset($_POST['g_type'])and isset($_POST['g_name'])and isset($_POST['memory_size'])and isset($_POST['memory_type'])and isset($_POST['core_clock'])and isset($_POST['boost_clock'])and isset($_POST['Length'])){
-        $storagename=$_POST['Manufacturer'];
-        $storagename=$_POST['g_name'];
-        $storagetype=$_POST['memory_size'];
-        $storagecap=$_POST['Capacity'];
-        $sql = "SELECT * FROM storage WHERE Name='$storagename' AND storage_type_id='$storagetype' AND Capacity='$storagecap'";
+        $gpuman=$_POST['Manufacturer'];
+        $gputype=$_POST['g_type'];
+        $gpuname=$_POST['g_name'];
+        $gpumemsize=$_POST['memory_size'];
+        $gpuclock=$_POST['core_clock'];
+        $gpubclock=$_POST['boost_clock'];
+        $sql = "SELECT * FROM gpu WHERE Manufacturer_id='$gpuman' AND Type='$gputype' AND Name='$gpuname' AND Memory_size='$gpumemsize' AND Core_clock='$gpuclock' AND Boost_clock='$gpubclock'";
         $res = mysqli_query($conn, $sql);
             if(mysqli_num_rows($res)>0){
-                $storagename_error="Storage is already exist!";
+                $storagename_error="GPU is already exist!";
             }else {
                 $sql = "INSERT INTO gpu(Manufacturer_id, Type, Name, Memory_size, Memory_type, Core_clock, Boost_clock, Length)
                 VALUES ('".$_POST['Manufacturer']. "','".$_POST['g_type']. "','".$_POST['g_name']. "','".$_POST['memory_size']. "','".$_POST['memory_type']. "','".$_POST['core_clock']. "','".$_POST['boost_clock']. "','".$_POST['Length']. "')";
+                echo "GPU added to the database.";
             }
     }
     // Storage:
@@ -218,6 +221,7 @@
             }
     }
     // Connecting to database:
+    /*
     if (isset($sql)){
         if($conn->query($sql)){
             header("location:admin.php?sikeres=true");
@@ -225,4 +229,5 @@
             header("location:admin.php?sikeres=false");
         }
     }
+    */
 ?>
