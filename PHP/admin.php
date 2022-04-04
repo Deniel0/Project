@@ -155,15 +155,15 @@
                     ?>
                     </select><br>
                 <h4>Cpu name:</h4>
-                    <input required placeholder="I7-11700K" type="text" name="c_name" id="">
+                    <input required placeholder="I7-11700K" pattern="[a-zA-Z0-9\-]" type="text" name="c_name" id="">
                 <h4>Number of seeds:</h4>
                     <input required placeholder="4" type="number" pattern="[0-9]" min="1" max="256" name="seeds" id="">
                 <h4>Number of threads:</h4>
                     <input required placeholder="5" type="number" pattern="[0-9]" min="1" max="512" name="threads" id="">
                 <h4>Clock:</h4>
-                    <input required placeholder="4.1 GHz" type="text" name="clock" id="">
+                    <input required placeholder="4.1 GHz" pattern="[a-zA-Z0-9 \.]" name="clock" id="">
                 <h4>Turbo clock:</h4>
-                    <input required placeholder="5.1 GHz" type="text" name="Turbo_clock" id="">
+                    <input required placeholder="5.1 GHz" pattern="[a-zA-Z0-9 \.]" name="Turbo_clock" id="">
                 <h4>Size of L3 cache:</h4>
                     <input required pattern="[A-Za-z0-9 ]{1,12}" placeholder="64 MB" type="text" name="l3-cache" id="">
                 <h4>Wattage:</h4>
@@ -421,7 +421,7 @@
                 <h4>Case name:</h4>
                     <input required type="text" placeholder="Silent Base 800" name="case_name" id="">
                 <h4>Max length(mm):</h4>
-                    <input required type="text" placeholder="420" name="max_length" id="">
+                    <input required type="text" pattern="[0-9]"  placeholder="420" name="max_length" id="">
                 <br>
                 <button class="button-6" role="button" type="submit">Add Case</button>
             </form>
