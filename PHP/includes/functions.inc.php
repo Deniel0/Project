@@ -48,7 +48,7 @@ function createUser($conn, $username, $password){
         mysqli_stmt_bind_param($stmt, "ss", $username, $hashedpwd);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
-        header("location: ../signup2.php?error=none");
+        header("location: ../login2.php?error=none");
         exit();
 }
 function emptyInputLogin($username, $password){
