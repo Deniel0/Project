@@ -7,6 +7,7 @@
     echo $sql;
     echo $conn->error;
     */
+    // Values (".$_SESSION['F_Id'].",'".htmlspecialchars(mysqli_real_escape_string($conn,$_POST['gpu_mem_type']))."')";
     // Manufacturer: Ugyan az a gyártó ne szerepeljen többször az adatbázisban
     if(isset($_POST['man_name'])){
         $manufacturer=$_POST['man_name'];
