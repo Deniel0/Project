@@ -2,6 +2,8 @@
     require 'includes/db.includes.php';
     include_once 'html_header.php';
 ?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <!-- Title -->
   <title>Home</title>
@@ -15,3 +17,4 @@
         <button class="startb" role="button"><span class="text"><a href="Picker.php">Let's get started</a></span></button>
     </div>
 </body>
+</html>
