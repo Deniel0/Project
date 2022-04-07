@@ -13,12 +13,6 @@
     require 'includes/db.includes.php';
     include_once 'html_header.php';
 ?>
-<!-- Head -->
-    <head>
-        <title>Picker</title>
-        <link rel="stylesheet" href="css/picker.css">
-    </head>
-<!-- Head end -->
 <body>
     <div class="pcontainer">
         <form action="" method="post" id="jump">
@@ -143,7 +137,7 @@
         if(isset($_SESSION['username'])){
     ?>
         <!-- button -->
-        <button type="submit" class="startb" name="save" role="button">
+        <button type="submit" class="startb" name="save">
             <span class="text"><i class="fa-solid fa-download"></i> Save</span>
         </button>
         <!-- close -->

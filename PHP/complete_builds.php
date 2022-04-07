@@ -2,11 +2,6 @@
     require 'includes/db.includes.php';
     include_once 'html_header.php';
 ?>
-<head>
-    <!-- Title -->
-  <title>Complete Builds</title>
-<link rel="stylesheet" href="css/compb.css">
-</head>
 <body>
 <div class="content">
     <ul class="flex-container wrap">
@@ -31,7 +26,7 @@
                         ?>
                         <img class="qrcode" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<?php echo $_SERVER['SERVER_NAME']."/daniel/szakdolgozat/download/comp.php?buildId=".$index?>" alt="">
                         </span>
-                            <button type="submit" class="startb" name="save" role="button" onclick="WriteToFile('<?=$index;?>')">
+                            <button type="submit" class="startb" name="save" onclick="WriteToFile('<?=$index;?>')">
                                 <a href="download/comp.php?buildId=<?=$index?>" target="_blank"><span class="text"><i class="fa-solid fa-download"></i> Save</span></a>
                             </button>
                         <?php 

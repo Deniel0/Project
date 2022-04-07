@@ -8,9 +8,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Title icon -->
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <title>Partpicker</title>
   <!-- css links -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <link rel="stylesheet" href="css/header2.css">
+<?php 
+$stylesheets = [
+    '/daniel/szakdolgozat/index.php' => [
+        '/daniel/szakdolgozat/css/index.css',
+    ],
+    '/daniel/szakdolgozat/Picker.php' => [
+        '/daniel/szakdolgozat/css/picker.css',
+    ],
+    '/daniel/szakdolgozat/admin.php' => [
+        '/daniel/szakdolgozat/css/select.css',
+        '/daniel/szakdolgozat/css/admin.css',
+        '/daniel/szakdolgozat/css/compb.css',
+    ],
+    '/daniel/szakdolgozat/complete_builds.php' => [
+        '/daniel/szakdolgozat/css/compb.css',
+    ],
+    '/daniel/szakdolgozat/signup2.php' => [
+        '/daniel/szakdolgozat/css/login2.css',
+    ],
+    '/daniel/szakdolgozat/login2.php.php' => [
+        '/daniel/szakdolgozat/css/login2.css',
+    ],
+];
+    foreach($stylesheets[$_SERVER['PHP_SELF']] as $file) {
+        echo "<link rel='stylesheet' type='text/css' href='$file'>\n";
+    }
+?>
 </head>
 <body>
 <!-- navbar -->

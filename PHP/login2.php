@@ -3,11 +3,6 @@
     require 'includes/db.includes.php';
     require_once 'includes/login.inc.php';
 ?>
-<head>
-  <!-- Title -->
-  <title>Login</title>
-  <link rel="stylesheet" href="css/login2.css">
-</head>
 <body>
     <div class="form-container">
 <div class="wrapper">

@@ -3,13 +3,6 @@
     require 'adminadd.php';
     require 'html_header.php';
 ?>
-<!-- Head -->
-<head>
-    <title>Admin</title>
-    <link rel="stylesheet" href="css/select.css">
-    <link rel="stylesheet" href="css/admin.css">
-    <link rel="stylesheet" href="css/compb.css">
-</head>
 <!-- Body -->
 <body>
     <div class="content">
@@ -31,7 +24,7 @@
                     ?>
                     </select><br>
                 <br>
-                <button class="button-6" role="button" type="submit">Add Admin</button>
+                <button class="button-6" type="submit">Add Admin</button>
             </form>
             <form action="" method="POST">
             <h4>Remove admin privilege:</h4>
@@ -47,7 +40,7 @@
                     ?>
                     </select><br>
                 <br>
-                <button class="button-6" role="button" type="submit">Remove Admin</button>
+                <button class="button-6" type="submit">Remove Admin</button>
             </form>
             <form action="" method="POST">
             <h4>Remove user:</h4>
@@ -63,7 +56,7 @@
                     ?>
                     </select><br>
                 <br>
-                <button class="button-6" role="button" type="submit">Remove User</button>
+                <button class="button-6" type="submit">Remove User</button>
             </form>
             </li>
         </div>
@@ -74,25 +67,25 @@
                     <h4>Manufacturer:</h4>
                         <input required pattern="[A-Za-z]{1,32}" placeholder="Asus" type="text" name="man_name" id="">
                     <br>
-                    <button class="button-6" role="button" type="submit">Add Manufacturer</button>
+                    <button class="button-6" type="submit">Add Manufacturer</button>
                 </form>
                 <form action="" method="POST">
                     <h4>Chipset:</h4>
                         <input required pattern="[A-Za-z0-9]{1,12}" placeholder="Z590" type="text" name="chip_name" id="">
                     <br>
-                    <button class="button-6" role="button" type="submit">Add Chipset</button>
+                    <button class="button-6" type="submit">Add Chipset</button>
                 </form>
                 <form action="" method="POST">
                     <h4>Ram type:</h4>
                         <input required pattern="[A-Za-z0-9 ]{1,12}" placeholder="DDR4" type="text" name="ram_type" id="">
                     <br>
-                    <button class="button-6" role="button" type="submit">Add Ram type</button>
+                    <button class="button-6" type="submit">Add Ram type</button>
                 </form>
                 <form action="" method="POST">
                     <h4>Storage type:</h4>
                         <input required pattern="[A-Za-z0-9 ]{1,12}" placeholder="SSD" type="text" name="stype_name" id="">
                     <br>
-                    <button class="button-6" role="button" type="submit">Add Storage type</button>
+                    <button class="button-6" type="submit">Add Storage type</button>
                 </form>
             </li>
         </div>
@@ -103,25 +96,25 @@
                 <h4>Socket:</h4>
                     <input required type="text" placeholder="1151" name="Socket" id="">
                 <br>
-                <button class="button-6" role="button" type="submit">Add Socket</button>
+                <button class="button-6" type="submit">Add Socket</button>
             </form>
             <form action="" method="POST">
                 <h4>Cooler Type:</h4>
                     <input required type="text" placeholder="Air" name="cooler_id" id="">
                 <br>
-                <button class="button-6" role="button" type="submit">Add Cooler Type</button>
+                <button class="button-6" type="submit">Add Cooler Type</button>
             </form>
             <form action="" method="POST">
                 <h4>GPU Type:</h4>
                     <input required type="text" placeholder="GeForce GTX" name="gpu_type" id="">
                 <br>
-                <button class="button-6" role="button" type="submit">Add GPU Type</button>
+                <button class="button-6" type="submit">Add GPU Type</button>
             </form>
             <form action="" method="POST">
                 <h4>GPU Memory Type:</h4>
                     <input required type="text" placeholder="GDDR5" name="gpu_mem_type" id="">
                 <br>
-                <button class="button-6" role="button" type="submit">Add GPU Memory Type</button>
+                <button class="button-6" type="submit">Add GPU Memory Type</button>
             </form>
             </li>
         </div>
@@ -169,7 +162,7 @@
                 <h4>Wattage:</h4>
                     <input required pattern="[A-Za-z0-9 ]{1,12}" placeholder="110 W" type="text" name="TDP" id="">
                 <br>
-                <button class="button-6" role="button" type="submit">Add CPU</button>
+                <button class="button-6" type="submit">Add CPU</button>
             </form>
             </li>
         </div>
@@ -219,7 +212,7 @@
                 <h4>Motherboard name:</h4>
                     <input required pattern="[A-Za-z0-9 ]{1,12}{16}" placeholder="ROG MAXIMUS Z690" type="text" name="m_name" id="">
                 <br>
-                <button class="button-6" role="button" type="submit">Add Motherboard</button>
+                <button class="button-6" type="submit">Add Motherboard</button>
             </form>
             </li>
         </div>
@@ -257,7 +250,7 @@
                 <h4>RPM:</h4>
                     <input required type="number" min="1" max="5000" placeholder="2000" name="rmp" id="">
                 <br>
-                <button class="button-6" role="button" type="submit">Add CPU cooler</button>
+                <button class="button-6" type="submit">Add CPU cooler</button>
             </form>
             </li>
         </div>
@@ -299,7 +292,7 @@
                 <h4>Cas Latency:</h4>
                     <input required pattern="[0-9]{1,12}" type="text" placeholder="16" name="cas_Latency" id="">
                 <br>
-                <button class="button-6" role="button" type="submit">Add RAM</button>
+                <button class="button-6" type="submit">Add RAM</button>
             </form>
             </li>
         </div>
@@ -355,7 +348,7 @@
                 <h4>Length(mm):</h4>
                     <input required type="number" placeholder="275" min="100" max="500" name="Length" id="">
                 <br>
-                <button class="button-6" role="button" type="submit">Add GPU</button>
+                <button class="button-6" type="submit">Add GPU</button>
             </form>
             </li>
         </div>
@@ -397,7 +390,7 @@
                 <h4>M.2 compatibility (0/1):</h4>
                     <input required type="number" pattern="[0-9]" placeholder="1" min="0" max="1" name="m2_comp" id="">
                 <br>
-                <button class="button-6" role="button" type="submit">Add Storage</button>
+                <button class="button-6" type="submit">Add Storage</button>
             </form>
             </li>
         </div>
@@ -423,7 +416,7 @@
                 <h4>Max length(mm):</h4>
                     <input required type="text" pattern="[0-9]"  placeholder="420" name="max_length" id="">
                 <br>
-                <button class="button-6" role="button" type="submit">Add Case</button>
+                <button class="button-6" type="submit">Add Case</button>
             </form>
             </li>
         </div>
@@ -473,7 +466,7 @@
                 ?>
                 </select><br>
                 <br>
-                <button class="button-6" role="button" type="submit">Add Power Supply</button>
+                <button class="button-6" type="submit">Add Power Supply</button>
             </form>
             </li>
         </div>
