@@ -7,9 +7,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Title icon -->
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <title>Partpicker</title>
   <!-- css links -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <link rel="stylesheet" href="css/header2.css">
+  <?php 
+$stylesheets = [
+    '/daniel/szakdolgozat/signup2.php' => [
+        '/daniel/szakdolgozat/css/login2.css',
+    ],
+    '/daniel/szakdolgozat/login2.php' => [
+        '/daniel/szakdolgozat/css/login2.css',
+    ],
+];
+    foreach($stylesheets[$_SERVER['PHP_SELF']] as $file) {
+        echo "<link rel='stylesheet' type='text/css' href='$file'>\n";
+    }
+?>
 </head>
 <body>
 <!-- navbar -->
