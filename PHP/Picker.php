@@ -24,7 +24,7 @@
                 $result = mysqli_query($conn, $sql);
                 $resultCheck = mysqli_num_rows($result);
                 while ($row = mysqli_fetch_array($result)){
-                    echo "<option id='".$row['cpu_id']."' value='". $row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."</option>";
+                    echo "<option id='cpu".$row['cpu_id']."' value='". $row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."'>".$row['Manufacturer'] . " " . $row['Name'] .  " " . $row['Clock']."</option>";
                 }
             ?>
         </select><br>
@@ -37,7 +37,7 @@
             $result = mysqli_query($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             while ($row = mysqli_fetch_array($result)){
-                echo "<option id='".$row['motherboard_id']."' value='". $row['Manufacturer'] . " " . $row['Name'] .  " " ."'>".$row['Manufacturer'] . " " . $row['Name'] .  " " ."</option>";
+                echo "<option id='mother".$row['motherboard_id']."' value='". $row['Manufacturer'] . " " . $row['Name'] .  " " ."'>".$row['Manufacturer'] . " " . $row['Name'] .  " " ."</option>";
             }
         ?>
     </select><br>
@@ -76,7 +76,7 @@
             $result = mysqli_query($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
             while ($row = mysqli_fetch_array($result)){
-                echo "<option id='".$row['gpu_id']."' value='".$row['Manufacturer'] . " " . $row['g_type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['gmem_type'] ."'>".$row['Manufacturer'] . " " . $row['g_type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['gmem_type'] ."</option>" ;
+                echo "<option id='case".$row['gpu_id']."' value='".$row['Manufacturer'] . " " . $row['g_type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['gmem_type'] ."'>".$row['Manufacturer'] . " " . $row['g_type'] .  " " . $row['Name'] . " " . $row['Memory_size'] . " " . $row['gmem_type'] ."</option>" ;
             }
         ?>
     </select><br>
@@ -146,87 +146,87 @@
         </form>
     </div>
 <!-- AJAX -->
-    <script>
-            changeCpu();
-            changeStorage();
-            changeCase();
-        function changeCpu() {
-            var id=document.getElementById("cpu").options[document.getElementById("cpu").selectedIndex].id;
-            $.ajax({
-                type:'post',
-                url:'partpickerAjax.php',
-                dataType:"JSON",
-                data:{ action:'cpu',c_id:id},
-                success: function(data){
-                    var motherboard = document.getElementById("Motherboard");
-                    motherboard.options.length=0;
-                    for(i=0;i<data.length;i++){
-                        opt = document.createElement("option");
-                        opt.value = data[i].name;
-                        opt.textContent = data[i].name;
-                        opt.id=data[i].id;
-                        motherboard.appendChild(opt);
-                    }
-                },
-            })
-        }
-        function changeStorage() {
-            var id=document.getElementById("Motherboard").options[document.getElementById("Motherboard").selectedIndex].id;
-            $.ajax({
-                type:'post',
-                url:'partpickerAjax.php',
-                dataType:"JSON",
-                data:{ action:'Motherboard',m_id:id},
-                success: function(data){
-                    var motherboard = document.getElementById("Storage");
-                    motherboard.options.length=0;
-                    for(j=0;j<data.length;j++){
-                        opt = document.createElement("option");
-                        opt.value = data[j];
-                        opt.textContent = data[j];
-                        motherboard.appendChild(opt);
-                    }
-                    motherboard = document.getElementById("ndStorage");
-                    motherboard.options.length=0;
-                    for(j=0;j<data.length;j++){
-                        opt = document.createElement("option");
-                        opt.value = data[j];
-                        opt.textContent = data[j];
-                        motherboard.appendChild(opt);
-                    }
-                },
-                error: function(jqXHR, textStatus, errorThrown){
-                    console.log(jqXHR);
-                    console.log(textStatus);
-                    console.log(errorThrown);
+<script>
+        changeCpu();
+        changeStorage();
+        changeCase();
+    function changeCpu() {
+        var id=document.getElementById("cpu").options[document.getElementById("cpu").selectedIndex].id.replace("cpu","");
+        $.ajax({
+            type:'post',
+            url:'partpickerAjax.php',
+            dataType:"JSON",
+            data:{ action:'cpu',c_id:id},
+            success: function(data){
+                var motherboard = document.getElementById("Motherboard");
+                motherboard.options.length=0;
+                for(i=0;i<data.length;i++){
+                    opt = document.createElement("option");
+                    opt.value = data[i].name;
+                    opt.textContent = data[i].name;
+                    opt.id=data[i].id;
+                    motherboard.appendChild(opt);
                 }
-            })
-        }
-        function changeCase() {
-            var id=document.getElementById("gpu").options[document.getElementById("gpu").selectedIndex].id;
-            $.ajax({
-                type:'post',
-                url:'partpickerAjax.php',
-                dataType:"JSON",
-                data:{ action:'gpu',g_id:id},
-                success: function(data){
-                    var motherboard = document.getElementById("case");
-                    motherboard.options.length=0;
-                    for(i=0;i<data.length;i++){
-                        opt = document.createElement("option");
-                        opt.value = data[i];
-                        opt.textContent = data[i];
-                        motherboard.appendChild(opt);
-                    }
-                },
-                error: function(jqXHR, textStatus, errorThrown){
-                    console.log(jqXHR);
-                    console.log(textStatus);
-                    console.log(errorThrown);
+            },
+        })
+    }
+    function changeStorage() {
+        var id=document.getElementById("Motherboard").options[document.getElementById("Motherboard").selectedIndex].id.replace("mother","");
+        $.ajax({
+            type:'post',
+            url:'partpickerAjax.php',
+            dataType:"JSON",
+            data:{ action:'Motherboard',m_id:id},
+            success: function(data){
+                var motherboard = document.getElementById("Storage");
+                motherboard.options.length=0;
+                for(j=0;j<data.length;j++){
+                    opt = document.createElement("option");
+                    opt.value = data[j];
+                    opt.textContent = data[j];
+                    motherboard.appendChild(opt);
                 }
-            })
-        }
-    </script>
+                motherboard = document.getElementById("ndStorage");
+                motherboard.options.length=0;
+                for(j=0;j<data.length;j++){
+                    opt = document.createElement("option");
+                    opt.value = data[j];
+                    opt.textContent = data[j];
+                    motherboard.appendChild(opt);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                console.log(jqXHR);
+                console.log(textStatus);
+                console.log(errorThrown);
+            }
+        })
+    }
+    function changeCase() {
+        var id=document.getElementById("gpu").options[document.getElementById("gpu").selectedIndex].id.replace("case","");
+        $.ajax({
+            type:'post',
+            url:'partpickerAjax.php',
+            dataType:"JSON",
+            data:{ action:'gpu',g_id:id},
+            success: function(data){
+                var motherboard = document.getElementById("case");
+                motherboard.options.length=0;
+                for(i=0;i<data.length;i++){
+                    opt = document.createElement("option");
+                    opt.value = data[i];
+                    opt.textContent = data[i];
+                    motherboard.appendChild(opt);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                console.log(jqXHR);
+                console.log(textStatus);
+                console.log(errorThrown);
+            }
+        })
+    }
+</script>
 <!-- AJAX End -->
 <?php
     include_once 'footer.php';

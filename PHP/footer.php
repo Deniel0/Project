@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="css/footer.css">
-<div class="container"></div>
 <footer>
   <!-- Footer main -->
   <section class="main">
@@ -38,7 +37,6 @@
       <li><a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><i class="fab fa-youtube"></i></a></li>
     </ul>
   </section>
-
   <!-- Footer legal -->
   <section class="copy">
     <ul class="copy-list">

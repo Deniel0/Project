@@ -3,7 +3,7 @@
     include_once 'html_header.php';
 ?>
 <div class="content">
-    <ul class="flex-container wrap">
+    <div class="flex-container wrap">
         <?php
             $sql = "SELECT cpu, motherboard, cpu_cooler, ram, gpu, first_storage, sec_storage, pc_case, power_supply, images FROM complete_builds";
             $result = $conn->query($sql);
@@ -12,7 +12,7 @@
             while ($row = mysqli_fetch_array($result)){
         ?>
             <div class="card">
-                <li class="flex-item">
+                <div class="flex-item">
                     <div class="image-fit"><img src="<?=$row['images']?>" class="gepek" alt="gamingpc"></div>
                     <span id="dots<?=$index?>">Setup:</span>
                         <span id="more<?=$index?>" style="display:none">
@@ -31,14 +31,13 @@
                         <?php 
                             }
                         ?>
-                </li>
+                </div>
                 <button onclick="arrow(<?php echo $index++;?>)" id="click"><i class="fa-solid fa-up-down"></i></button>
             </div>
         <?php } ?>
-    </ul>
+    </div>
 </div>
 <script src="JavaScript/show.js"></script>
-</body>
 <?php
     include_once 'footer.php';
 ?>
