@@ -16,7 +16,7 @@
                 <li class="flex-item">
                     <div class="image-fit"><img src="<?=$row['images']?>" class="gepek" alt="gamingpc"></div>
                     <span id="dots<?=$index?>">Setup:</span>
-                        <span  id="more<?=$index?>" style="display:none">
+                        <span id="more<?=$index?>" style="display:none">
                             <?php
                                 echo "<p id='build".$index."' value='". $row['cpu'] . " " . $row['motherboard'] .  " " . $row['cpu_cooler']." ".$row['ram']." ".$row['gpu']." ".$row['first_storage']." ".$row['sec_storage']." ".$row['pc_case']." ".$row['power_supply']."'>
                                 "."Cpu: ".$row['cpu'] . "<br>Motherboard: " . $row['motherboard'] .  "<br>Cpu_cooler: " . $row['cpu_cooler']."<br>RAM: ".$row['ram']."<br>Video Card: ".$row['gpu']."<br>First_storage: ".$row['first_storage']."<br>Second_storage: ".$row['sec_storage']."<br>Case: ".$row['pc_case']."<br>Power Supply: ".$row['power_supply']."</p>";

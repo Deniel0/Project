@@ -2,6 +2,8 @@
     session_start();
     require 'includes/functions.inc.php';
 ?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta charset="UTF-8">
@@ -19,6 +21,7 @@
         ],
         '/daniel/szakdolgozat/Picker.php' => [
             '/daniel/szakdolgozat/css/picker.css',
+            '/daniel/szakdolgozat/css/footer.css"',
         ],
         '/daniel/szakdolgozat/admin.php' => [
             '/daniel/szakdolgozat/css/select.css',
@@ -27,6 +30,7 @@
         ],
         '/daniel/szakdolgozat/complete_builds.php' => [
             '/daniel/szakdolgozat/css/compb.css',
+            '/daniel/szakdolgozat/css/footer.css"',
         ],
         '/daniel/szakdolgozat/signup2.php' => [
             '/daniel/szakdolgozat/css/login2.css',
