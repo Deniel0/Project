@@ -22,7 +22,7 @@
                             echo "<option value='".$row['username']."'>".$row['username']."</option>" ;
                         }
                     ?>
-                    </select><br>
+            </select><br>
                 <br>
                 <button class="button-6" type="submit">Add Admin</button>
             </form>

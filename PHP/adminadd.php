@@ -239,7 +239,6 @@
     // Connecting to database:
     if (isset($sql)){
         if($conn->query($sql)){
-            
             header("location:admin.php?sikeres=true");
         }else{
             header("location:admin.php?sikeres=false");
