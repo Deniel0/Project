@@ -3,7 +3,6 @@
     require 'includes/db.includes.php';
     require_once 'includes/login.inc.php';
 ?>
-<body>
     <div class="form-container">
 <div class="wrapper">
     <header>Login</header>
@@ -48,3 +47,4 @@
   </div>
   </div>
 </body>
+</html>

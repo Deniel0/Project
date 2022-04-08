@@ -32,12 +32,6 @@
             '/daniel/szakdolgozat/css/compb.css',
             '/daniel/szakdolgozat/css/footer.css',
         ],
-        '/daniel/szakdolgozat/signup2.php' => [
-            '/daniel/szakdolgozat/css/login2.css',
-        ],
-        '/daniel/szakdolgozat/login2.php' => [
-            '/daniel/szakdolgozat/css/login2.css',
-        ],
     ];
         foreach($stylesheets[$_SERVER['PHP_SELF']] as $file) {
             echo "<link rel='stylesheet' type='text/css' href='$file'>\n";

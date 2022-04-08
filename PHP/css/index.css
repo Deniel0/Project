@@ -20,6 +20,7 @@ body{
     background-image: url(../images/gaming_home2.jpg);    /* https://blog.graana.com/lifestyle/how-to-make-use-of-your-basement/ */
     background-position: center top;
     background-size:cover;
+    background-repeat: no-repeat;
 }
 /* home-title */
 .main-header{
