@@ -21,7 +21,7 @@
         ],
         '/daniel/szakdolgozat/Picker.php' => [
             '/daniel/szakdolgozat/css/picker.css',
-            '/daniel/szakdolgozat/css/footer.css"',
+            '/daniel/szakdolgozat/css/footer.css',
         ],
         '/daniel/szakdolgozat/admin.php' => [
             '/daniel/szakdolgozat/css/select.css',
@@ -30,7 +30,7 @@
         ],
         '/daniel/szakdolgozat/complete_builds.php' => [
             '/daniel/szakdolgozat/css/compb.css',
-            '/daniel/szakdolgozat/css/footer.css"',
+            '/daniel/szakdolgozat/css/footer.css',
         ],
         '/daniel/szakdolgozat/signup2.php' => [
             '/daniel/szakdolgozat/css/login2.css',
@@ -87,4 +87,3 @@
 <script src="JavaScript/header.js"></script>
 <script src="https://kit.fontawesome.com/9ea544f381.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</body>

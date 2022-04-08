@@ -2,7 +2,6 @@
     require 'includes/db.includes.php';
     include_once 'html_header.php';
 ?>
-<body>
 <div class="content">
     <ul class="flex-container wrap">
         <?php

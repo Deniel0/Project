@@ -4,13 +4,12 @@
     require 'html_header.php';
 ?>
 <!-- Body -->
-<body>
     <div class="content">
         <ul class="flex-container wrap">
         <!-- Admin/User -->
         <div class="card">
             <li class="flex-item">
-            <form action="" method="POST">
+            <form   method="POST">
             <h4>Add admin privilege to user:</h4>
             <select required name="admin">
                     <option value="" selected disabled>Users</option>
@@ -26,7 +25,7 @@
                 <br>
                 <button class="button-6" type="submit">Add Admin</button>
             </form>
-            <form action="" method="POST">
+            <form   method="POST">
             <h4>Remove admin privilege:</h4>
             <select required name="rem_admin">
                     <option value="" selected disabled>Admins</option>
@@ -42,7 +41,7 @@
                 <br>
                 <button class="button-6" type="submit">Remove Admin</button>
             </form>
-            <form action="" method="POST">
+            <form   method="POST">
             <h4>Remove user:</h4>
             <select required name="rem_user">
                     <option value="" selected disabled>Users</option>
@@ -63,25 +62,25 @@
         <!-- 1st -->
         <div class="card">
             <li class="flex-item">
-                <form action="" method="POST">
+                <form   method="POST">
                     <h4>Manufacturer:</h4>
                         <input required pattern="[A-Za-z]{1,32}" placeholder="Asus" type="text" name="man_name" id="">
                     <br>
                     <button class="button-6" type="submit">Add Manufacturer</button>
                 </form>
-                <form action="" method="POST">
+                <form   method="POST">
                     <h4>Chipset:</h4>
                         <input required pattern="[A-Za-z0-9]{1,12}" placeholder="Z590" type="text" name="chip_name" id="">
                     <br>
                     <button class="button-6" type="submit">Add Chipset</button>
                 </form>
-                <form action="" method="POST">
+                <form   method="POST">
                     <h4>Ram type:</h4>
                         <input required pattern="[A-Za-z0-9 ]{1,12}" placeholder="DDR4" type="text" name="ram_type" id="">
                     <br>
                     <button class="button-6" type="submit">Add Ram type</button>
                 </form>
-                <form action="" method="POST">
+                <form   method="POST">
                     <h4>Storage type:</h4>
                         <input required pattern="[A-Za-z0-9 ]{1,12}" placeholder="SSD" type="text" name="stype_name" id="">
                     <br>
@@ -92,25 +91,25 @@
         <!-- 2nd -->
         <div class="card">
             <li class="flex-item">
-            <form action="" method="POST">
+            <form   method="POST">
                 <h4>Socket:</h4>
                     <input required type="text" placeholder="1151" name="Socket" id="">
                 <br>
                 <button class="button-6" type="submit">Add Socket</button>
             </form>
-            <form action="" method="POST">
+            <form   method="POST">
                 <h4>Cooler Type:</h4>
                     <input required type="text" placeholder="Air" name="cooler_id" id="">
                 <br>
                 <button class="button-6" type="submit">Add Cooler Type</button>
             </form>
-            <form action="" method="POST">
+            <form   method="POST">
                 <h4>GPU Type:</h4>
                     <input required type="text" placeholder="GeForce GTX" name="gpu_type" id="">
                 <br>
                 <button class="button-6" type="submit">Add GPU Type</button>
             </form>
-            <form action="" method="POST">
+            <form   method="POST">
                 <h4>GPU Memory Type:</h4>
                     <input required type="text" placeholder="GDDR5" name="gpu_mem_type" id="">
                 <br>
@@ -122,7 +121,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add CPU:</h3>
-            <form action="" method="POST">
+            <form   method="POST">
                 <h4>Socket:</h4>
                     <select required name="Socket">
                     <option value="" selected disabled>Select Socket</option>
@@ -170,7 +169,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Motherboard:</h3>
-            <form action="" method="POST">
+            <form   method="POST">
             <h4>Socket:</h4>
                 <select required name="Socket">
                     <option value="" selected disabled>Select Socket</option>
@@ -220,7 +219,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add CPU cooler:</h3>
-            <form action="" method="POST">
+            <form   method="POST">
                 <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -258,7 +257,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add RAM:</h3>
-            <form action="" method="POST">
+            <form   method="POST">
                 <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -300,7 +299,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add GPU:</h3>
-            <form action="" method="POST">
+            <form   method="POST">
                 <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -356,7 +355,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Storage:</h3>
-            <form action="" method="POST">
+            <form   method="POST">
                 <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -398,7 +397,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Case:</h3>
-            <form action="" method="POST">
+            <form   method="POST">
                 <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>
@@ -424,7 +423,7 @@
         <div class="card">
             <li class="flex-item">
             <h3>Add Power Supply:</h3>
-            <form action="" method="POST">
+            <form   method="POST">
                 <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
                 <option value="" selected disabled>Select Manufacturer</option>

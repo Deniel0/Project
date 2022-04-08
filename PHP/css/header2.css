@@ -39,9 +39,6 @@ html,body {
     color: #fff;
     line-height: 65px;
 }
-/* .nav ul li a:hover {
-    color: #00E676;
-} */
 .nav ul li a:hover {
     color: hsl(197, 100%, 50%);
 }
@@ -58,7 +55,7 @@ html,body {
     display: none;
 }
 /*Stying for small screens*/
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1100px){
 nav{
     position: fixed;
     z-index: 3;
@@ -123,7 +120,7 @@ li{
     transition: all 0.5s ease 0.9s;
 }
 }
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
     .nav {
         margin-top: -5vh;
     }

@@ -13,9 +13,8 @@
     require 'includes/db.includes.php';
     include_once 'html_header.php';
 ?>
-<body>
     <div class="pcontainer">
-        <form action="" method="post" id="jump">
+        <form method="post" id="jump">
 <!-- CPU -->
             <h3 class="pickertarget"><i class="fa-solid fa-microchip"></i> Select your CPU:</h3>
         <select required id="cpu" name="cpu" onchange="changeCpu()">
@@ -229,8 +228,6 @@
         }
     </script>
 <!-- AJAX End -->
-</body>
-<!-- end include -->
 <?php
     include_once 'footer.php';
 ?>
