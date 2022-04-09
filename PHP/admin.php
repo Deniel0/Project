@@ -3,7 +3,7 @@
     require 'adminadd.php';
     require 'html_header.php';
 ?>
-<!-- Body -->
+<!-- Admin interface: Add admin | Delete admin/user | Add parts and part types to database -->
     <div class="content">
         <div class="flex-container wrap">
         <!-- Admin/User -->

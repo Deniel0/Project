@@ -1,13 +1,8 @@
 <?php
-    // link:
     require 'includes/db.includes.php';
-    //Hiba kiiratás:
     /*
-    $conn->query($sql);
-    echo $sql;
-    echo $conn->error;
+    admin.php háttere, itt vannak a funkciók/hibakezelések
     */
-    // Values (".$_SESSION['F_Id'].",'".htmlspecialchars(mysqli_real_escape_string($conn,$_POST['gpu_mem_type']))."')";
     // Manufacturer: Ugyan az a gyártó ne szerepeljen többször az adatbázisban
     if(isset($_POST['man_name'])){
         $manufacturer=$_POST['man_name'];
@@ -20,7 +15,7 @@
                 echo "Manufacturer added to the database.";
             }
     }
-    // Admin: Ne listázza ki azt aki már admin
+    // Add Admin
     if(isset($_POST['admin'])){
         $sql = "INSERT INTO admin(user_id,prev) SELECT user_id,1 FROM users WHERE username='".$_POST["admin"]."'";
     }
@@ -28,7 +23,7 @@
     if(isset($_POST['rem_admin'])){
         $sql = "DELETE FROM admin WHERE user_id='".$_POST["rem_admin"]."'";
     }
-    // Remove user:
+    // Remove user: (SQL miatt adminból is rögtön törlődik a felhaszáló)
     if(isset($_POST['rem_user'])){
         $sql = "DELETE FROM users WHERE user_id='".$_POST["rem_user"]."'";
     }
@@ -157,7 +152,7 @@
                 echo "CPU cooler added to the database.";
             }
     }
-    // RAM:
+    // RAM: Ugyan az a ram ne szerpelhessen többször
     if(isset($_POST['Manufacturer'])and isset($_POST['ram_type'])and isset($_POST['capacity'])and isset($_POST['speed'])and isset($_POST['modules'])and isset($_POST['cas_Latency'])){
         $ramman=$_POST['Manufacturer'];
         $ramtype=$_POST['ram_type'];
@@ -175,7 +170,7 @@
                 echo "RAM added to the database.";
             }
     }
-    // GPU:
+    // GPU: Ugyan az a GPU ne szerpelhessen többször
     if(isset($_POST['Manufacturer'])and isset($_POST['g_type'])and isset($_POST['g_name'])and isset($_POST['memory_size'])and isset($_POST['memory_type'])and isset($_POST['core_clock'])and isset($_POST['boost_clock'])and isset($_POST['Length'])){
         $gpuman=$_POST['Manufacturer'];
         $gputype=$_POST['g_type'];
@@ -193,7 +188,7 @@
                 echo "GPU added to the database.";
             }
     }
-    // Storage:
+    // Storage: Ugyan az a Storage ne szerpelhessen többször
     if(isset($_POST['Manufacturer'])and isset($_POST['storage_type'])and isset($_POST['Name'])and isset($_POST['Capacity'])and isset($_POST['R_W_speed'])and isset($_POST['m2_comp'])){
         $storagename=$_POST['Name'];
         $storagetype=$_POST['storage_type'];

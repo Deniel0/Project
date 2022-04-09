@@ -14,49 +14,50 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <link rel="stylesheet" href="css/header2.css">
   <?php 
-$stylesheets = [
-    '/daniel/szakdolgozat/signup2.php' => [
-        '/daniel/szakdolgozat/css/login2.css',
-    ],
-    '/daniel/szakdolgozat/login2.php' => [
-        '/daniel/szakdolgozat/css/login2.css',
-    ],
-];
-    foreach($stylesheets[$_SERVER['PHP_SELF']] as $file) {
-        echo "<link rel='stylesheet' type='text/css' href='$file'>\n";
-    }
-?>
+  //Dinamikus css link (az url alapján hivatkozza be a hozzátartozó css-t, ha a link változik az elérési utat MEG KELL VÁLTOZTATNI)
+    $stylesheets = [
+        '/daniel/szakdolgozat/signup2.php' => [
+            '/daniel/szakdolgozat/css/login2.css',
+        ],
+        '/daniel/szakdolgozat/login2.php' => [
+            '/daniel/szakdolgozat/css/login2.css',
+        ],
+    ];
+        foreach($stylesheets[$_SERVER['PHP_SELF']] as $file) {
+            echo "<link rel='stylesheet' type='text/css' href='$file'>\n";
+        }
+    ?>
 </head>
 <body>
 <!-- navbar -->
-<nav class="nav">
-    <div class="hamburger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-    </div>
-    <ul class="navlinks">
-        <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
-        <li><a href="Picker.php"><i class="fa-solid fa-puzzle-piece"></i> Picker</a></li>
-        <li><a href="complete_builds.php"><i class="fa-solid fa-desktop"></i> Complete Builds</a></li>
-        <?php 
-            if(!isset($_SESSION['username'])){
-        ?>
-            <li><a href="login2.php"><i class="fa-solid fa-right-to-bracket"></i> Log in</a></li>
-            <li><a href="signup2.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li>
-        <?php 
-            }
-        ?>
-        <?php 
-            if(isset($_SESSION['username'])){
-        ?>
-            <li><a href="includes/logout.php"><i class="fa-solid fa-power-off"></i> Log out</a></li>
-            <li class="profil"><i class="fa-solid fa-user"> </i><?php echo " ". $_SESSION['username'] ?></li>
-        <?php 
-            }
-        ?>
-    </ul>
-</nav>
+    <nav class="nav">
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="navlinks">
+            <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="Picker.php"><i class="fa-solid fa-puzzle-piece"></i> Picker</a></li>
+            <li><a href="complete_builds.php"><i class="fa-solid fa-desktop"></i> Complete Builds</a></li>
+            <?php 
+                if(!isset($_SESSION['username'])){
+            ?>
+                <li><a href="login2.php"><i class="fa-solid fa-right-to-bracket"></i> Log in</a></li>
+                <li><a href="signup2.php"><i class="fa-solid fa-user-plus"></i> Sign up</a></li>
+            <?php 
+                }
+            ?>
+            <?php 
+                if(isset($_SESSION['username'])){
+            ?>
+                <li><a href="includes/logout.php"><i class="fa-solid fa-power-off"></i> Log out</a></li>
+                <li class="profil"><i class="fa-solid fa-user"> </i><?php echo " ". $_SESSION['username'] ?></li>
+            <?php 
+                }
+            ?>
+        </ul>
+    </nav>
 <!-- script -->
 <script src="JavaScript/header.js"></script>
 <script src="https://kit.fontawesome.com/9ea544f381.js" crossorigin="anonymous"></script>

@@ -14,7 +14,8 @@
   <!-- css links -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <link rel="stylesheet" href="css/header2.css">
-    <?php 
+    <?php
+    //Dinamikus css link (az url alapján hivatkozza be a hozzátartozó css-t, ha a link változik az elérési utat MEG KELL VÁLTOZTATNI)
     $stylesheets = [
         '/daniel/szakdolgozat/index.php' => [
             '/daniel/szakdolgozat/css/index.css',
@@ -47,6 +48,7 @@
         <div class="line3"></div>
     </div>
     <ul class="navlinks">
+        <!-- Az ikonokhoz tartozó leírás a script importnál található -->
         <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
         <li><a href="Picker.php"><i class="fa-solid fa-puzzle-piece"></i> Picker</a></li>
         <li><a href="complete_builds.php"><i class="fa-solid fa-desktop"></i> Complete Builds</a></li>
@@ -79,5 +81,7 @@
 <section class="home"></section><br>
 <!-- script -->
 <script src="JavaScript/header.js"></script>
-<script src="https://kit.fontawesome.com/9ea544f381.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Az iconok font Awesome-on keresztül működnek, ha a fontawesome.com -on megváltozik/törlődik a létrehozott "kit" az script src megszűnik létezni az ikonokkal együtt -->
+<!-- Megoldás: Létre kell hozni egy új "kit-et" és az ahhoz kapott src-t kell behivatkozni ide: -->
+<script src="https://kit.fontawesome.com/9ea544f381.js" crossorigin="anonymous"></script>

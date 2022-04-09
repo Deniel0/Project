@@ -3,24 +3,24 @@
     require 'includes/db.includes.php';
     require_once 'includes/signup.inc.php';
 ?>
-    <div class="form-container">
-<div class="wrapper">
+<div class="form-container">
+  <div class="wrapper">
     <header>Signup</header>
-    <form action="includes/signup.inc.php" method="post">
-      <div class="field">
-        <div class="input-area">
-          <input type="text" name="username" placeholder="Username" required>
-          <i class="icon fas fa-envelope"></i>
+      <form action="includes/signup.inc.php" method="post">
+        <div class="field">
+          <div class="input-area">
+            <input type="text" name="username" placeholder="Username" required>
+            <i class="icon fas fa-envelope"></i>
+          </div>
         </div>
-      </div>
-      <div class="field">
-        <div class="input-area">
-          <input type="password" name="password" placeholder="Password" required>
-          <i class="icon fas fa-lock"></i>
+        <div class="field">
+          <div class="input-area">
+            <input type="password" name="password" placeholder="Password" required>
+            <i class="icon fas fa-lock"></i>
+          </div>
         </div>
-      </div>
-      <input type="submit" name="submit" value="Signup">
-    </form>
+        <input type="submit" name="submit" value="Signup">
+      </form>
     <div class="sign-txt">You already have an account? <a href="login2.php">Login</a></div>
     <?php
   if (isset($_GET["error"])) {
@@ -45,6 +45,6 @@
   }
 ?>
   </div>
-  </div>
+</div>
 </body>
 </html>
