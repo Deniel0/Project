@@ -1,5 +1,0 @@
-goqr.me/api/
-fontawesome.com
-fonts.google.com
-css-tricks.com/how-to-create-neon-text-with-css
-css-tricks.com/the-current-state-of-styling-scrollbars-in-css
