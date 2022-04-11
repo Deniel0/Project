@@ -2,6 +2,10 @@
     require 'includes/db.includes.php';
     require 'adminadd.php';
     require 'html_header.php';
+    if (CheckAdmin($conn) != true) {
+        header("location: /daniel/szakdolgozat/index.php?error=youAreNotAnAdmin");
+        exit();
+    } 
 ?>
 <!-- Admin interface: Add admin | Delete admin/user | Add parts and part types to database -->
     <div class="content">

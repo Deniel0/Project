@@ -83,7 +83,7 @@ function loginUser($conn, $username, $password){
 function CheckAdmin($conn){
     $result=false;
     if (isset($_SESSION['username'])) {
-        $sql='SELECT user_id FROM `admin` WHERE user_id=(select user_id from users where username="'.$_SESSION['username'].'")';
+        $sql='SELECT user_id FROM `admin` WHERE user_id=(SELECT user_id FROM users WHERE username="'.$_SESSION['username'].'")';
         $rs= $conn->query($sql);
         if($rs->num_rows>0){
             $result = true;
