@@ -12,9 +12,9 @@
             <form method="POST">
             <h4>Add admin privilege to user:</h4>
             <select required name="admin">
-                    <option selected disabled>Users</option>
+                    <option value="" selected disabled>Users</option>
                     <?php
-                        $sql = "SELECT * FROM users";
+                        $sql = "SELECT * FROM users where user_id not in(Select user_id from admin)";
                         $result = mysqli_query($conn, $sql);
                         $resultCheck = mysqli_num_rows($result);
                         while ($row = mysqli_fetch_array($result)){
@@ -28,7 +28,7 @@
             <form method="POST">
             <h4>Remove admin privilege:</h4>
             <select required name="rem_admin">
-                <option selected disabled>Admins</option>
+                <option value="" selected disabled>Admins</option>
                     <?php
                         $sql = "SELECT admin.user_id, users.username FROM admin, users WHERE admin.user_id=users.user_id ORDER BY username ASC";
                         $result = mysqli_query($conn, $sql);
@@ -44,7 +44,7 @@
             <form method="POST">
             <h4>Remove user:</h4>
             <select required name="rem_user">
-                    <option selected disabled>Users</option>
+                    <option value="" selected disabled>Users</option>
                     <?php
                         $sql = $sql = "SELECT * FROM users ORDER BY username ASC";
                         $result = mysqli_query($conn, $sql);
@@ -124,7 +124,7 @@
             <form method="POST">
                 <h4>Socket:</h4>
                     <select required name="Socket">
-                    <option selected disabled>Select Socket</option>
+                    <option value="" selected disabled>Select Socket</option>
                     <?php
                         $sql = "SELECT * FROM socket";
                         $result = mysqli_query($conn, $sql);
@@ -136,7 +136,7 @@
                     </select><br>
                 <h4>Manufacturer:</h4>
                     <select required name="Manufacturer">
-                    <option selected disabled>Select Manufacturer</option>
+                    <option value="" selected disabled>Select Manufacturer</option>
                     <?php
                         $sql = "SELECT * FROM manufacturer ORDER BY manufacturer.Manufacturer ASC";
                         $result = mysqli_query($conn, $sql);
@@ -172,7 +172,7 @@
             <form method="POST">
             <h4>Socket:</h4>
                 <select required name="Socket">
-                    <option selected disabled>Select Socket</option>
+                    <option value="" selected disabled>Select Socket</option>
                     <?php
                         $sql = "SELECT * FROM socket";
                         $result = mysqli_query($conn, $sql);
@@ -184,7 +184,7 @@
                     </select><br>
                 <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
-                <option selected disabled>Select Manufacturer</option>
+                <option value="" selected disabled>Select Manufacturer</option>
                 <?php
                     $sql = "SELECT * FROM manufacturer ORDER BY manufacturer.Manufacturer ASC";
                     $result = mysqli_query($conn, $sql);
@@ -196,7 +196,7 @@
                 </select><br>
                 <h4>Chipset:</h4>
                 <select required name="Chipset">
-                    <option selected disabled>Select Chipset</option>
+                    <option value="" selected disabled>Select Chipset</option>
                     <?php
                         $sql = "SELECT * FROM chipset";
                         $result = mysqli_query($conn, $sql);
@@ -222,7 +222,7 @@
             <form method="POST">
                 <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
-                <option selected disabled>Select Manufacturer</option>
+                <option value="" selected disabled>Select Manufacturer</option>
                 <?php
                     $sql = "SELECT * FROM manufacturer ORDER BY manufacturer.Manufacturer ASC";
                     $result = mysqli_query($conn, $sql);
@@ -236,7 +236,7 @@
                     <input required type="text" placeholder="Dark Rock Pro 4" name="model">
                 <h4>Cooler Type:</h4>
                     <select required name="cooler_type">
-                    <option selected disabled>Select Cooler Type</option>
+                    <option value="" selected disabled>Select Cooler Type</option>
                     <?php
                         $sql = "SELECT * FROM `cpu_cooler_type`";
                         $result = mysqli_query($conn, $sql);
@@ -260,7 +260,7 @@
             <form method="POST">
                 <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
-                <option selected disabled>Select Manufacturer</option>
+                <option value="" selected disabled>Select Manufacturer</option>
                 <?php
                     $sql = "SELECT * FROM manufacturer ORDER BY manufacturer.Manufacturer ASC";
                     $result = mysqli_query($conn, $sql);
@@ -272,7 +272,7 @@
                 </select><br>
                 <h4>Ram type:</h4>
                 <select required name="ram_type">
-                    <option selected disabled>Select Ram type</option>
+                    <option value="" selected disabled>Select Ram type</option>
                     <?php
                         $sql = "SELECT * FROM `ram_type`";
                         $result = mysqli_query($conn, $sql);
@@ -302,7 +302,7 @@
             <form method="POST">
                 <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
-                <option selected disabled>Select Manufacturer</option>
+                <option value="" selected disabled>Select Manufacturer</option>
                 <?php
                     $sql = "SELECT * FROM manufacturer ORDER BY manufacturer.Manufacturer ASC";
                     $result = mysqli_query($conn, $sql);
@@ -314,7 +314,7 @@
                 </select><br>
                 <h4>GPU Type:</h4>
                 <select required name="g_type">
-                <option selected disabled>Select GPU type</option>
+                <option value="" selected disabled>Select GPU type</option>
                 <?php
                     $sql = "SELECT * FROM gpu_type";
                     $result = mysqli_query($conn, $sql);
@@ -330,7 +330,7 @@
                     <input required type="text" placeholder="8GB" name="memory_size">
                 <h4>Memory type:</h4>
                 <select required name="memory_type">
-                <option selected disabled>Select Memory type</option>
+                <option value="" selected disabled>Select Memory type</option>
                 <?php
                     $sql = "SELECT * FROM gmemory_type";
                     $result = mysqli_query($conn, $sql);
@@ -358,7 +358,7 @@
             <form method="POST">
                 <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
-                <option selected disabled>Select Manufacturer</option>
+                <option value="" selected disabled>Select Manufacturer</option>
                 <?php
                     $sql = "SELECT * FROM manufacturer ORDER BY manufacturer.Manufacturer ASC";
                     $result = mysqli_query($conn, $sql);
@@ -370,7 +370,7 @@
                 </select><br>
                 <h4>Storage type:</h4>
                 <select required name="storage_type">
-                    <option selected disabled>Select Storage type</option>
+                    <option value="" selected disabled>Select Storage type</option>
                     <?php
                         $sql = "SELECT * FROM `storage_type`";
                         $result = mysqli_query($conn, $sql);
@@ -400,7 +400,7 @@
             <form method="POST">
                 <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
-                <option selected disabled>Select Manufacturer</option>
+                <option value="" selected disabled>Select Manufacturer</option>
                 <?php
                     $sql = "SELECT * FROM manufacturer ORDER BY manufacturer.Manufacturer ASC";
                     $result = mysqli_query($conn, $sql);
@@ -426,7 +426,7 @@
             <form method="POST">
                 <h4>Manufacturer:</h4>
                 <select required name="Manufacturer">
-                <option selected disabled>Select Manufacturer</option>
+                <option value="" selected disabled>Select Manufacturer</option>
                 <?php
                     $sql = "SELECT * FROM manufacturer ORDER BY manufacturer.Manufacturer ASC";
                     $result = mysqli_query($conn, $sql);
@@ -442,7 +442,7 @@
                     <input required type="text" placeholder="1250 W" name="wattage">
                 <h4>Efficiency Rating:</h4>
                 <select required name="Efficiency_Rating">
-                <option selected disabled>Select Efficiency Rating</option>
+                <option value="" selected disabled>Select Efficiency Rating</option>
                 <?php
                     $sql = "SELECT * FROM efficiency_type";
                     $result = mysqli_query($conn, $sql);
@@ -454,7 +454,7 @@
                 </select><br>
                 <h4>Modular:</h4>
                 <select required name="Modular">
-                <option selected disabled>Select Modularity</option>
+                <option value="" selected disabled>Select Modularity</option>
                 <?php
                     $sql = "SELECT * FROM pw_modular_type";
                     $result = mysqli_query($conn, $sql);
