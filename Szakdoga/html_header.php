@@ -21,8 +21,8 @@
             '/daniel/szakdolgozat/css/index.css',
         ],
         '/daniel/szakdolgozat/Picker.php' => [
-            '/daniel/szakdolgozat/css/picker.css',
             '/daniel/szakdolgozat/css/footer.css',
+            '/daniel/szakdolgozat/css/picker.css',
         ],
         '/daniel/szakdolgozat/admin.php' => [
             '/daniel/szakdolgozat/css/select.css',
@@ -30,8 +30,8 @@
             '/daniel/szakdolgozat/css/compb.css',
         ],
         '/daniel/szakdolgozat/complete_builds.php' => [
-            '/daniel/szakdolgozat/css/compb.css',
             '/daniel/szakdolgozat/css/footer.css',
+            '/daniel/szakdolgozat/css/compb.css',
         ],
     ];
         foreach($stylesheets[$_SERVER['PHP_SELF']] as $file) {

@@ -31,8 +31,8 @@
                         <?php 
                             }
                         ?>
+                <button onclick="arrow(<?php echo $index++;?>)" id="click" class="click"><i class="fa-solid fa-up-down"></i></button>
                 </div>
-                <button onclick="arrow(<?php echo $index++;?>)" id="click"><i class="fa-solid fa-up-down"></i></button>
             </div>
         <?php } ?>
     </div>
