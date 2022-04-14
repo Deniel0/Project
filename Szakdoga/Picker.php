@@ -96,8 +96,8 @@
                 ?>
         </select><br>
 <!-- 2nd.:Storage -->
-    <h3><i class="fa-solid fa-hard-drive"></i> Select your 2nd.:Storage:</h3>
-        <select required name="ndStorage" id="ndStorage">
+    <h3><i class="fa-solid fa-hard-drive"></i> Select your 2nd.:Storage: It's not required</h3>
+        <select name="ndStorage" id="ndStorage">
             <option value="" selected disabled>Select 2nd.:Storage...</option>
                 <?php
                     $sql = "SELECT storage.Manufacturer_id, manufacturer.Manufacturer, storage.storage_type_id, storage_type.s_type, Name, Capacity, R_W_speed, storage_id FROM storage, manufacturer, storage_type WHERE storage.Manufacturer_id=manufacturer.Manufacturer_id AND storage.storage_type_id=storage_type.storage_type_id ORDER BY manufacturer.Manufacturer ASC";

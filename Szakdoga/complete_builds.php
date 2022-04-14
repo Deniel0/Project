@@ -14,7 +14,7 @@
             <div class="card">
                 <div class="flex-item">
                     <div class="image-fit"><img src="<?=$row['images']?>" class="gepek" alt="gamingpc"></div>
-                    <span id="dots<?=$index?>">Setup:</span>
+                    <span id="dots<?=$index?>"></span>
                         <span id="more<?=$index?>" style="display:none">
                             <?php
                                 echo "<p id='build".$index."' value='". $row['cpu'] . " " . $row['motherboard'] .  " " . $row['cpu_cooler']." ".$row['ram']." ".$row['gpu']." ".$row['first_storage']." ".$row['sec_storage']." ".$row['pc_case']." ".$row['power_supply']."'>
