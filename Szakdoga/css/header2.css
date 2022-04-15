@@ -57,6 +57,7 @@ body::-webkit-scrollbar-thumb{
 }
 .nav ul li a:hover {
     color: hsl(197, 100%, 50%);
+    font-size: larger;
 }
 
 /*Styling Hamburger Icon*/
@@ -97,7 +98,7 @@ li{
     color: hsl(197, 100%, 50%);
     position: absolute;
     right: 0px;
-    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    background-image: linear-gradient(144deg,rgba(175, 64, 255, 0.801), rgba(90, 66, 243, 0.801) 50%,rgba(0, 219, 235, 0.801));
     height: fit-content;
     width: 300px;
     border-radius: 20px;
@@ -139,5 +140,10 @@ li{
 @media (max-width: 1404px) {
     .nav {
         margin-top: -5vh;
+    }
+}
+@media (max-width: 768px) {
+    .nav ul li a {
+        font-size: larger;
     }
 }
