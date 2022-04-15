@@ -5,7 +5,7 @@
         $motherboards=array();
         //Socket alapján szűr (sql lekérdezés)
         $sql="SELECT Socket_id FROM cpu WHERE cpu_id=".$_POST['c_id'] ;
-        //Van e ilyen cpu id "num_rows" 
+        //Van e ilyen cpu id "num_rows"
         if ($result=$conn->query($sql)){
             if($result->num_rows>0){
                 $row=$result->fetch_assoc();
