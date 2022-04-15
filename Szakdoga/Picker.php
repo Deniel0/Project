@@ -11,7 +11,6 @@
             header("Connection: close");
             readfile("picked_parts.txt");
     }
-    //includes:
     require 'includes/db.includes.php';
     include_once 'html_header.php';
 ?>
