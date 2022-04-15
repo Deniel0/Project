@@ -152,15 +152,21 @@
         changeStorage();
         changeCase();
     function changeCpu() {
+        //Kiválasztott CPU azonosító lekérése
         var id=document.getElementById("cpu").options[document.getElementById("cpu").selectedIndex].id.replace("cpu","");
         $.ajax({
+            //Elküld egy (post) kérést
             type:'post',
             url:'partpickerAjax.php',
             dataType:"JSON",
+            //A processzor azonosítót/értékét
             data:{ action:'cpu',c_id:id},
             success: function(data){
+                //Kiválasztja a motherboard listát, és a benne lévő elemeket törli
                 var motherboard = document.getElementById("Motherboard");
                 motherboard.options.length=0;
+                //Amit a php fájl küldött tömb, azon végig megy és a találatokat hozzáadja listához
+                //Új optionnt hoz létre, amit feltölt
                 for(i=0;i<data.length;i++){
                     opt = document.createElement("option");
                     opt.value = data[i].name;

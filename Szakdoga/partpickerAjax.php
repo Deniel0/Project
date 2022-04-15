@@ -1,20 +1,27 @@
 <?php
     include "includes/db.includes.php";
+    //melyiket szűri/választja ki
     if(isset($_POST['action']) and $_POST['action'] == 'cpu'){
         $motherboards=array();
+        //Socket alapján szűr (sql lekérdezés)
         $sql="SELECT Socket_id FROM cpu WHERE cpu_id=".$_POST['c_id'] ;
+        //Van e ilyen cpu id "num_rows" 
         if ($result=$conn->query($sql)){
             if($result->num_rows>0){
                 $row=$result->fetch_assoc();
+                //Aminek a kiválasztott cpu-val megegyező Socketje van lekéri
                 $sql="SELECT motherboard.Manufacturer_id, manufacturer.Manufacturer, Name,motherboard.motherboard_id FROM motherboard, manufacturer WHERE motherboard.Manufacturer_id=manufacturer.Manufacturer_id AND motherboard.Socket_id=".$row['Socket_id'];
                 $result=$conn->query($sql);
+                //végig megy az egészen és kiválasztja az összes találatot/egyezést
                 while($row=$result->fetch_assoc()){
+                    //Tömbbe tárolja el
                      $motherboards[]=array(
                          "name"=>$row['Manufacturer'] . " " . $row['Name'],
                          "id"=>$row['motherboard_id'],
                         );
                 }
             }
+            //tömbből stringet, hogy ki lehessen iratni
             echo json_encode($motherboards);
             exit();
         }else{

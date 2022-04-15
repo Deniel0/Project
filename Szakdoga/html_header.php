@@ -51,6 +51,7 @@
         <!-- Az ikonokhoz tartozó leírás a script importnál található -->
         <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
         <li><a href="Picker.php"><i class="fa-solid fa-puzzle-piece"></i> Picker</a></li>
+
         <li><a href="complete_builds.php"><i class="fa-solid fa-desktop"></i> Complete Builds</a></li>
         <?php 
             if(!isset($_SESSION['username'])){
